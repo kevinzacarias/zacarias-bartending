@@ -1,0 +1,699 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Zacarias Bartending & Events | Mobile Bartending in the DMV</title>
+  <meta name="description" content="Premium mobile bartending for weddings, birthdays, corporate events, and private parties in the DMV. Fast quotes. Professional setup. Great vibes." />
+  <meta name="theme-color" content="#0b0b0f" />
+  <style>
+    :root{
+      --bg:#0b0b0f;
+      --panel:#11111a;
+      --panel2:#151526;
+      --text:#f6f6fb;
+      --muted:#b8b8c9;
+      --line:rgba(255,255,255,.10);
+      --accent:#7c5cff;
+      --accent2:#21d4fd;
+      --good:#3fe28b;
+      --shadow:0 18px 45px rgba(0,0,0,.45);
+      --radius:18px;
+      --radius2:26px;
+      --max:1120px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:var(--sans);
+      color:var(--text);
+      background:
+        radial-gradient(1200px 600px at 20% -10%, rgba(124,92,255,.35), transparent 55%),
+        radial-gradient(900px 500px at 90% 10%, rgba(33,212,253,.25), transparent 60%),
+        radial-gradient(900px 600px at 50% 110%, rgba(63,226,139,.14), transparent 55%),
+        var(--bg);
+      line-height:1.5;
+    }
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 18px}
+
+    /* Top bar */
+    .topbar{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(14px);
+      background: rgba(11,11,15,.62);
+      border-bottom:1px solid var(--line);
+    }
+    .topbar .row{display:flex; align-items:center; justify-content:space-between; gap:14px; padding:14px 0}
+    .brand{display:flex; align-items:center; gap:10px}
+    .logo{
+      width:38px; height:38px; border-radius:14px;
+      background: linear-gradient(135deg, rgba(124,92,255,1), rgba(33,212,253,1));
+      box-shadow: 0 10px 28px rgba(124,92,255,.28);
+      position:relative;
+    }
+    .logo:after{
+      content:"";
+      position:absolute; inset:9px 10px 10px 9px;
+      border-radius:12px;
+      background: rgba(11,11,15,.35);
+      border:1px solid rgba(255,255,255,.16);
+    }
+    .brand h1{font-size:14px; margin:0; letter-spacing:.3px}
+    .brand p{margin:0; font-size:12px; color:var(--muted)}
+
+    .nav{display:flex; gap:14px; align-items:center; flex-wrap:wrap; justify-content:flex-end}
+    .nav a{font-size:13px; color:var(--muted); padding:8px 10px; border-radius:999px; border:1px solid transparent}
+    .nav a:hover{color:var(--text); border-color:rgba(255,255,255,.12); background:rgba(255,255,255,.04)}
+
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding:12px 14px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(255,255,255,.06);
+      color:var(--text);
+      font-weight:600;
+      font-size:14px;
+      transition:transform .08s ease, background .15s ease;
+      cursor:pointer;
+      user-select:none;
+    }
+    .btn:hover{background:rgba(255,255,255,.10)}
+    .btn:active{transform:translateY(1px)}
+    .btn.primary{
+      border-color:rgba(124,92,255,.55);
+      background:linear-gradient(135deg, rgba(124,92,255,.95), rgba(33,212,253,.55));
+      box-shadow: 0 16px 40px rgba(124,92,255,.22);
+    }
+    .btn.primary:hover{filter:brightness(1.03)}
+
+    /* Hero */
+    .hero{padding:46px 0 22px}
+    .hero-grid{display:grid; grid-template-columns: 1.25fr .95fr; gap:22px; align-items:stretch}
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border: 1px solid rgba(255,255,255,.10);
+      border-radius: var(--radius2);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .hero-left{padding:26px 22px}
+    .kicker{
+      display:inline-flex; gap:10px; align-items:center;
+      padding:8px 12px;
+      border-radius:999px;
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.10);
+      color:var(--muted);
+      font-size:13px;
+    }
+    .dot{width:8px; height:8px; border-radius:99px; background:var(--good); box-shadow:0 0 18px rgba(63,226,139,.35)}
+    .hero h2{margin:14px 0 10px; font-size:40px; line-height:1.08; letter-spacing:-.6px}
+    .hero p{margin:0; color:var(--muted); font-size:15.5px; max-width:58ch}
+    .cta-row{display:flex; flex-wrap:wrap; gap:10px; margin-top:16px}
+    .meta-row{display:flex; gap:14px; flex-wrap:wrap; margin-top:18px; color:var(--muted); font-size:13px}
+    .pill{display:inline-flex; gap:8px; align-items:center; padding:8px 10px; border-radius:999px; border:1px solid rgba(255,255,255,.10); background:rgba(0,0,0,.18)}
+    .pill b{color:var(--text); font-weight:700}
+
+    .hero-right{padding:0}
+    .hero-media{
+      height:100%;
+      min-height:320px;
+      background:
+        radial-gradient(600px 300px at 70% 30%, rgba(33,212,253,.26), transparent 60%),
+        radial-gradient(600px 360px at 30% 65%, rgba(124,92,255,.34), transparent 55%),
+        linear-gradient(180deg, rgba(17,17,26,.55), rgba(11,11,15,.55));
+      position:relative;
+    }
+    .hero-media .glass{
+      position:absolute; inset:18px;
+      border-radius: calc(var(--radius2) - 8px);
+      border:1px solid rgba(255,255,255,.12);
+      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03));
+      overflow:hidden;
+    }
+    .hero-media .glass:before{
+      content:"";
+      position:absolute; inset:-60px -80px auto auto;
+      width:240px; height:240px;
+      background: radial-gradient(circle at 30% 30%, rgba(63,226,139,.20), transparent 55%);
+      transform: rotate(20deg);
+    }
+    .hero-media .label{
+      position:absolute; left:22px; top:22px;
+      display:flex; gap:10px; align-items:flex-start;
+      padding:12px 12px;
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(11,11,15,.40);
+      backdrop-filter: blur(10px);
+      max-width: 260px;
+    }
+    .hero-media .label h3{margin:0; font-size:14px}
+    .hero-media .label p{margin:2px 0 0; font-size:12px; color:var(--muted)}
+
+    .hero-media .stats{
+      position:absolute; left:22px; right:22px; bottom:22px;
+      display:grid; grid-template-columns: repeat(3, 1fr);
+      gap:10px;
+    }
+    .stat{
+      padding:12px 12px;
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(11,11,15,.42);
+      backdrop-filter: blur(10px);
+    }
+    .stat .k{font-size:12px; color:var(--muted)}
+    .stat .v{font-size:16px; font-weight:800; margin-top:2px}
+
+    /* Sections */
+    section{padding:22px 0}
+    .section-title{display:flex; align-items:flex-end; justify-content:space-between; gap:14px; margin-bottom:12px}
+    .section-title h3{margin:0; font-size:22px; letter-spacing:-.2px}
+    .section-title p{margin:0; color:var(--muted); font-size:13.5px}
+
+    .grid-3{display:grid; grid-template-columns: repeat(3, 1fr); gap:12px}
+    .grid-2{display:grid; grid-template-columns: repeat(2, 1fr); gap:12px}
+
+    .tile{
+      padding:16px;
+      border-radius: var(--radius);
+      border:1px solid rgba(255,255,255,.10);
+      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+    }
+    .tile h4{margin:0 0 6px; font-size:15px}
+    .tile p{margin:0; color:var(--muted); font-size:13.5px}
+    .icon{
+      width:34px; height:34px; border-radius:12px;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+      display:grid; place-items:center;
+      margin-bottom:10px;
+      font-family:var(--mono);
+      font-size:12px;
+      color:rgba(246,246,251,.9)
+    }
+
+    .packages{display:grid; grid-template-columns: 1fr 1fr 1fr; gap:12px}
+    .pkg{
+      position:relative;
+      padding:18px;
+      border-radius:22px;
+      border:1px solid rgba(255,255,255,.10);
+      background: linear-gradient(180deg, rgba(17,17,26,.75), rgba(11,11,15,.65));
+      overflow:hidden;
+    }
+    .pkg.featured{
+      border-color: rgba(124,92,255,.50);
+      box-shadow: 0 22px 60px rgba(124,92,255,.18);
+    }
+    .badge{
+      position:absolute; top:14px; right:14px;
+      font-size:12px; font-weight:800;
+      padding:7px 10px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(124,92,255,.18);
+    }
+    .pkg h4{margin:0 0 4px; font-size:16px}
+    .price{margin:0 0 8px; color:var(--muted); font-size:13px}
+    .price b{color:var(--text); font-size:22px}
+    .list{margin:10px 0 14px; padding:0; list-style:none; display:grid; gap:8px}
+    .list li{display:flex; gap:10px; align-items:flex-start; color:var(--muted); font-size:13.5px}
+    .check{width:18px; height:18px; border-radius:6px; background:rgba(63,226,139,.18); border:1px solid rgba(63,226,139,.35); display:grid; place-items:center; color:rgba(246,246,251,.92); font-size:12px; flex:0 0 auto}
+
+    /* Gallery */
+    .gallery{display:grid; grid-template-columns: repeat(4, 1fr); gap:10px}
+    .ph{
+      aspect-ratio: 4/3;
+      border-radius: 18px;
+      border:1px solid rgba(255,255,255,.10);
+      background:
+        radial-gradient(400px 260px at 30% 35%, rgba(33,212,253,.18), transparent 55%),
+        radial-gradient(420px 320px at 70% 70%, rgba(124,92,255,.22), transparent 60%),
+        rgba(255,255,255,.04);
+      position:relative;
+      overflow:hidden;
+    }
+    .ph span{
+      position:absolute; left:12px; bottom:12px;
+      font-size:12px; color:var(--muted);
+      padding:6px 10px; border-radius:999px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(11,11,15,.40);
+      backdrop-filter: blur(10px);
+    }
+
+    /* Testimonials */
+    .quote{display:flex; flex-direction:column; gap:8px}
+    .quote p{margin:0; color:var(--text); font-size:14.5px}
+    .quote small{color:var(--muted)}
+
+    /* Form */
+    .form{padding:18px; border-radius:22px; border:1px solid rgba(255,255,255,.10); background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03))}
+    .form-row{display:grid; grid-template-columns: 1fr 1fr; gap:10px}
+    label{display:block; font-size:12px; color:var(--muted); margin:0 0 6px}
+    input, select, textarea{
+      width:100%;
+      padding:12px 12px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(11,11,15,.55);
+      color:var(--text);
+      outline:none;
+    }
+    input:focus, select:focus, textarea:focus{border-color: rgba(124,92,255,.55); box-shadow:0 0 0 4px rgba(124,92,255,.14)}
+    textarea{min-height:110px; resize:vertical}
+    .form-actions{display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin-top:10px}
+    .note{color:var(--muted); font-size:12.5px}
+
+    /* Footer */
+    footer{padding:26px 0 40px; color:var(--muted)}
+    .foot{display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; border-top:1px solid var(--line); padding-top:16px}
+    .tiny{font-size:12.5px}
+
+    /* Mobile */
+    @media (max-width: 980px){
+      .hero-grid{grid-template-columns: 1fr;}
+      .hero h2{font-size:34px}
+      .packages{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:1fr}
+      .grid-2{grid-template-columns:1fr}
+      .gallery{grid-template-columns: repeat(2, 1fr)}
+      .form-row{grid-template-columns:1fr}
+      .nav{display:none}
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap">
+      <div class="row">
+        <a class="brand" href="#top" aria-label="Zacarias Bartending & Events">
+          <div class="logo" aria-hidden="true"></div>
+          <div>
+            <h1>Zacarias Bartending & Events</h1>
+            <p>Mobile Bartending • DMV</p>
+          </div>
+        </a>
+
+        <nav class="nav" aria-label="Primary">
+          <a href="#services">Services</a>
+          <a href="#packages">Packages</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div style="display:flex; gap:10px; align-items:center">
+          <a class="btn" href="tel:+1-240-555-0199" id="phoneBtn" aria-label="Call">Call</a>
+          <a class="btn primary" href="#contact">Get a Quote</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-grid">
+          <div class="card hero-left">
+            <div class="kicker"><span class="dot" aria-hidden="true"></span> Fast quotes • Clean setup • Good energy</div>
+            <h2>Premium mobile bartending for parties that feel <em>effortless</em>.</h2>
+            <p>
+              Weddings, birthdays, corporate events, and private gatherings — I bring the bar, the speed, and the vibe.
+              You tell me the guest count + location, and I’ll send options that fit your budget.
+            </p>
+
+            <div class="cta-row">
+              <a class="btn primary" href="#contact">Book your date</a>
+              <a class="btn" href="#packages">See packages</a>
+              <a class="btn" href="#gallery">View gallery</a>
+            </div>
+
+            <div class="meta-row" aria-label="Highlights">
+              <span class="pill"><b>DMV</b> service area</span>
+              <span class="pill"><b>Licensed</b> & insured*</span>
+              <span class="pill"><b>Signature</b> cocktails</span>
+            </div>
+            <p class="note" style="margin-top:10px">*Update these claims based on your actual status.</p>
+          </div>
+
+          <div class="card hero-right" aria-label="Event preview">
+            <div class="hero-media">
+              <div class="glass"></div>
+              <div class="label">
+                <div class="icon" aria-hidden="true">DMV</div>
+                <div>
+                  <h3>What you get</h3>
+                  <p>Professional bartender, bar tools, garnish setup, and a smooth experience.</p>
+                </div>
+              </div>
+              <div class="stats">
+                <div class="stat"><div class="k">Response time</div><div class="v">Same day</div></div>
+                <div class="stat"><div class="k">Events</div><div class="v">Weddings • Parties</div></div>
+                <div class="stat"><div class="k">Add‑ons</div><div class="v">Mocktails • Menu</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="wrap">
+        <div class="section-title">
+          <div>
+            <h3>Services</h3>
+            <p>Pick what you need — keep it simple or go full premium.</p>
+          </div>
+          <a class="btn" href="#contact">Ask about your event</a>
+        </div>
+
+        <div class="grid-3">
+          <div class="tile">
+            <div class="icon">01</div>
+            <h4>Mobile Bartending</h4>
+            <p>Professional service for weddings, birthdays, house parties, and corporate events.</p>
+          </div>
+          <div class="tile">
+            <div class="icon">02</div>
+            <h4>Custom Cocktail Menu</h4>
+            <p>Signature cocktails + mocktails designed around your theme, season, and crowd.</p>
+          </div>
+          <div class="tile">
+            <div class="icon">03</div>
+            <h4>Shopping List + Guidance</h4>
+            <p>I send a clean shopping list so you know exactly what to buy — no stress, no waste.</p>
+          </div>
+        </div>
+
+        <div class="grid-2" style="margin-top:12px">
+          <div class="tile">
+            <div class="icon">04</div>
+            <h4>Bar Setup & Garnish Station</h4>
+            <p>Tools, ice buckets, garnish trays, and an organized station that looks sharp on camera.</p>
+          </div>
+          <div class="tile">
+            <div class="icon">05</div>
+            <h4>Optional Add‑Ons</h4>
+            <p>Second bartender, specialty glassware, premium syrups, theme decor, and more.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="packages">
+      <div class="wrap">
+        <div class="section-title">
+          <div>
+            <h3>Packages</h3>
+            <p>Flat hourly rate — final quote depends on hours booked, guest count, and travel.</p>
+          </div>
+          <p class="note">Tip: put your real prices here when you’re ready.</p>
+        </div>
+
+        <div class="packages">
+          <div class="pkg">
+            <h4>Essential</h4>
+            <p class="price"><b>$40</b> / hour</p>
+            <ul class="list">
+              <li><span class="check">✓</span> 1 bartender (up to 3 hours)</li>
+              <li><span class="check">✓</span> Basic bar tools + setup</li>
+              <li><span class="check">✓</span> Shopping list provided</li>
+            </ul>
+            <a class="btn" href="#contact">Get exact quote</a>
+          </div>
+
+          <div class="pkg featured">
+            <div class="badge">Most booked</div>
+            <h4>Signature</h4>
+            <p class="price"><b>$40</b> / hour</p>
+            <ul class="list">
+              <li><span class="check">✓</span> 1 bartender (up to 4 hours)</li>
+              <li><span class="check">✓</span> 2 signature cocktails + mocktail option</li>
+              <li><span class="check">✓</span> Garnish station + menu cards</li>
+            </ul>
+            <a class="btn primary" href="#contact">Check availability</a>
+          </div>
+
+          <div class="pkg">
+            <h4>Premium</h4>
+            <p class="price"><b>$40</b> / hour</p>
+            <ul class="list">
+              <li><span class="check">✓</span> Up to 5 hours service</li>
+              <li><span class="check">✓</span> 3 cocktails + upgraded setup</li>
+              <li><span class="check">✓</span> Add‑on planning help + timeline</li>
+            </ul>
+            <a class="btn" href="#contact">Build my package</a>
+          </div>
+        </div>
+
+        <p class="note" style="margin-top:10px">Want a cash bar, open bar, or “client supplies alcohol”? Put your policy in the FAQ below.</p>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <div class="wrap">
+        <div class="section-title">
+          <div>
+            <h3>Gallery</h3>
+            <p>Drop your best 8–12 photos here (bar setup, cocktails, you working, happy guests).</p>
+          </div>
+          <a class="btn" href="#contact">Book for your event</a>
+        </div>
+        <div class="gallery">
+          <div class="ph"><span>Signature cocktails</span></div>
+          <div class="ph"><span>Clean bar setup</span></div>
+          <div class="ph"><span>Wedding service</span></div>
+          <div class="ph"><span>Corporate event</span></div>
+          <div class="ph"><span>Mocktail bar</span></div>
+          <div class="ph"><span>Birthday party</span></div>
+          <div class="ph"><span>Garnish station</span></div>
+          <div class="ph"><span>Night vibes</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-title">
+          <div>
+            <h3>What people say</h3>
+            <p>Replace these with real testimonials (name, city, event type).</p>
+          </div>
+        </div>
+
+        <div class="grid-3">
+          <div class="tile quote">
+            <p>“Showed up early, setup looked amazing, and the drinks were moving fast all night.”</p>
+            <small>— Ashley • Germantown • Birthday</small>
+          </div>
+          <div class="tile quote">
+            <p>“The signature menu was perfect for our theme — guests kept asking for the recipe.”</p>
+            <small>— Marco • Rockville • House Party</small>
+          </div>
+          <div class="tile quote">
+            <p>“Professional, friendly, and organized. Took a huge load off our wedding day.”</p>
+            <small>— Nina • DC • Wedding</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="wrap">
+        <div class="section-title">
+          <div>
+            <h3>FAQ</h3>
+            <p>Keep it clear so clients feel confident booking.</p>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div class="tile">
+            <h4>Do you provide alcohol?</h4>
+            <p>Typically the client purchases alcohol, and I provide a detailed shopping list. Ask about add‑ons for specialty ingredients.</p>
+          </div>
+          <div class="tile">
+            <h4>How far do you travel?</h4>
+            <p>DMV area (DC, MD, VA). Travel fees may apply depending on distance and timing.</p>
+          </div>
+          <div class="tile">
+            <h4>What do you need from me?</h4>
+            <p>Event date, location, guest count, hours of service, and if you want signature cocktails or a simple setup.</p>
+          </div>
+          <div class="tile">
+            <h4>Deposit & cancellation?</h4>
+            <p>Add your policy here (ex: non‑refundable deposit holds the date; reschedule options available).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="section-title">
+          <div>
+            <h3>Contact & Quick Quote</h3>
+            <p>Fill this out — you’ll get a response with availability + package options.</p>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div class="form">
+            <form id="quoteForm">
+              <div class="form-row">
+                <div>
+                  <label for="name">Name</label>
+                  <input id="name" name="name" autocomplete="name" placeholder="Kevin" required />
+                </div>
+                <div>
+                  <label for="phone">Phone</label>
+                  <input id="phone" name="phone" inputmode="tel" placeholder="(240) 555‑0199" required />
+                </div>
+              </div>
+
+              <div class="form-row" style="margin-top:10px">
+                <div>
+                  <label for="date">Event date</label>
+                  <input id="date" name="date" type="date" required />
+                </div>
+                <div>
+                  <label for="guests">Guest count</label>
+                  <input id="guests" name="guests" type="number" min="1" placeholder="50" required />
+                </div>
+              </div>
+
+              <div class="form-row" style="margin-top:10px">
+                <div>
+                  <label for="location">City</label>
+                  <input id="location" name="location" placeholder="Gaithersburg" required />
+                </div>
+                <div>
+                  <label for="package">Package</label>
+                  <select id="package" name="package" required>
+                    <option value="Signature" selected>Signature (Most booked)</option>
+                    <option value="Essential">Essential</option>
+                    <option value="Premium">Premium</option>
+                    <option value="Not sure">Not sure</option>
+                  </select>
+                </div>
+              </div>
+
+              <div style="margin-top:10px">
+                <label for="details">Event details</label>
+                <textarea id="details" name="details" placeholder="Type of event, hours, open bar vs cash bar, any themes, cocktails you want…" required></textarea>
+              </div>
+
+              <div class="form-actions">
+                <button class="btn primary" type="submit">Send request</button>
+                <a class="btn" id="textBtn" href="sms:+12405550199">Text</a>
+                <span class="note">No spam. Just availability + options.</span>
+              </div>
+            </form>
+          </div>
+
+          <div class="tile" style="padding:18px; border-radius:22px">
+            <h4 style="margin:0 0 8px">Direct contact</h4>
+            <p style="margin:0; color:var(--muted)">Best for quick bookings + last‑minute questions.</p>
+
+            <div style="display:grid; gap:10px; margin-top:14px">
+              <a class="btn" href="tel:+1-240-555-0199">Call: (240) 555‑0199</a>
+              <a class="btn" href="mailto:zacariasbartending@gmail.com?subject=Event%20Quote%20Request">Email: zacariasbartending@gmail.com</a>
+              <a class="btn" href="#" id="igLink">Instagram: @zacariasbartending</a>
+            </div>
+
+            <div style="margin-top:14px" class="tile">
+              <h4 style="margin:0 0 6px">Service area</h4>
+              <p style="margin:0; color:var(--muted)">Gaithersburg • Rockville • DC • Northern VA • and nearby.</p>
+            </div>
+
+            <p class="note" style="margin-top:12px">Replace the phone/email/IG with your real info before publishing.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot">
+        <div class="tiny">
+          <div style="display:flex; align-items:center; gap:10px; margin-bottom:6px">
+            <div class="logo" style="width:28px;height:28px;border-radius:12px"></div>
+            <b style="color:var(--text)">Zacarias Bartending & Events</b>
+          </div>
+          <div>© <span id="year"></span> Zacarias Bartending & Events. All rights reserved.</div>
+        </div>
+        <div class="tiny">
+          <a href="#top" class="btn">Back to top</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ====== QUICK SETUP ======
+    // 1) Replace phone/email/instagram in the HTML above.
+    // 2) Optionally connect the form to Formspree, Netlify Forms, or Google Forms.
+
+    const YEAR = new Date().getFullYear();
+    document.getElementById('year').textContent = YEAR;
+
+    // Replace these with your real values
+    const SETTINGS = {
+      businessEmail: 'kevinzacarias43@gmail.com',
+      phoneE164: '+12404742431',
+      instagramUrl: 'https://www.instagram.com/kevinjz_'
+    };
+
+    // Update buttons/links
+    const phoneBtn = document.getElementById('phoneBtn');
+    const textBtn = document.getElementById('textBtn');
+    const igLink = document.getElementById('igLink');
+
+    phoneBtn.href = `tel:${SETTINGS.phoneE164}`;
+    textBtn.href = `sms:${SETTINGS.phoneE164}`;
+    igLink.href = SETTINGS.instagramUrl;
+    igLink.target = '_blank';
+    igLink.rel = 'noreferrer';
+
+    // Form -> opens an email draft (works everywhere; upgrade later to a real form endpoint)
+    const form = document.getElementById('quoteForm');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      const payload = {
+        name: data.get('name')?.toString().trim(),
+        phone: data.get('phone')?.toString().trim(),
+        date: data.get('date')?.toString().trim(),
+        guests: data.get('guests')?.toString().trim(),
+        location: data.get('location')?.toString().trim(),
+        pkg: data.get('package')?.toString().trim(),
+        details: data.get('details')?.toString().trim(),
+      };
+
+      const subject = encodeURIComponent(`Event Quote Request — ${payload.date} (${payload.location})`);
+      const bodyLines = [
+        `Name: ${payload.name}`,
+        `Phone: ${payload.phone}`,
+        `Event date: ${payload.date}`,
+        `City: ${payload.location}`,
+        `Guest count: ${payload.guests}`,
+        `Package: ${payload.pkg}`,
+        `\nDetails:`,
+        payload.details,
+        `\n— Sent from zacariasbartending.com`
+      ];
+      const body = encodeURIComponent(bodyLines.join('\n'));
+      window.location.href = `mailto:${SETTINGS.businessEmail}?subject=${subject}&body=${body}`;
+    });
+  </script>
+</body>
+</html>
