@@ -312,7 +312,7 @@
 
         <div style="display:flex; gap:10px; align-items:center">
           <a class="btn" href="tel:+1-240-555-0199" id="phoneBtn" aria-label="Call">Call</a>
-          <a class="btn primary" href="#contact">Get a Quote</a>
+<a class="btn primary" href="#quote">Get a Quote</a>
         </div>
       </div>
     </div>
@@ -539,67 +539,38 @@
       </div>
     </section>
 
-    <section id="contact">
-      <div class="wrap">
-        <div class="section-title">
-          <div>
-            <h3>Contact & Quick Quote</h3>
-            <p>Fill this out — you’ll get a response with availability + package options.</p>
-          </div>
-        </div>
+   <section id="contact">
+  <div class="wrap">
+    <div class="section-title">
+      <div>
+        <h3>Contact & Quick Quote</h3>
+        <p>Fill this out — you’ll get a response shortly.</p>
+      </div>
+    </div>
 
-        <div class="grid-2">
-          <div class="form">
-            <form id="quoteForm">
-              <div class="form-row">
-                <div>
-                  <label for="name">Name</label>
-                  <input id="name" name="name" autocomplete="name" placeholder="Kevin" required />
-                </div>
-                <div>
-                  <label for="phone">Phone</label>
-                  <input id="phone" name="phone" inputmode="tel" placeholder="(240) 555‑0199" required />
-                </div>
-              </div>
+    <div style="margin-top:20px">
+      <iframe
+        data-tally-src="https://tally.so/r/eqaqWq"
+        loading="lazy"
+        width="100%"
+        height="800"
+        frameborder="0"
+        marginheight="0"
+        marginwidth="0"
+        title="Zacarias Bartending Quote Form">
+      </iframe>
+    </div>
+  </div>
+</section>
 
-              <div class="form-row" style="margin-top:10px">
-                <div>
-                  <label for="date">Event date</label>
-                  <input id="date" name="date" type="date" required />
-                </div>
-                <div>
-                  <label for="guests">Guest count</label>
-                  <input id="guests" name="guests" type="number" min="1" placeholder="50" required />
-                </div>
-              </div>
-
-              <div class="form-row" style="margin-top:10px">
-                <div>
-                  <label for="location">City</label>
-                  <input id="location" name="location" placeholder="Gaithersburg" required />
-                </div>
-                <div>
-                  <label for="package">Package</label>
-                  <select id="package" name="package" required>
-                    <option value="Signature" selected>Signature (Most booked)</option>
-                    <option value="Essential">Essential</option>
-                    <option value="Premium">Premium</option>
-                    <option value="Not sure">Not sure</option>
-                  </select>
-                </div>
-              </div>
-
-              <div style="margin-top:10px">
-                <label for="details">Event details</label>
-                <textarea id="details" name="details" placeholder="Type of event, hours, open bar vs cash bar, any themes, cocktails you want…" required></textarea>
-              </div>
-
-              <div class="form-actions">
-                <button class="btn primary" type="submit">Send request</button>
-                <a class="btn" id="textBtn" href="sms:+12405550199">Text</a>
-                <span class="note">No spam. Just availability + options.</span>
-              </div>
-            </form>
+<script>
+  if (!window.Tally) {
+    var d = document, s = d.createElement("script");
+    s.src = "https://tally.so/widgets/embed.js";
+    s.async = true;
+    d.body.appendChild(s);
+  }
+</script>
           </div>
 
           <div class="tile" style="padding:18px; border-radius:22px">
