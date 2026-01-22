@@ -6,24 +6,31 @@
   <title>Zacarias Bartending & Events | Mobile Bartending in the DMV</title>
   <meta name="description" content="Premium mobile bartending for weddings, birthdays, corporate events, and private parties in the DMV. Fast quotes. Professional setup. Great vibes." />
   <meta name="theme-color" content="#0b0b0f" />
+
+  <!-- Social preview -->
+  <meta property="og:title" content="Zacarias Bartending & Events" />
+  <meta property="og:description" content="Premium mobile bartending in the DMV. Fast quotes. Clean setup. Great energy." />
+  <meta property="og:type" content="website" />
+
   <style>
     :root{
-      --bg:#0b0b0f;
-      --panel:#11111a;
-      --panel2:#151526;
+      --bg:#07070c;
+      --panel:#0e0f18;
+      --panel2:#141529;
       --text:#f6f6fb;
       --muted:#b8b8c9;
       --line:rgba(255,255,255,.10);
       --accent:#7c5cff;
       --accent2:#21d4fd;
       --good:#3fe28b;
-      --shadow:0 18px 45px rgba(0,0,0,.45);
+      --shadow:0 18px 45px rgba(0,0,0,.48);
       --radius:18px;
       --radius2:26px;
       --max:1120px;
       --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
       --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
     }
+
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
@@ -31,42 +38,53 @@
       font-family:var(--sans);
       color:var(--text);
       background:
-        radial-gradient(1200px 600px at 20% -10%, rgba(124,92,255,.35), transparent 55%),
-        radial-gradient(900px 500px at 90% 10%, rgba(33,212,253,.25), transparent 60%),
-        radial-gradient(900px 600px at 50% 110%, rgba(63,226,139,.14), transparent 55%),
+        radial-gradient(1100px 560px at 12% -10%, rgba(124,92,255,.42), transparent 55%),
+        radial-gradient(900px 520px at 92% 8%, rgba(33,212,253,.28), transparent 60%),
+        radial-gradient(1000px 640px at 50% 115%, rgba(63,226,139,.16), transparent 56%),
         var(--bg);
-      line-height:1.5;
+      line-height:1.55;
     }
     a{color:inherit; text-decoration:none}
     .wrap{max-width:var(--max); margin:0 auto; padding:0 18px}
+    .sr-only{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;}
 
     /* Top bar */
     .topbar{
-      position:sticky; top:0; z-index:50;
-      backdrop-filter: blur(14px);
-      background: rgba(11,11,15,.62);
+      position:sticky; top:0; z-index:60;
+      backdrop-filter: blur(16px);
+      background: rgba(7,7,12,.62);
       border-bottom:1px solid var(--line);
     }
-    .topbar .row{display:flex; align-items:center; justify-content:space-between; gap:14px; padding:14px 0}
-    .brand{display:flex; align-items:center; gap:10px}
+    .topbar .row{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:14px; padding:14px 0;
+    }
+    .brand{display:flex; align-items:center; gap:10px; min-width: 240px}
     .logo{
-      width:38px; height:38px; border-radius:14px;
+      width:40px; height:40px; border-radius:16px;
       background: linear-gradient(135deg, rgba(124,92,255,1), rgba(33,212,253,1));
-      box-shadow: 0 10px 28px rgba(124,92,255,.28);
+      box-shadow: 0 12px 34px rgba(124,92,255,.28);
       position:relative;
+      flex:0 0 auto;
     }
     .logo:after{
       content:"";
-      position:absolute; inset:9px 10px 10px 9px;
+      position:absolute; inset:10px 11px 11px 10px;
       border-radius:12px;
-      background: rgba(11,11,15,.35);
+      background: rgba(7,7,12,.35);
       border:1px solid rgba(255,255,255,.16);
     }
     .brand h1{font-size:14px; margin:0; letter-spacing:.3px}
     .brand p{margin:0; font-size:12px; color:var(--muted)}
 
-    .nav{display:flex; gap:14px; align-items:center; flex-wrap:wrap; justify-content:flex-end}
-    .nav a{font-size:13px; color:var(--muted); padding:8px 10px; border-radius:999px; border:1px solid transparent}
+    .nav{
+      display:flex; gap:10px; align-items:center; flex-wrap:wrap; justify-content:flex-end;
+    }
+    .nav a{
+      font-size:13px; color:var(--muted);
+      padding:8px 10px; border-radius:999px;
+      border:1px solid transparent;
+    }
     .nav a:hover{color:var(--text); border-color:rgba(255,255,255,.12); background:rgba(255,255,255,.04)}
 
     .btn{
@@ -76,26 +94,37 @@
       border:1px solid rgba(255,255,255,.14);
       background:rgba(255,255,255,.06);
       color:var(--text);
-      font-weight:600;
+      font-weight:800;
       font-size:14px;
-      transition:transform .08s ease, background .15s ease;
+      transition:transform .08s ease, background .15s ease, filter .15s ease;
       cursor:pointer;
       user-select:none;
+      white-space:nowrap;
     }
     .btn:hover{background:rgba(255,255,255,.10)}
     .btn:active{transform:translateY(1px)}
     .btn.primary{
       border-color:rgba(124,92,255,.55);
       background:linear-gradient(135deg, rgba(124,92,255,.95), rgba(33,212,253,.55));
-      box-shadow: 0 16px 40px rgba(124,92,255,.22);
+      box-shadow: 0 18px 44px rgba(124,92,255,.22);
     }
-    .btn.primary:hover{filter:brightness(1.03)}
+    .btn.primary:hover{filter:brightness(1.04)}
+    .btn.ghost{
+      border-color: rgba(255,255,255,.12);
+      background: rgba(0,0,0,.18);
+    }
+    .btn.small{padding:10px 12px; font-size:13px}
 
     /* Hero */
-    .hero{padding:46px 0 22px}
-    .hero-grid{display:grid; grid-template-columns: 1.25fr .95fr; gap:22px; align-items:stretch}
+    .hero{padding:50px 0 18px}
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.18fr .92fr;
+      gap:18px;
+      align-items:stretch;
+    }
     .card{
-      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.03));
       border: 1px solid rgba(255,255,255,.10);
       border-radius: var(--radius2);
       box-shadow: var(--shadow);
@@ -112,22 +141,63 @@
       font-size:13px;
     }
     .dot{width:8px; height:8px; border-radius:99px; background:var(--good); box-shadow:0 0 18px rgba(63,226,139,.35)}
-    .hero h2{margin:14px 0 10px; font-size:40px; line-height:1.08; letter-spacing:-.6px}
-    .hero p{margin:0; color:var(--muted); font-size:15.5px; max-width:58ch}
-    .cta-row{display:flex; flex-wrap:wrap; gap:10px; margin-top:16px}
-    .meta-row{display:flex; gap:14px; flex-wrap:wrap; margin-top:18px; color:var(--muted); font-size:13px}
-    .pill{display:inline-flex; gap:8px; align-items:center; padding:8px 10px; border-radius:999px; border:1px solid rgba(255,255,255,.10); background:rgba(0,0,0,.18)}
-    .pill b{color:var(--text); font-weight:700}
+    .hero h2{
+      margin:14px 0 10px;
+      font-size:44px;
+      line-height:1.05;
+      letter-spacing:-.9px
+    }
+    .hero p{
+      margin:0;
+      color:var(--muted);
+      font-size:15.5px;
+      max-width:64ch
+    }
 
-    .hero-right{padding:0}
+    .cta-row{display:flex; flex-wrap:wrap; gap:10px; margin-top:16px}
+    .meta-row{display:flex; gap:10px; flex-wrap:wrap; margin-top:18px; color:var(--muted); font-size:13px}
+    .pill{
+      display:inline-flex; gap:8px; align-items:center;
+      padding:8px 10px; border-radius:999px;
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(0,0,0,.18)
+    }
+    .pill b{color:var(--text); font-weight:900}
+
+    .pricing{
+      margin-top:12px;
+      padding:12px 14px;
+      border-radius:18px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(0,0,0,.18);
+      color: var(--muted);
+      font-size: 13.5px;
+    }
+    .pricing strong{color:var(--text)}
+    .micro{color:var(--muted); font-size:12.5px; margin-top:10px}
+
+    /* Right hero media */
+    .hero-right{padding:0; position:relative}
     .hero-media{
       height:100%;
-      min-height:320px;
-      background:
-        radial-gradient(600px 300px at 70% 30%, rgba(33,212,253,.26), transparent 60%),
-        radial-gradient(600px 360px at 30% 65%, rgba(124,92,255,.34), transparent 55%),
-        linear-gradient(180deg, rgba(17,17,26,.55), rgba(11,11,15,.55));
+      min-height:350px;
       position:relative;
+      background:
+        radial-gradient(600px 320px at 70% 30%, rgba(33,212,253,.28), transparent 60%),
+        radial-gradient(620px 380px at 30% 65%, rgba(124,92,255,.38), transparent 55%),
+        linear-gradient(180deg, rgba(14,15,24,.70), rgba(7,7,12,.78));
+    }
+    .hero-photo{
+      position:absolute; inset:0;
+      width:100%; height:100%;
+      object-fit:cover;
+      opacity:.62;
+      filter:saturate(1.08) contrast(1.06);
+    }
+    .hero-media:after{
+      content:"";
+      position:absolute; inset:0;
+      background: linear-gradient(180deg, rgba(7,7,12,.20), rgba(7,7,12,.88));
     }
     .hero-media .glass{
       position:absolute; inset:18px;
@@ -135,45 +205,60 @@
       border:1px solid rgba(255,255,255,.12);
       background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03));
       overflow:hidden;
+      z-index:2;
     }
     .hero-media .glass:before{
       content:"";
       position:absolute; inset:-60px -80px auto auto;
-      width:240px; height:240px;
+      width:250px; height:250px;
       background: radial-gradient(circle at 30% 30%, rgba(63,226,139,.20), transparent 55%);
       transform: rotate(20deg);
     }
-    .hero-media .label{
+    .label{
       position:absolute; left:22px; top:22px;
       display:flex; gap:10px; align-items:flex-start;
       padding:12px 12px;
       border-radius:16px;
       border:1px solid rgba(255,255,255,.12);
-      background: rgba(11,11,15,.40);
-      backdrop-filter: blur(10px);
-      max-width: 260px;
+      background: rgba(7,7,12,.50);
+      backdrop-filter: blur(12px);
+      max-width: 310px;
+      z-index:3;
     }
-    .hero-media .label h3{margin:0; font-size:14px}
-    .hero-media .label p{margin:2px 0 0; font-size:12px; color:var(--muted)}
+    .label h3{margin:0; font-size:14px}
+    .label p{margin:2px 0 0; font-size:12px; color:var(--muted)}
+    .mini-ico{
+      width:34px; height:34px; border-radius:12px;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+      display:grid; place-items:center;
+      font-family:var(--mono);
+      font-size:12px;
+      color:rgba(246,246,251,.9)
+    }
 
-    .hero-media .stats{
+    .stats{
       position:absolute; left:22px; right:22px; bottom:22px;
       display:grid; grid-template-columns: repeat(3, 1fr);
       gap:10px;
+      z-index:3;
     }
     .stat{
       padding:12px 12px;
       border-radius:16px;
       border:1px solid rgba(255,255,255,.12);
-      background: rgba(11,11,15,.42);
-      backdrop-filter: blur(10px);
+      background: rgba(7,7,12,.52);
+      backdrop-filter: blur(12px);
     }
     .stat .k{font-size:12px; color:var(--muted)}
-    .stat .v{font-size:16px; font-weight:800; margin-top:2px}
+    .stat .v{font-size:16px; font-weight:950; margin-top:2px}
 
     /* Sections */
-    section{padding:22px 0}
-    .section-title{display:flex; align-items:flex-end; justify-content:space-between; gap:14px; margin-bottom:12px}
+    section{padding:24px 0}
+    .section-title{
+      display:flex; align-items:flex-end; justify-content:space-between;
+      gap:14px; margin-bottom:12px
+    }
     .section-title h3{margin:0; font-size:22px; letter-spacing:-.2px}
     .section-title p{margin:0; color:var(--muted); font-size:13.5px}
 
@@ -188,6 +273,7 @@
     }
     .tile h4{margin:0 0 6px; font-size:15px}
     .tile p{margin:0; color:var(--muted); font-size:13.5px}
+
     .icon{
       width:34px; height:34px; border-radius:12px;
       border:1px solid rgba(255,255,255,.14);
@@ -199,60 +285,146 @@
       color:rgba(246,246,251,.9)
     }
 
+    /* How it works */
+    .steps{display:grid; grid-template-columns: repeat(3, 1fr); gap:12px}
+    .step{
+      padding:16px;
+      border-radius:22px;
+      border:1px solid rgba(255,255,255,.10);
+      background: linear-gradient(180deg, rgba(14,15,24,.85), rgba(7,7,12,.72));
+      position:relative;
+      overflow:hidden;
+    }
+    .step:before{
+      content:"";
+      position:absolute; inset:-120px -120px auto auto;
+      width:260px; height:260px;
+      background: radial-gradient(circle at 30% 30%, rgba(124,92,255,.18), transparent 58%);
+      transform: rotate(20deg);
+    }
+    .step b{display:inline-flex; align-items:center; gap:10px}
+    .step .num{
+      width:28px; height:28px; border-radius:10px;
+      display:grid; place-items:center;
+      font-family:var(--mono);
+      font-size:12px;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+    }
+    .step p{margin:8px 0 0; color:var(--muted); font-size:13.5px}
+
+    /* Packages */
     .packages{display:grid; grid-template-columns: 1fr 1fr 1fr; gap:12px}
     .pkg{
       position:relative;
       padding:18px;
       border-radius:22px;
       border:1px solid rgba(255,255,255,.10);
-      background: linear-gradient(180deg, rgba(17,17,26,.75), rgba(11,11,15,.65));
+      background: linear-gradient(180deg, rgba(14,15,24,.85), rgba(7,7,12,.72));
       overflow:hidden;
+    }
+    .pkg:before{
+      content:"";
+      position:absolute; inset:-120px -120px auto auto;
+      width:260px; height:260px;
+      background: radial-gradient(circle at 30% 30%, rgba(33,212,253,.14), transparent 58%);
+      transform: rotate(18deg);
     }
     .pkg.featured{
       border-color: rgba(124,92,255,.50);
       box-shadow: 0 22px 60px rgba(124,92,255,.18);
     }
     .badge{
-      position:absolute; top:14px; right:14px;
-      font-size:12px; font-weight:800;
+      position:absolute; top:14px; right:14px; z-index:2;
+      font-size:12px; font-weight:950;
       padding:7px 10px;
       border-radius:999px;
       border:1px solid rgba(255,255,255,.14);
-      background: rgba(124,92,255,.18);
+      background: rgba(124,92,255,.20);
     }
-    .pkg h4{margin:0 0 4px; font-size:16px}
-    .price{margin:0 0 8px; color:var(--muted); font-size:13px}
+    .pkg h4{margin:0 0 4px; font-size:16px; position:relative; z-index:2}
+    .price{margin:0 0 8px; color:var(--muted); font-size:13px; position:relative; z-index:2}
     .price b{color:var(--text); font-size:22px}
-    .list{margin:10px 0 14px; padding:0; list-style:none; display:grid; gap:8px}
+    .list{margin:10px 0 14px; padding:0; list-style:none; display:grid; gap:8px; position:relative; z-index:2}
     .list li{display:flex; gap:10px; align-items:flex-start; color:var(--muted); font-size:13.5px}
-    .check{width:18px; height:18px; border-radius:6px; background:rgba(63,226,139,.18); border:1px solid rgba(63,226,139,.35); display:grid; place-items:center; color:rgba(246,246,251,.92); font-size:12px; flex:0 0 auto}
+    .check{
+      width:18px; height:18px; border-radius:6px;
+      background:rgba(63,226,139,.18);
+      border:1px solid rgba(63,226,139,.35);
+      display:grid; place-items:center;
+      color:rgba(246,246,251,.92);
+      font-size:12px;
+      flex:0 0 auto
+    }
+
+    /* Gallery */
+    .gallery{display:grid; grid-template-columns: repeat(3, 1fr); gap:12px}
+    .shot{
+      position:relative;
+      border-radius:22px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
+      min-height: 190px;
+    }
+    .shot img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+      filter:saturate(1.1) contrast(1.05);
+      opacity:.95;
+    }
+    .shot:after{
+      content:"";
+      position:absolute; inset:0;
+      background: linear-gradient(180deg, rgba(0,0,0,.00), rgba(0,0,0,.58));
+    }
+    .shot .cap{
+      position:absolute;
+      left:14px;
+      bottom:12px;
+      z-index:2;
+      font-weight:900;
+      font-size:13px;
+      letter-spacing:.2px;
+    }
 
     /* Testimonials */
     .quote{display:flex; flex-direction:column; gap:8px}
     .quote p{margin:0; color:var(--text); font-size:14.5px}
     .quote small{color:var(--muted)}
 
-    /* Form */
-    .form{padding:18px; border-radius:22px; border:1px solid rgba(255,255,255,.10); background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03))}
-    .form-row{display:grid; grid-template-columns: 1fr 1fr; gap:10px}
-    label{display:block; font-size:12px; color:var(--muted); margin:0 0 6px}
-    input, select, textarea{
-      width:100%;
-      padding:12px 12px;
-      border-radius:14px;
-      border:1px solid rgba(255,255,255,.12);
-      background: rgba(11,11,15,.55);
-      color:var(--text);
-      outline:none;
+    /* Contact */
+    .contact-card{
+      padding:18px;
+      border-radius:22px;
+      border:1px solid rgba(255,255,255,.10);
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap:12px;
+      align-items:start;
     }
-    input:focus, select:focus, textarea:focus{border-color: rgba(124,92,255,.55); box-shadow:0 0 0 4px rgba(124,92,255,.14)}
-    textarea{min-height:110px; resize:vertical}
-    .form-actions{display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin-top:10px}
-    .note{color:var(--muted); font-size:12.5px}
+    .contact-card h4{margin:0 0 6px}
+    .contact-list{margin:10px 0 0; padding:0; list-style:none; display:grid; gap:8px; color:var(--muted); font-size:13.5px}
+    .contact-list a{color:var(--text); font-weight:950}
+    .mini{
+      padding:14px;
+      border-radius:18px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(0,0,0,.18);
+    }
+    .mini .k{color:var(--muted); font-size:12.5px}
+    .mini .v{font-weight:950; margin-top:4px}
 
     /* Footer */
     footer{padding:26px 0 40px; color:var(--muted)}
-    .foot{display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; border-top:1px solid var(--line); padding-top:16px}
+    .foot{
+      display:flex; justify-content:space-between;
+      gap:16px; flex-wrap:wrap;
+      border-top:1px solid var(--line); padding-top:16px
+    }
     .tiny{font-size:12.5px}
 
     /* Mobile */
@@ -262,12 +434,32 @@
       .packages{grid-template-columns:1fr}
       .grid-3{grid-template-columns:1fr}
       .grid-2{grid-template-columns:1fr}
+      .steps{grid-template-columns:1fr}
       .gallery{grid-template-columns: repeat(2, 1fr)}
-      .form-row{grid-template-columns:1fr}
+      .contact-card{grid-template-columns: 1fr}
       .nav{display:none}
+    }
+    @media (max-width: 520px){
+      .gallery{grid-template-columns: 1fr}
+      .hero-left{padding:22px 18px}
+    }
+
+    /* Sticky mobile CTA */
+    .sticky-cta{
+      position:fixed;
+      left:12px; right:12px; bottom:12px;
+      display:none;
+      gap:10px;
+      z-index:80;
+    }
+    .sticky-cta .btn{flex:1; justify-content:center}
+    @media (max-width: 980px){
+      .sticky-cta{display:flex}
+      body{padding-bottom:74px}
     }
   </style>
 </head>
+
 <body>
   <header class="topbar">
     <div class="wrap">
@@ -282,94 +474,112 @@
 
         <nav class="nav" aria-label="Primary">
           <a href="#services">Services</a>
+          <a href="#how">How it works</a>
           <a href="#packages">Packages</a>
           <a href="#gallery">Gallery</a>
           <a href="#faq">FAQ</a>
-<a href="https://tally.so/r/eqaqWq" target="_blank">Contact</a>
+          <a href="#contact">Contact</a>
         </nav>
 
         <div style="display:flex; gap:10px; align-items:center">
-          <a class="btn" href="tel:+1-240-555-0199" id="phoneBtn" aria-label="Call">Call</a>
-<a class="btn primary" href="https://tally.so/r/eqaqWq" target="_blank" rel="noopener">Get a Quote</a>
+          <a class="btn ghost" href="tel:+12404742431" aria-label="Call">Call</a>
+          <a class="btn primary" href="https://tally.so/r/eqaqWq" target="_blank" rel="noopener">Get a Quote</a>
         </div>
       </div>
     </div>
   </header>
 
   <main id="top">
+    <!-- HERO -->
     <section class="hero">
       <div class="wrap">
         <div class="hero-grid">
           <div class="card hero-left">
-            <div class="kicker"><span class="dot" aria-hidden="true"></span> Fast quotes • Clean setup • Good energy</div>
-            <h2>Premium mobile bartending for parties that feel <em>effortless</em>.</h2>
-            <p>
-              Weddings, birthdays, corporate events, and private gatherings — I bring the bar, the speed, and the vibe.
-              You tell me the guest count + location, and I’ll send options that fit your budget.
-            </p>
-            <p class="pricing">
-  <strong>$75/hr · 3-hour minimum</strong><br>
-  DMV service area · Custom quotes for large events & weddings
-</p>
+            <div class="kicker"><span class="dot" aria-hidden="true"></span> Same-day replies • Clean setup • Great vibes</div>
 
-<a class="btn primary" href="https://tally.so/r/eqaqWq" target="_blank" rel="noopener">Get a Quote</a>
-<a class="btn primary" href="https://tally.so/r/eqaqWq" target="_blank" rel="noopener">Book your date</a>
-              <a class="btn" href="#packages">See packages</a>
+            <h2>Premium mobile bartending for events that feel <em>effortless</em>.</h2>
+
+            <p>
+              Weddings, birthdays, corporate events, and private parties — I bring the bar, the speed, and the energy.
+              Tell me your guest count + location and I’ll send options that fit your budget.
+            </p>
+
+            <div class="pricing">
+              <strong>Starting at $75/hr · 3-hour minimum</strong><br>
+              Serving DC • Maryland • Northern VA
+            </div>
+
+            <div class="cta-row">
+              <a class="btn primary" href="https://tally.so/r/eqaqWq" target="_blank" rel="noopener">Get a Quote</a>
+              <a class="btn" href="sms:+12404742431">Text (240) 474-2431</a>
+              <a class="btn ghost" href="#packages">View packages</a>
             </div>
 
             <div class="meta-row" aria-label="Highlights">
-              <span class="pill"><b>DMV</b> service area</span>
-              <span class="pill"><b>Licensed</b> & insured*</span>
-              <span class="pill"><b>Signature</b> cocktails</span>
+              <span class="pill"><b>Fast</b> service</span>
+              <span class="pill"><b>Pro</b> setup</span>
+              <span class="pill"><b>Signature</b> menus</span>
+              <span class="pill"><b>Mocktails</b> available</span>
+            </div>
+
+            <div class="micro">
+              Need a shopping list? I send one that’s clean and easy — no waste, no stress.
             </div>
           </div>
 
           <div class="card hero-right" aria-label="Event preview">
             <div class="hero-media">
+              <!-- Add a real photo at /assets/hero.jpg for an instant upgrade -->
+              <img class="hero-photo" src="assets/hero.jpg" alt="Bartending setup at an event" onerror="this.style.display='none'">
+
               <div class="glass"></div>
+
               <div class="label">
-                <div class="icon" aria-hidden="true">DMV</div>
+                <div class="mini-ico" aria-hidden="true">DMV</div>
                 <div>
                   <h3>What you get</h3>
-                  <p>Professional bartender, bar tools, garnish setup, and a smooth experience.</p>
+                  <p>Professional bartender, bar tools, garnish setup, and smooth service from start to finish.</p>
                 </div>
               </div>
+
               <div class="stats">
                 <div class="stat"><div class="k">Response time</div><div class="v">Same day</div></div>
-                <div class="stat"><div class="k">Events</div><div class="v">Weddings • Parties</div></div>
-                <div class="stat"><div class="k">Add‑ons</div><div class="v">Mocktails • Menu</div></div>
+                <div class="stat"><div class="k">Best for</div><div class="v">Weddings • Parties</div></div>
+                <div class="stat"><div class="k">Extras</div><div class="v">Mocktails • Menu</div></div>
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>
 
+    <!-- SERVICES -->
     <section id="services">
       <div class="wrap">
         <div class="section-title">
           <div>
             <h3>Services</h3>
-            <p>Pick what you need — keep it simple or go full premium.</p>
+            <p>Choose what you need — keep it simple or go full premium.</p>
           </div>
-          <a class="btn" href="#contact">Ask about your event</a>
+          <a class="btn primary" href="https://tally.so/r/eqaqWq" target="_blank" rel="noopener">Request a quote</a>
         </div>
 
         <div class="grid-3">
           <div class="tile">
             <div class="icon">01</div>
             <h4>Mobile Bartending</h4>
-            <p>Professional service for weddings, birthdays, house parties, and corporate events.</p>
+            <p>Professional service for weddings, birthdays, house parties, and corporate events across the DMV.</p>
           </div>
           <div class="tile">
             <div class="icon">02</div>
-            <h4>Custom Cocktail Menu</h4>
-            <p>Signature cocktails + mocktails designed around your theme, season, and crowd.</p>
+            <h4>Signature Cocktail Menu</h4>
+            <p>Custom cocktails + mocktails designed around your theme, season, and crowd — clean and consistent.</p>
           </div>
           <div class="tile">
             <div class="icon">03</div>
             <h4>Shopping List + Guidance</h4>
-            <p>I send a clean shopping list so you know exactly what to buy — no stress, no waste.</p>
+            <p>You get an exact shopping list so you know what to buy — no stress, no waste, no guessing.</p>
           </div>
         </div>
 
@@ -381,22 +591,50 @@
           </div>
           <div class="tile">
             <div class="icon">05</div>
-            <h4>Optional Add‑Ons</h4>
-            <p>Second bartender, specialty glassware, premium syrups, theme decor, and more.</p>
+            <h4>Add-Ons</h4>
+            <p>Second bartender, mocktail bar, custom menu, extra hour, garnish package, and more.</p>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- HOW IT WORKS -->
+    <section id="how">
+      <div class="wrap">
+        <div class="section-title">
+          <div>
+            <h3>How it works</h3>
+            <p>Three steps — then you’re locked in.</p>
+          </div>
+          <a class="btn" href="https://tally.so/r/eqaqWq" target="_blank" rel="noopener">Start quote</a>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <b><span class="num">1</span> Send your event details</b>
+            <p>Date, location, guest count, hours, and whether you want signature cocktails or a simple setup.</p>
+          </div>
+          <div class="step">
+            <b><span class="num">2</span> Get a clear quote</b>
+            <p>I reply with options that fit your budget — plus an organized shopping list if needed.</p>
+          </div>
+          <div class="step">
+            <b><span class="num">3</span> Enjoy the event</b>
+            <p>I show up ready: clean setup, efficient service, great energy — so you can actually enjoy your night.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PACKAGES -->
     <section id="packages">
       <div class="wrap">
         <div class="section-title">
           <div>
             <h3>Packages</h3>
-            <p>Flat hourly rate — final quote depends on hours booked, guest count, and travel.</p>
+            <p>Simple options — final quote depends on hours, guest count, and travel.</p>
           </div>
-
-          
+          <a class="btn primary" href="https://tally.so/r/eqaqWq" target="_blank" rel="noopener">Get exact pricing</a>
         </div>
 
         <div class="packages">
@@ -404,11 +642,11 @@
             <h4>Essential</h4>
             <p class="price"><b>$75</b> / hour</p>
             <ul class="list">
-              <li><span class="check">✓</span> 1 bartender (Hourly rate — 3 hour minimum)</li>
+              <li><span class="check">✓</span> 1 bartender (3-hour minimum)</li>
               <li><span class="check">✓</span> Basic bar tools + setup</li>
-              <li><span class="check">✓</span> Shopping list provided</li>
+              <li><span class="check">✓</span> Shopping list included</li>
             </ul>
-<a class="btn" href="https://tally.so/r/eqaqWq" target="_blank" rel="noopener">Get exact quote</a>
+            <a class="btn" href="https://tally.so/r/eqaqWq" target="_blank" rel="noopener">Get exact quote</a>
           </div>
 
           <div class="pkg featured">
@@ -416,42 +654,83 @@
             <h4>Signature</h4>
             <p class="price"><b>$85</b> / hour</p>
             <ul class="list">
-              <li><span class="check">✓</span> 1 bartender (Hourly Rate - 3 hour minimum)</li>
+              <li><span class="check">✓</span> 1 bartender (3-hour minimum)</li>
               <li><span class="check">✓</span> 2 signature cocktails + mocktail option</li>
               <li><span class="check">✓</span> Garnish station + menu cards</li>
             </ul>
-<a class="btn" href="https://tally.so/r/eqaqWq" target="_blank" rel="noopener">Get exact quote</a>
+            <a class="btn primary" href="https://tally.so/r/eqaqWq" target="_blank" rel="noopener">Get exact quote</a>
           </div>
 
           <div class="pkg">
             <h4>Premium</h4>
             <p class="price"><b>$100</b> / hour</p>
             <ul class="list">
-              <li><span class="check">✓</span> Hourly rate — 3 hour minimum</li>
+              <li><span class="check">✓</span> 1 bartender (3-hour minimum)</li>
               <li><span class="check">✓</span> 3 cocktails + upgraded setup</li>
-              <li><span class="check">✓</span> Add‑on planning help + timeline</li>
+              <li><span class="check">✓</span> Planning help + event flow</li>
             </ul>
-<a class="btn" href="https://tally.so/r/eqaqWq" target="_blank" rel="noopener">Get exact quote</a>
+            <a class="btn" href="https://tally.so/r/eqaqWq" target="_blank" rel="noopener">Get exact quote</a>
           </div>
         </div>
 
+        <div class="tile" style="margin-top:12px">
+          <b style="display:block; margin-bottom:6px">Popular add-ons</b>
+          <div style="color:var(--muted); font-size:13.5px">
+            Extra bartender <b style="color:var(--text)">$200</b> • Extra hour <b style="color:var(--text)">$100/hr</b> • Custom menu <b style="color:var(--text)">$50</b> • Mocktail bar <b style="color:var(--text)">$75</b> • Ice <b style="color:var(--text)">$50</b> • Garnish package <b style="color:var(--text)">$50</b> • Travel outside DMV quoted
+          </div>
+        </div>
       </div>
     </section>
 
+    <!-- GALLERY -->
     <section id="gallery">
       <div class="wrap">
         <div class="section-title">
           <div>
-      
+            <h3>Gallery</h3>
+            <p>Add your event pics in /assets/ and this turns into a high-end portfolio instantly.</p>
+          </div>
+          <a class="btn primary" href="https://tally.so/r/eqaqWq" target="_blank" rel="noopener">Book your date</a>
+        </div>
+
+        <div class="gallery">
+          <div class="shot">
+            <img src="assets/gallery-1.jpg" alt="Signature cocktail pour" onerror="this.style.display='none'">
+            <div class="cap">Signature cocktails</div>
+          </div>
+          <div class="shot">
+            <img src="assets/gallery-2.jpg" alt="Clean bar setup" onerror="this.style.display='none'">
+            <div class="cap">Clean setup</div>
+          </div>
+          <div class="shot">
+            <img src="assets/gallery-3.jpg" alt="Garnish station" onerror="this.style.display='none'">
+            <div class="cap">Garnish station</div>
+          </div>
+          <div class="shot">
+            <img src="assets/gallery-4.jpg" alt="Mocktail option" onerror="this.style.display='none'">
+            <div class="cap">Mocktail options</div>
+          </div>
+          <div class="shot">
+            <img src="assets/gallery-5.jpg" alt="Bartender service" onerror="this.style.display='none'">
+            <div class="cap">Fast service</div>
+          </div>
+          <div class="shot">
+            <img src="assets/gallery-6.jpg" alt="Cheers at celebration" onerror="this.style.display='none'">
+            <div class="cap">Good vibes</div>
+          </div>
+        </div>
       </div>
     </section>
 
+    <!-- TESTIMONIALS -->
     <section>
       <div class="wrap">
         <div class="section-title">
           <div>
-            <h3>What people say</h3>
-       
+            <h3>What clients say</h3>
+            <p>Professional, friendly, and organized — every time.</p>
+          </div>
+        </div>
 
         <div class="grid-3">
           <div class="tile quote">
@@ -459,62 +738,114 @@
             <small>— Ashley • Germantown • Birthday</small>
           </div>
           <div class="tile quote">
-            <p>“The signature menu was perfect for our theme — guests kept asking for the recipe.”</p>
+            <p>“The signature menu fit our theme perfectly — guests kept asking for the recipes.”</p>
             <small>— Marco • Rockville • House Party</small>
           </div>
           <div class="tile quote">
-            <p>“Professional, friendly, and organized. Took a huge load off our wedding day.”</p>
+            <p>“Professional and smooth. Took a huge load off us so we could enjoy the night.”</p>
             <small>— Nina • DC • Wedding</small>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- FAQ -->
     <section id="faq">
       <div class="wrap">
         <div class="section-title">
           <div>
             <h3>FAQ</h3>
+            <p>Quick answers — smooth booking.</p>
           </div>
         </div>
 
         <div class="grid-2">
           <div class="tile">
             <h4>Do you provide alcohol?</h4>
-            <p>Typically the client purchases alcohol, and I provide a detailed shopping list. Ask about add‑ons for specialty ingredients.</p>
+            <p>Typically the client purchases alcohol. I provide a detailed shopping list and guidance so you get the right amounts.</p>
+          </div>
+          <div class="tile">
+            <h4>Do you offer mocktails?</h4>
+            <p>Yes — mocktail options are available and are perfect for kids, non-drinkers, and themed events.</p>
           </div>
           <div class="tile">
             <h4>How far do you travel?</h4>
-            <p>DMV area (DC, MD, VA). Travel fees may apply depending on distance and timing.</p>
+            <p>DC, Maryland, and Northern VA. Travel fees may apply depending on distance and timing.</p>
           </div>
           <div class="tile">
-            <h4>What do you need from me?</h4>
-            <p>Event date, location, guest count, hours of service, and if you want signature cocktails or a simple setup.</p>
-          </div>
-          <div class="tile">
-            <h4>Deposit & cancellation?</h4>
-            <p>A non-refundable deposit is required to secure your date. Remaining balance is due by the event day. Cancellations must be made at least 7 days in advance. Deposits may be transferred to a new date if available.</p>
+            <h4>How do I book?</h4>
+            <p>Hit the quote form, and I’ll respond with options. Once we align on details, your date gets secured.</p>
           </div>
         </div>
       </div>
     </section>
 
-   <section id="contact">
-  <div class="wrap">
-    <div class="section-title">
-    
-              <p style="margin:0; color:var(--muted)">Gaithersburg • Rockville • DC • Northern VA • and nearby.</p>
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="wrap">
+        <div class="section-title">
+          <div>
+            <h3>Contact</h3>
+            <p>Text/call or use the quote form — I reply fast.</p>
+          </div>
+          <a class="btn primary" href="https://tally.so/r/eqaqWq" target="_blank" rel="noopener">Open quote form</a>
+        </div>
+
+        <div class="contact-card card">
+          <div>
+            <h4>Let’s lock in your date</h4>
+            <p style="margin:0; color:var(--muted); font-size:13.5px">
+              Serving the DMV area — Gaithersburg • Rockville • DC • Northern VA • and nearby.
+            </p>
+
+            <ul class="contact-list">
+              <li><span style="color:var(--muted)">Phone:</span> <a href="tel:+12404742431">(240) 474-2431</a></li>
+              <li><span style="color:var(--muted)">Email:</span> <a href="mailto:kevin.zacarias2004@gmail.com">kevin.zacarias2004@gmail.com</a></li>
+              <li><span style="color:var(--muted)">Quotes:</span> <a href="https://tally.so/r/eqaqWq" target="_blank" rel="noopener">Tally quote form</a></li>
+            </ul>
+
+            <div class="cta-row" style="margin-top:14px">
+              <a class="btn primary" href="https://tally.so/r/eqaqWq" target="_blank" rel="noopener">Get a Quote</a>
+              <a class="btn" href="sms:+12404742431">Text me</a>
+              <a class="btn ghost" href="tel:+12404742431">Call now</a>
             </div>
 
-            <p class="note" style="margin-top:12px">
+            <div class="micro" style="margin-top:12px">
+              Fast response. Clean setup. Professional service. Great energy.
+            </div>
+          </div>
+
+          <div class="mini">
+            <div class="k">Fast response</div>
+            <div class="v">Same day</div>
+            <hr style="border:0; border-top:1px solid rgba(255,255,255,.10); margin:12px 0">
+            <div class="k">Best way to book</div>
+            <div class="v">Quote form</div>
+
+            <!-- Tally embed (kept compact and professional) -->
+            <div style="margin-top:12px; border-radius:16px; overflow:hidden; border:1px solid rgba(255,255,255,.10)">
+              <iframe
+                title="Quote form"
+                src="https://tally.so/r/eqaqWq?transparentBackground=1"
+                width="100%"
+                height="380"
+                frameborder="0"
+                marginheight="0"
+                marginwidth="0">
+              </iframe>
+            </div>
+
+            <div class="micro" style="margin-top:10px">
+              If you prefer, you can use the buttons instead — it still goes straight to the same quote form.
+            </div>
           </div>
         </div>
       </div>
-</section>
-</main>
+    </section>
+  </main>
 
-<footer>
-<div class="wrap">
+  <footer>
+    <div class="wrap">
       <div class="foot">
         <div class="tiny">
           <div style="display:flex; align-items:center; gap:10px; margin-bottom:6px">
@@ -523,69 +854,22 @@
           </div>
           <div>© <span id="year"></span> Zacarias Bartending & Events. All rights reserved.</div>
         </div>
-        <div class="tiny">
+        <div class="tiny" style="display:flex; gap:10px; flex-wrap:wrap">
+          <a href="https://tally.so/r/eqaqWq" target="_blank" rel="noopener" class="btn primary">Get a Quote</a>
           <a href="#top" class="btn">Back to top</a>
         </div>
       </div>
-</div>
-</footer>
+    </div>
+  </footer>
 
-<script>
-    // ====== QUICK SETUP ======
-    // 1) Replace phone/email/instagram in the HTML above.
-    // 2) Optionally connect the form to Formspree, Netlify Forms, or Google Forms.
+  <!-- Sticky mobile CTA -->
+  <div class="sticky-cta" aria-label="Quick actions">
+    <a class="btn ghost" href="tel:+12404742431">Call</a>
+    <a class="btn primary" href="https://tally.so/r/eqaqWq" target="_blank" rel="noopener">Get a Quote</a>
+  </div>
 
-    const YEAR = new Date().getFullYear();
-    document.getElementById('year').textContent = YEAR;
-
-    // Replace these with your real values
-    const SETTINGS = {
-      businessEmail: 'kevinzacarias43@gmail.com',
-      phoneE164: '+12404742431',
-      instagramUrl: 'https://www.instagram.com/kevinjz_'
-    };
-
-    // Update buttons/links
-    const phoneBtn = document.getElementById('phoneBtn');
-    const textBtn = document.getElementById('textBtn');
-    const igLink = document.getElementById('igLink');
-
-    phoneBtn.href = `tel:${SETTINGS.phoneE164}`;
-    textBtn.href = `sms:${SETTINGS.phoneE164}`;
-    igLink.href = SETTINGS.instagramUrl;
-    igLink.target = '_blank';
-    igLink.rel = 'noreferrer';
-
-    // Form -> opens an email draft (works everywhere; upgrade later to a real form endpoint)
-    const form = document.getElementById('quoteForm');
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const data = new FormData(form);
-      const payload = {
-        name: data.get('name')?.toString().trim(),
-        phone: data.get('phone')?.toString().trim(),
-        date: data.get('date')?.toString().trim(),
-        guests: data.get('guests')?.toString().trim(),
-        location: data.get('location')?.toString().trim(),
-        pkg: data.get('package')?.toString().trim(),
-        details: data.get('details')?.toString().trim(),
-      };
-
-      const subject = encodeURIComponent(`Event Quote Request — ${payload.date} (${payload.location})`);
-      const bodyLines = [
-        `Name: ${payload.name}`,
-        `Phone: ${payload.phone}`,
-        `Event date: ${payload.date}`,
-        `City: ${payload.location}`,
-        `Guest count: ${payload.guests}`,
-        `Package: ${payload.pkg}`,
-        `\nDetails:`,
-        payload.details,
-        `\n— Sent from zacariasbartending.com`
-      ];
-      const body = encodeURIComponent(bodyLines.join('\n'));
-      window.location.href = `mailto:${SETTINGS.businessEmail}?subject=${subject}&body=${body}`;
-    });
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
