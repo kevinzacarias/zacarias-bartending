@@ -164,7 +164,7 @@ h2 em { color: #d4af64; font-style: italic; }
 .booking-info h2 { text-align: left; }
 .booking-info .section-label { justify-content: flex-start; }
 .booking-info p { color: rgba(248,244,238,0.6); margin-top: 1rem; line-height: 1.8; font-weight: 300; }
-.quote-preview { background: #18181c; border: 1px solid rgba(212,175,100,0.3); border-radius: 14px; padding: 1.8rem; margin-top: 2rem; position: sticky; top: 90px; }
+.quote-preview { background: #131316; border: 1px solid rgba(212,175,100,0.3); border-radius: 12px; padding: 1.2rem; margin-top: 1rem; }
 .quote-preview h4 { font-family: ‘Playfair Display’, serif; font-size: 1.1rem; color: #d4af64; margin-bottom: 1rem; }
 .quote-line { display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.06); font-size: 0.85rem; }
 .quote-line .ql { color: rgba(248,244,238,0.55); }
@@ -499,16 +499,6 @@ section { padding: 70px 5vw; }
       <div class="section-label">Book Your Event</div>
       <h2>Request Your<br><em>Free Quote</em></h2>
       <p>Fill out the form and get a personalized estimate instantly. We'll follow up within 24 hours to confirm availability and finalize details.</p>
-      <div class="quote-preview">
-        <h4>✦ Live Quote Estimate</h4>
-        <div class="quote-line"><span class="ql">Package</span><span class="qv" id="qPkg">— Not selected</span></div>
-        <div class="quote-line"><span class="ql">Extra Hours</span><span class="qv" id="qHrs">$0</span></div>
-        <div class="quote-line"><span class="ql">Add-Ons</span><span class="qv" id="qAddons">$0</span></div>
-        <div class="quote-total">
-          <span class="ql">Estimated Total</span>
-          <span class="qv" id="qTotal">$—</span>
-        </div>
-      </div>
     </div>
     <div class="booking-form" id="bookingFormWrap">
       <div id="successMsg" class="success-msg">
@@ -598,7 +588,21 @@ section { padding: 70px 5vw; }
           </select>
         </div>
         <div class="form-group"><label>Special Requests / Notes</label><textarea name="notes" placeholder="Anything we should know about your event, venue, theme, or special requests..."></textarea></div>
+
+        <input type="hidden" id="estimatedTotalHidden" name="estimated_total" value="">
         <input type="text" name="_gotcha" style="display:none">
+
+        <div class="quote-preview">
+          <h4>✦ Live Quote Estimate</h4>
+          <div class="quote-line"><span class="ql">Package</span><span class="qv" id="qPkg">— Not selected</span></div>
+          <div class="quote-line"><span class="ql">Extra Hours</span><span class="qv" id="qHrs">$0</span></div>
+          <div class="quote-line"><span class="ql">Add-Ons</span><span class="qv" id="qAddons">$0</span></div>
+          <div class="quote-total">
+            <span class="ql">Estimated Total</span>
+            <span class="qv" id="qTotal">$—</span>
+          </div>
+        </div>
+
         <button type="submit" class="form-submit" id="submitBtn">✦ Send Quote Request</button>
         <p style="text-align:center;font-size:0.75rem;color:rgba(248,244,238,0.3);margin-top:0.75rem;">We respond within 24 hours · No obligation · Free consultation</p>
       </form>
@@ -757,30 +761,37 @@ section { padding: 70px 5vw; }
     document.getElementById('addonsHidden').value = selected.join(', ');
   }
 
-  function updateQuote() {
-    const pkgVal = parseInt(document.getElementById('packageSelect').value) || 0;
-    const hrsVal = parseInt(document.getElementById('extraHours').value) * 100;
-    let addonsVal = 0;
-    let travelCustom = false;
+function updateQuote() {
+  const pkgVal = parseInt(document.getElementById('packageSelect').value) || 0;
+  const hrsVal = (parseInt(document.getElementById('extraHours').value) || 0) * 100;
+  let addonsVal = 0;
+  let travelCustom = false;
 
-    document.querySelectorAll('.checkbox-item.active').forEach(el => {
-      const v = parseInt(el.dataset.value) || 0;
-      if (el.dataset.name === 'Travel Outside DMV') travelCustom = true;
-      else addonsVal += v;
-    });
-
-    const pkgNames = {'300':'Starter ($300)', '450':'Standard ($450)', '600':'Premium ($600)'};
-    document.getElementById('qPkg').textContent = pkgVal ? pkgNames[pkgVal] : '— Not selected';
-    document.getElementById('qHrs').textContent = hrsVal ? '+$' + hrsVal : '$0';
-    document.getElementById('qAddons').textContent = (addonsVal || travelCustom) ? '$' + addonsVal + (travelCustom ? ' + Travel' : '') : '$0';
-
-    if (!pkgVal) {
-      document.getElementById('qTotal').textContent = '$—';
+  document.querySelectorAll('.checkbox-item.active').forEach(el => {
+    const v = parseInt(el.dataset.value) || 0;
+    if (el.dataset.name === 'Travel Outside DMV') {
+      travelCustom = true;
     } else {
-      const total = pkgVal + hrsVal + addonsVal;
-      document.getElementById('qTotal').textContent = '$' + total + (travelCustom ? ' + Travel' : '');
+      addonsVal += v;
     }
+  });
+
+  const pkgNames = {'300':'Starter ($300)', '450':'Standard ($450)', '600':'Premium ($600)'};
+
+  document.getElementById('qPkg').textContent = pkgVal ? pkgNames[pkgVal] : '— Not selected';
+  document.getElementById('qHrs').textContent = hrsVal ? '+$' + hrsVal : '$0';
+  document.getElementById('qAddons').textContent = (addonsVal || travelCustom) ? '$' + addonsVal + (travelCustom ? ' + Travel' : '') : '$0';
+
+  if (!pkgVal) {
+    document.getElementById('qTotal').textContent = '$—';
+    document.getElementById('estimatedTotalHidden').value = '';
+  } else {
+    const total = pkgVal + hrsVal + addonsVal;
+    const totalText = '$' + total + (travelCustom ? ' + Travel' : '');
+    document.getElementById('qTotal').textContent = totalText;
+    document.getElementById('estimatedTotalHidden').value = totalText;
   }
+}
 
   async function submitQuote(e) {
     e.preventDefault();
@@ -864,6 +875,7 @@ section { padding: 70px 5vw; }
     input.value = '';
     askFAQ(q);
   }
+  updateQuote();
 </script>
 
 </body>
