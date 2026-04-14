@@ -410,7 +410,7 @@ section { padding: 70px 5vw; }
     <div class="package-card">
       <div class="pkg-name">Starter</div>
       <div class="pkg-subtitle">Perfect for intimate gatherings</div>
-      <div class="pkg-price"><strong>$300</strong><span>Flat Rate</span></div>
+      <div class="pkg-price"><strong>$350</strong><span>Flat Rate</span></div>
       <ul class="pkg-details">
         <li>3 Hours of Service</li><li>Up to 50 Guests</li><li>1 Professional Bartender</li><li>Full Bar Setup &amp; Breakdown</li><li>Standard Cocktail Menu</li><li>Premium Tools &amp; Supplies</li>
       </ul>
@@ -420,7 +420,7 @@ section { padding: 70px 5vw; }
       <div class="pkg-badge">Most Popular</div>
       <div class="pkg-name">Standard</div>
       <div class="pkg-subtitle">Our signature experience</div>
-      <div class="pkg-price"><strong>$450</strong><span>Flat Rate</span></div>
+      <div class="pkg-price"><strong>$500</strong><span>Flat Rate</span></div>
       <ul class="pkg-details">
         <li>4 Hours of Service</li><li>Up to 75 Guests</li><li>1 Professional Bartender</li><li>Full Bar Setup &amp; Breakdown</li><li>Custom Cocktail Consultation</li><li>Premium Tools &amp; Supplies</li>
       </ul>
@@ -429,7 +429,7 @@ section { padding: 70px 5vw; }
     <div class="package-card">
       <div class="pkg-name">Premium</div>
       <div class="pkg-subtitle">For the most elevated events</div>
-      <div class="pkg-price"><strong>$600</strong><span>Flat Rate</span></div>
+      <div class="pkg-price"><strong>$650</strong><span>Flat Rate</span></div>
       <ul class="pkg-details">
         <li>5 Hours of Service</li><li>Up to 100 Guests</li><li>1–2 Bartenders Included</li><li>Full Bar Setup &amp; Breakdown</li><li>Full Custom Menu Design</li><li>Priority Booking &amp; Support</li>
       </ul>
@@ -453,7 +453,7 @@ section { padding: 70px 5vw; }
     <table class="compare-table">
       <thead><tr><th style="text-align:left;">Feature</th><th>Starter</th><th class="highlight">Standard ★</th><th>Premium</th></tr></thead>
       <tbody>
-        <tr><td class="label">Price</td><td>$300</td><td>$450</td><td>$600</td></tr>
+        <tr><td class="label">Price</td><td>$350</td><td>$500</td><td>$650</td></tr>
         <tr><td class="label">Hours</td><td>3 hrs</td><td>4 hrs</td><td>5 hrs</td></tr>
         <tr><td class="label">Max Guests</td><td>50</td><td>75</td><td>100</td></tr>
         <tr><td class="label">Bartenders</td><td>1</td><td>1</td><td>1–2</td></tr>
@@ -550,9 +550,9 @@ section { padding: 70px 5vw; }
         <div class="form-group"><label>Select Package *</label>
           <select name="package" id="packageSelect" onchange="updateQuote()" required>
             <option value="">Select a package</option>
-            <option value="300">Starter — $300 (3 hrs, up to 50 guests)</option>
-            <option value="450">Standard — $450 (4 hrs, up to 75 guests)</option>
-            <option value="600">Premium — $600 (5 hrs, up to 100 guests)</option>
+            <option value="350">Starter — $350 (3 hrs, up to 50 guests)</option>
+            <option value="500">Standard — $500 (4 hrs, up to 75 guests)</option>
+            <option value="650">Premium — $650 (5 hrs, up to 100 guests)</option>
           </select>
         </div>
         <div class="form-group"><label>Extra Hours Needed?</label>
@@ -776,7 +776,7 @@ function updateQuote() {
     }
   });
 
-  const pkgNames = {'300':'Starter ($300)', '450':'Standard ($450)', '600':'Premium ($600)'};
+  const pkgNames = {'350':'Starter ($350)', '500':'Standard ($500)', '650':'Premium ($650)'};
 
   document.getElementById('qPkg').textContent = pkgVal ? pkgNames[pkgVal] : '— Not selected';
   document.getElementById('qHrs').textContent = hrsVal ? '+$' + hrsVal : '$0';
@@ -820,9 +820,9 @@ function updateQuote() {
   const faqKB = {
     'alcohol': "We are a labor-only service — you provide the alcohol and we bring all the expertise, tools, and supplies to make it shine! This keeps your costs lower and gives you full control over your bar selection.",
     'provide': "You provide the alcohol — we handle everything else! Bar tools, shakers, strainers, bar mats, ice bins, and all the expertise. We also offer garnish packages and ice service as add-ons.",
-    'price': "Our packages start at $300 (Starter – 3 hrs, 50 guests), $450 (Standard – 4 hrs, 75 guests), and $600 (Premium – 5 hrs, 100 guests). Add-ons available too!",
-    'pricing': "Packages start at $300 (Starter), $450 (Standard), and $600 (Premium). Check the Packages section for full details!",
-    'charge': "Packages start at $300 (Starter), $450 (Standard), and $600 (Premium).",
+    'price': "Our packages start at $350 (Starter – 3 hrs, 50 guests), $500 (Standard – 4 hrs, 75 guests), and $650 (Premium – 5 hrs, 100 guests). Add-ons available too!",
+    'pricing': "Packages start at $350 (Starter), $500 (Standard), and $650 (Premium). Check the Packages section for full details!",
+    'charge': "Packages start at $350 (Starter), $500 (Standard), and $650 (Premium).",
     'wedding': "Absolutely — weddings are one of our specialties! We coordinate with your planner, match your venue's aesthetic, and deliver seamless elegant bar service.",
     'travel': "We primarily serve the DMV — DC, Maryland, and Virginia. For events outside the DMV, we offer custom travel quotes.",
     'advance': "We recommend booking 3–4 weeks ahead for most events. For weddings and large events, 2–3 months is ideal. We try to accommodate last-minute requests too!",
