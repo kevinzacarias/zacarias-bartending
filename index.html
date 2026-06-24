@@ -1,302 +1,276 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer-when-downgrade">
 <title>Zacarias Bartending & Events | Premium Mobile Bartending DMV</title>
 <meta name="description" content="Elite mobile bartending services for private events in DC, Maryland & Virginia. Custom cocktails, weddings, corporate events & more. Get your instant quote today.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --black: #080808;
-    --deep: #0d0d0f;
-    --surface: #131316;
-    --card: #18181c;
-    --border: rgba(255,255,255,0.07);
-    --border-glow: rgba(212,175,100,0.3);
-    --gold: #d4af64;
-    --gold-light: #f0cc80;
-    --gold-dim: rgba(212,175,100,0.12);
-    --white: #f8f4ee;
-    --muted: rgba(248,244,238,0.6);
-    --subtle: rgba(248,244,238,0.3);
-    --font-display: 'Playfair Display', serif;
-    --font-body: 'Outfit', sans-serif;
-    --radius: 14px;
-  }
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
-  body { background: #080808; color: #f8f4ee; font-family: 'Outfit', sans-serif; font-weight: 400; line-height: 1.65; overflow-x: hidden; }
-  ::selection { background: #d4af64; color: #080808; }
-  ::-webkit-scrollbar { width: 4px; }
-  ::-webkit-scrollbar-track { background: #080808; }
-  ::-webkit-scrollbar-thumb { background: #d4af64; border-radius: 2px; }
+:root{--black:#060608;--deep:#0c0c10;--surface:#111115;--card:#16161b;--border:rgba(255,255,255,0.07);--gold:#c8a96e;--gold-lt:#e8c98a;--gold-dim:rgba(200,169,110,0.12);--gold-glow:rgba(200,169,110,0.25);--white:#f5f1eb;--muted:rgba(245,241,235,0.55);--display:'Cormorant Garamond',serif;--body:'DM Sans',sans-serif;--r:12px;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--black);color:var(--white);font-family:var(--body);font-weight:400;line-height:1.65;overflow-x:hidden;}
+::selection{background:var(--gold);color:var(--black);}
+::-webkit-scrollbar{width:3px;}
+::-webkit-scrollbar-track{background:var(--black);}
+::-webkit-scrollbar-thumb{background:var(--gold);border-radius:2px;}
 
-nav {
-position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-padding: 0 5vw; height: 70px;
-display: flex; align-items: center; justify-content: space-between;
-background: rgba(8,8,8,0.92); backdrop-filter: blur(20px);
-border-bottom: 1px solid rgba(255,255,255,0.07);
-transition: all 0.3s;
-}
-nav.scrolled { background: rgba(8,8,8,0.98); box-shadow: 0 4px 30px rgba(0,0,0,0.6); }
-.nav-logo { font-family: ‘Playfair Display’, serif; font-size: 1.2rem; color: #d4af64; text-decoration: none; }
-.nav-logo span { color: #f8f4ee; font-style: italic; }
-.nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
-.nav-links a { color: rgba(248,244,238,0.6); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500; transition: color 0.2s; }
-.nav-links a:hover { color: #d4af64; }
-.nav-cta { background: #d4af64 !important; color: #080808 !important; padding: 0.5rem 1.4rem !important; border-radius: 50px !important; font-weight: 600 !important; }
-.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
-.hamburger span { display: block; width: 24px; height: 2px; background: #f8f4ee; border-radius: 2px; }
-.mobile-menu { display: none; position: fixed; top: 70px; left: 0; right: 0; background: rgba(8,8,8,0.98); backdrop-filter: blur(20px); padding: 2rem; z-index: 99; border-bottom: 1px solid rgba(255,255,255,0.07); flex-direction: column; gap: 1.5rem; }
-.mobile-menu.open { display: flex; }
-.mobile-menu a { color: #f8f4ee; text-decoration: none; font-size: 1.1rem; font-weight: 500; padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.07); }
-.mobile-menu a.gold { color: #d4af64; font-weight: 600; border: none; }
+nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:0 5vw;height:68px;display:flex;align-items:center;justify-content:space-between;background:rgba(6,6,8,0.92);backdrop-filter:blur(24px);border-bottom:1px solid var(--border);transition:all .3s;}
+nav.scrolled{background:rgba(6,6,8,0.99);box-shadow:0 4px 40px rgba(0,0,0,0.7);}
+.nav-logo{font-family:var(--display);font-size:1.3rem;color:var(--gold);text-decoration:none;}
+.nav-logo span{color:var(--white);font-style:italic;}
+.nav-links{display:flex;gap:2rem;list-style:none;align-items:center;}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;font-weight:500;transition:color .2s;}
+.nav-links a:hover{color:var(--gold);}
+.nav-cta{background:var(--gold)!important;color:var(--black)!important;padding:.45rem 1.3rem!important;border-radius:50px!important;font-weight:600!important;}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}
+.hamburger span{display:block;width:22px;height:1.5px;background:var(--white);border-radius:2px;}
+.mobile-menu{display:none;position:fixed;top:68px;left:0;right:0;background:rgba(6,6,8,.99);backdrop-filter:blur(24px);padding:2rem 5vw;z-index:199;border-bottom:1px solid var(--border);flex-direction:column;}
+.mobile-menu.open{display:flex;}
+.mobile-menu a{color:var(--white);text-decoration:none;font-size:1rem;font-weight:500;padding:.9rem 0;border-bottom:1px solid var(--border);display:block;}
+.mobile-menu a.gold-link{color:var(--gold);font-weight:600;border:none;margin-top:.5rem;}
 
-#hero { min-height: 100vh; display: flex; align-items: center; position: relative; overflow: hidden; padding: 120px 5vw 80px; }
-.hero-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 70% 40%, rgba(212,175,100,0.07) 0%, transparent 60%), linear-gradient(160deg, #0d0d0f 0%, #080808 50%, #0a0905 100%); }
-.hero-grid { position: absolute; inset: 0; opacity: 0.025; background-image: linear-gradient(#d4af64 1px, transparent 1px), linear-gradient(90deg, #d4af64 1px, transparent 1px); background-size: 60px 60px; }
-.hero-visual { position: absolute; right: 0; top: 0; bottom: 0; width: 45%; opacity: 0.35; background: url(‘https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=800&q=80’) center/cover; mask-image: linear-gradient(90deg, transparent 0%, black 40%); -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 40%); }
-.hero-content { position: relative; max-width: 700px; animation: fadeUp 1s ease both; }
-.hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(212,175,100,0.1); border: 1px solid rgba(212,175,100,0.3); border-radius: 50px; padding: 0.4rem 1rem; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: #d4af64; margin-bottom: 2rem; font-weight: 600; }
-h1 { font-family: ‘Playfair Display’, serif; font-size: clamp(2.8rem, 6vw, 5.5rem); line-height: 1.08; font-weight: 700; margin-bottom: 1.5rem; color: #f8f4ee; }
-h1 em { color: #d4af64; font-style: italic; }
-.hero-sub { font-size: 1.05rem; color: rgba(248,244,238,0.6); max-width: 520px; margin-bottom: 2.5rem; line-height: 1.7; font-weight: 300; }
-.hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 3rem; }
-.btn-primary { background: #d4af64; color: #080808; padding: 0.85rem 2rem; border-radius: 50px; font-weight: 600; font-size: 0.9rem; letter-spacing: 0.04em; text-decoration: none; border: none; cursor: pointer; transition: all 0.25s; display: inline-flex; align-items: center; gap: 0.4rem; font-family: ‘Outfit’, sans-serif; }
-.btn-primary:hover { background: #f0cc80; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(212,175,100,0.3); }
-.btn-outline { background: transparent; color: #f8f4ee; padding: 0.85rem 2rem; border-radius: 50px; font-weight: 500; font-size: 0.9rem; text-decoration: none; border: 1px solid rgba(212,175,100,0.3); cursor: pointer; transition: all 0.25s; display: inline-flex; align-items: center; gap: 0.4rem; font-family: ‘Outfit’, sans-serif; }
-.btn-outline:hover { border-color: #d4af64; color: #d4af64; background: rgba(212,175,100,0.08); }
-.trust-row { display: flex; flex-wrap: wrap; gap: 1.5rem; }
-.trust-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; color: rgba(248,244,238,0.55); }
-.trust-item::before { content: “✓”; color: #d4af64; font-weight: 700; }
-.hero-scroll { position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 0.5rem; color: rgba(248,244,238,0.3); font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; animation: bounce 2s infinite; }
-.hero-scroll::after { content: “”; width: 1px; height: 40px; background: linear-gradient(#d4af64, transparent); }
+#hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:120px 5vw 80px;}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 70% 55% at 65% 45%,rgba(200,169,110,0.08) 0%,transparent 65%),linear-gradient(155deg,#0c0c10 0%,#060608 55%,#080606 100%);}
+.hero-img{position:absolute;right:0;top:0;bottom:0;width:48%;opacity:.28;background:url('https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=900&q=80') center/cover;mask-image:linear-gradient(90deg,transparent 0%,black 35%);-webkit-mask-image:linear-gradient(90deg,transparent 0%,black 35%);}
+.hero-content{position:relative;max-width:680px;}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:.6rem;background:rgba(200,169,110,0.1);border:1px solid rgba(200,169,110,0.28);border-radius:50px;padding:.35rem 1rem;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:2rem;font-weight:600;}
+h1{font-family:var(--display);font-size:clamp(3rem,6.5vw,6rem);line-height:1.04;font-weight:700;margin-bottom:1.4rem;color:var(--white);}
+h1 em{color:var(--gold);font-style:italic;}
+.hero-sub{font-size:1rem;color:var(--muted);max-width:500px;margin-bottom:2.5rem;line-height:1.75;font-weight:300;}
+.hero-btns{display:flex;gap:.9rem;flex-wrap:wrap;margin-bottom:2.5rem;}
+.btn-gold{background:var(--gold);color:var(--black);padding:.8rem 1.9rem;border-radius:50px;font-weight:600;font-size:.88rem;text-decoration:none;border:none;cursor:pointer;transition:all .25s;display:inline-flex;align-items:center;gap:.4rem;font-family:var(--body);}
+.btn-gold:hover{background:var(--gold-lt);transform:translateY(-2px);box-shadow:0 10px 30px rgba(200,169,110,0.3);}
+.btn-ghost{background:transparent;color:var(--white);padding:.8rem 1.9rem;border-radius:50px;font-weight:500;font-size:.88rem;text-decoration:none;border:1px solid rgba(200,169,110,0.28);cursor:pointer;transition:all .25s;display:inline-flex;align-items:center;gap:.4rem;font-family:var(--body);}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold);background:var(--gold-dim);}
+.trust-pills{display:flex;flex-wrap:wrap;gap:1rem;}
+.trust-pill{font-size:.78rem;color:rgba(245,241,235,.5);display:flex;align-items:center;gap:.4rem;}
+.trust-pill::before{content:"✦";color:var(--gold);font-size:.55rem;}
+.social-strip{display:flex;gap:.7rem;margin-top:2rem;flex-wrap:wrap;}
+.social-pill{display:inline-flex;align-items:center;gap:.5rem;background:var(--card);border:1px solid var(--border);border-radius:50px;padding:.4rem 1rem;font-size:.75rem;color:var(--muted);text-decoration:none;transition:all .2s;}
+.social-pill:hover{border-color:var(--gold-glow);color:var(--gold);}
 
-section { padding: 100px 5vw; position: relative; }
-.section-label { display: inline-flex; align-items: center; gap: 0.6rem; color: #d4af64; font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; margin-bottom: 1rem; }
-.section-label::before, .section-label::after { content: “”; height: 1px; background: #d4af64; opacity: 0.4; width: 20px; }
-h2 { font-family: ‘Playfair Display’, serif; font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1.15; font-weight: 700; color: #f8f4ee; }
-h2 em { color: #d4af64; font-style: italic; }
-.section-intro { color: rgba(248,244,238,0.6); font-size: 1rem; max-width: 560px; line-height: 1.75; font-weight: 300; margin-top: 1rem; }
-.section-head { margin-bottom: 4rem; text-align: center; }
-.section-head .section-intro { margin: 1rem auto 0; }
-.divider { height: 1px; background: linear-gradient(90deg, transparent, rgba(212,175,100,0.3) 30%, rgba(212,175,100,0.3) 70%, transparent); margin: 0 5vw; }
+.divider{height:1px;background:linear-gradient(90deg,transparent,rgba(200,169,110,0.2) 30%,rgba(200,169,110,0.2) 70%,transparent);margin:0 5vw;}
+section{padding:96px 5vw;position:relative;}
+.sec-label{display:inline-flex;align-items:center;gap:.6rem;color:var(--gold);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;margin-bottom:.9rem;}
+.sec-label::before,.sec-label::after{content:"";height:1px;background:var(--gold);opacity:.35;width:18px;}
+h2{font-family:var(--display);font-size:clamp(2rem,4vw,3rem);line-height:1.12;font-weight:700;color:var(--white);}
+h2 em{color:var(--gold);font-style:italic;}
+.sec-intro{color:var(--muted);font-size:.97rem;max-width:540px;line-height:1.8;font-weight:300;margin-top:.9rem;}
+.sec-head{margin-bottom:3.5rem;text-align:center;}
+.sec-head .sec-intro{margin:.9rem auto 0;}
 
-#about { background: #0d0d0f; }
-.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
-.about-img-wrap { position: relative; border-radius: 14px; overflow: hidden; aspect-ratio: 4/5; }
-.about-img-wrap img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.8); }
-.about-img-wrap::after { content: “”; position: absolute; inset: 0; background: linear-gradient(to top, rgba(8,8,8,0.6) 0%, transparent 60%); }
-.about-img-border { position: absolute; inset: 16px; border: 1px solid rgba(212,175,100,0.25); border-radius: 10px; pointer-events: none; z-index: 1; }
-.about-stat-badge { position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); background: rgba(8,8,8,0.9); backdrop-filter: blur(12px); border: 1px solid rgba(212,175,100,0.3); border-radius: 12px; padding: 1rem 2rem; text-align: center; z-index: 2; white-space: nowrap; }
-.about-stat-badge strong { display: block; font-family: ‘Playfair Display’, serif; font-size: 2rem; color: #d4af64; line-height: 1; }
-.about-stat-badge span { font-size: 0.78rem; color: rgba(248,244,238,0.6); }
-.about-text .section-label { justify-content: flex-start; }
-.about-text h2 { text-align: left; }
-.about-text p { color: rgba(248,244,238,0.6); margin-top: 1.2rem; line-height: 1.8; font-weight: 300; }
-.about-pillars { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem; }
-.pillar { background: #18181c; border: 1px solid rgba(255,255,255,0.07); border-radius: 10px; padding: 1rem 1.2rem; display: flex; align-items: center; gap: 0.7rem; transition: border-color 0.2s; }
-.pillar:hover { border-color: rgba(212,175,100,0.3); }
-.pillar-text { font-size: 0.85rem; font-weight: 500; color: #f8f4ee; }
+#about{background:var(--deep);}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;}
+.about-img-wrap{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:4/5;}
+.about-img-wrap img{width:100%;height:100%;object-fit:cover;filter:brightness(.8);}
+.about-img-wrap::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(6,6,8,.65) 0%,transparent 55%);}
+.img-border{position:absolute;inset:14px;border:1px solid rgba(200,169,110,0.22);border-radius:9px;pointer-events:none;z-index:1;}
+.stat-badge{position:absolute;bottom:1.8rem;left:50%;transform:translateX(-50%);background:rgba(6,6,8,.9);backdrop-filter:blur(16px);border:1px solid rgba(200,169,110,0.28);border-radius:10px;padding:.9rem 2rem;text-align:center;z-index:2;white-space:nowrap;}
+.stat-badge strong{display:block;font-family:var(--display);font-size:2.2rem;color:var(--gold);line-height:1;}
+.stat-badge span{font-size:.75rem;color:var(--muted);}
+.about-text .sec-label{justify-content:flex-start;}
+.about-text h2{text-align:left;}
+.about-text p{color:var(--muted);margin-top:1.1rem;line-height:1.82;font-weight:300;}
+.pillars{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-top:1.8rem;}
+.pillar{background:var(--card);border:1px solid var(--border);border-radius:9px;padding:.9rem 1.1rem;display:flex;align-items:center;gap:.65rem;transition:border-color .2s;}
+.pillar:hover{border-color:var(--gold-glow);}
+.pillar span:last-child{font-size:.83rem;font-weight:500;color:var(--white);}
 
-#services { background: #080808; }
-.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; }
-.service-card { background: #18181c; border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; overflow: hidden; transition: all 0.3s; }
-.service-card:hover { border-color: rgba(212,175,100,0.3); transform: translateY(-4px); box-shadow: 0 20px 50px rgba(0,0,0,0.4); }
-.service-img { height: 180px; overflow: hidden; }
-.service-img img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.7); transition: transform 0.4s, filter 0.4s; }
-.service-card:hover .service-img img { transform: scale(1.06); filter: brightness(0.9); }
-.service-body { padding: 1.4rem; }
-.service-icon { font-size: 1.5rem; margin-bottom: 0.5rem; }
-.service-body h3 { font-family: ‘Playfair Display’, serif; font-size: 1.15rem; margin-bottom: 0.4rem; color: #f8f4ee; }
-.service-body p { font-size: 0.85rem; color: rgba(248,244,238,0.6); line-height: 1.6; }
-.service-tag { display: inline-block; margin-top: 0.8rem; background: rgba(212,175,100,0.1); border: 1px solid rgba(212,175,100,0.3); color: #d4af64; font-size: 0.7rem; padding: 0.25rem 0.7rem; border-radius: 50px; letter-spacing: 0.08em; text-transform: uppercase; }
+#services{background:var(--black);}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.2rem;}
+.svc-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;transition:all .3s;}
+.svc-card:hover{border-color:var(--gold-glow);transform:translateY(-4px);box-shadow:0 20px 50px rgba(0,0,0,.5);}
+.svc-img{height:170px;overflow:hidden;}
+.svc-img img{width:100%;height:100%;object-fit:cover;filter:brightness(.68);transition:transform .4s,filter .4s;}
+.svc-card:hover .svc-img img{transform:scale(1.07);filter:brightness(.88);}
+.svc-body{padding:1.3rem;}
+.svc-icon{font-size:1.4rem;margin-bottom:.4rem;}
+.svc-body h3{font-family:var(--display);font-size:1.12rem;margin-bottom:.35rem;color:var(--white);}
+.svc-body p{font-size:.83rem;color:var(--muted);line-height:1.6;}
+.svc-tag{display:inline-block;margin-top:.7rem;background:rgba(200,169,110,0.1);border:1px solid rgba(200,169,110,0.28);color:var(--gold);font-size:.68rem;padding:.22rem .7rem;border-radius:50px;letter-spacing:.08em;text-transform:uppercase;}
 
-#packages { background: #0d0d0f; }
-.packages-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 4rem; }
-.package-card { background: #18181c; border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; padding: 2.5rem 2rem; position: relative; transition: all 0.3s; text-align: center; }
-.package-card.featured { border-color: #d4af64; background: linear-gradient(160deg, #1a1710 0%, #18181c 100%); box-shadow: 0 0 60px rgba(212,175,100,0.1); }
-.package-card:hover { transform: translateY(-6px); box-shadow: 0 24px 60px rgba(0,0,0,0.5); }
-.pkg-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #d4af64; color: #080808; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.3rem 1rem; border-radius: 50px; white-space: nowrap; }
-.pkg-name { font-family: ‘Playfair Display’, serif; font-size: 1.4rem; margin-bottom: 0.25rem; color: #f8f4ee; }
-.pkg-subtitle { font-size: 0.78rem; color: rgba(248,244,238,0.5); text-transform: uppercase; letter-spacing: 0.06em; }
-.pkg-price { margin: 1.5rem 0; }
-.pkg-price strong { font-family: ‘Playfair Display’, serif; font-size: 3.5rem; color: #d4af64; line-height: 1; display: block; }
-.pkg-price span { font-size: 0.85rem; color: rgba(248,244,238,0.5); display: block; margin-top: 0.2rem; }
-.pkg-details { list-style: none; text-align: left; margin-bottom: 1.5rem; }
-.pkg-details li { padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.06); font-size: 0.875rem; color: rgba(248,244,238,0.65); display: flex; align-items: center; gap: 0.5rem; }
-.pkg-details li:last-child { border-bottom: none; }
-.pkg-details li::before { content: “◆”; color: #d4af64; font-size: 0.45rem; flex-shrink: 0; }
-.addons-section { background: #131316; border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; padding: 2.5rem; }
-.addons-section h3 { font-family: ‘Playfair Display’, serif; font-size: 1.4rem; margin-bottom: 1.5rem; text-align: center; color: #f8f4ee; }
-.addons-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; }
-.addon-item { background: #18181c; border: 1px solid rgba(255,255,255,0.07); border-radius: 10px; padding: 1rem 1.2rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; color: #f8f4ee; }
-.addon-price { color: #d4af64; font-weight: 600; }
-.compare-wrap { margin-top: 3rem; overflow-x: auto; }
-.compare-table { width: 100%; border-collapse: collapse; min-width: 500px; }
-.compare-table th { background: #18181c; padding: 1rem 1.5rem; font-family: ‘Playfair Display’, serif; border: 1px solid rgba(255,255,255,0.07); text-align: center; color: #f8f4ee; }
-.compare-table th.highlight { background: #1a1710; border-color: #d4af64; color: #d4af64; }
-.compare-table td { padding: 0.8rem 1.5rem; border: 1px solid rgba(255,255,255,0.07); font-size: 0.875rem; color: rgba(248,244,238,0.6); text-align: center; }
-.compare-table tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
-.compare-table td.label { text-align: left; color: #f8f4ee; font-weight: 500; }
-.check { color: #d4af64; }
-.cross { color: rgba(255,255,255,0.2); }
+#packages{background:var(--deep);}
+.pkg-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin-bottom:3rem;}
+.pkg-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:2rem 1.6rem;position:relative;transition:all .3s;text-align:center;}
+.pkg-card.featured{border-color:var(--gold);background:linear-gradient(160deg,#18150d 0%,#16161b 100%);box-shadow:0 0 50px rgba(200,169,110,0.1);}
+.pkg-card:hover{transform:translateY(-6px);box-shadow:0 24px 60px rgba(0,0,0,.55);}
+.pkg-badge{position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--black);font-size:.62rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.28rem .9rem;border-radius:50px;white-space:nowrap;}
+.pkg-name{font-family:var(--display);font-size:1.5rem;margin-bottom:.2rem;color:var(--white);}
+.pkg-sub{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-bottom:1.3rem;}
+.pkg-price strong{font-family:var(--display);font-size:3.2rem;color:var(--gold);line-height:1;display:block;}
+.pkg-price span{font-size:.8rem;color:var(--muted);margin-top:.15rem;display:block;}
+.pkg-details{list-style:none;text-align:left;margin:1.4rem 0;border-top:1px solid var(--border);padding-top:1.2rem;}
+.pkg-details li{padding:.42rem 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:.82rem;color:rgba(245,241,235,.62);display:flex;align-items:flex-start;gap:.5rem;line-height:1.45;}
+.pkg-details li:last-child{border-bottom:none;}
+.pkg-details li::before{content:"◆";color:var(--gold);font-size:.4rem;flex-shrink:0;margin-top:.35em;}
+.addons-wrap{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:2.2rem;}
+.addons-wrap h3{font-family:var(--display);font-size:1.4rem;margin-bottom:1.4rem;text-align:center;color:var(--white);}
+.addons-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(195px,1fr));gap:.9rem;}
+.addon-item{background:var(--card);border:1px solid var(--border);border-radius:9px;padding:.9rem 1.1rem;display:flex;justify-content:space-between;align-items:center;font-size:.83rem;color:var(--white);}
+.addon-price{color:var(--gold);font-weight:600;}
+.compare-wrap{margin-top:3rem;overflow-x:auto;}
+.compare-table{width:100%;border-collapse:collapse;min-width:520px;}
+.compare-table th{background:var(--card);padding:.9rem 1.2rem;font-family:var(--display);border:1px solid var(--border);text-align:center;color:var(--white);font-size:1rem;}
+.compare-table th.hi{background:#1a1508;border-color:var(--gold);color:var(--gold);}
+.compare-table td{padding:.7rem 1.2rem;border:1px solid var(--border);font-size:.83rem;color:var(--muted);text-align:center;}
+.compare-table tr:nth-child(even) td{background:rgba(255,255,255,.018);}
+.compare-table td.lbl{text-align:left;color:var(--white);font-weight:500;}
+.chk{color:var(--gold);}
+.no{color:rgba(255,255,255,.18);}
 
-#drinks { background: #080808; }
-.drinks-featured { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 2rem; }
-.drink-card { background: #18181c; border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; overflow: hidden; transition: all 0.3s; }
-.drink-card:hover { border-color: rgba(212,175,100,0.3); transform: translateY(-4px); }
-.drink-img { height: 100px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; background: linear-gradient(135deg, #1a1208, #0d0d10); }
-.drink-body { padding: 1rem; }
-.drink-body h4 { font-family: ‘Playfair Display’, serif; font-size: 1rem; margin-bottom: 0.25rem; color: #f8f4ee; }
-.drink-body p { font-size: 0.78rem; color: rgba(248,244,238,0.55); }
-.custom-cocktail-banner { background: linear-gradient(135deg, #1a1507, #18181c); border: 1px solid rgba(212,175,100,0.3); border-radius: 14px; padding: 2rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
-.custom-cocktail-banner h3 { font-family: ‘Playfair Display’, serif; font-size: 1.4rem; color: #f8f4ee; }
-.custom-cocktail-banner p { color: rgba(248,244,238,0.6); font-size: 0.9rem; margin-top: 0.3rem; }
+#drinks{background:var(--black);}
+.drinks-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:1.2rem;margin-bottom:2rem;}
+.drink-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;transition:all .3s;}
+.drink-card:hover{border-color:var(--gold-glow);transform:translateY(-3px);}
+.drink-img-wrap{height:160px;overflow:hidden;}
+.drink-img-wrap img{width:100%;height:100%;object-fit:cover;filter:brightness(.78);transition:transform .4s,filter .4s;}
+.drink-card:hover .drink-img-wrap img{transform:scale(1.07);filter:brightness(.95);}
+.drink-body{padding:1rem;}
+.drink-body h4{font-family:var(--display);font-size:1.05rem;margin-bottom:.2rem;color:var(--white);}
+.drink-body p{font-size:.75rem;color:var(--muted);}
+.cocktail-cta{background:linear-gradient(135deg,#161108,#16161b);border:1px solid rgba(200,169,110,0.28);border-radius:var(--r);padding:2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;}
+.cocktail-cta h3{font-family:var(--display);font-size:1.4rem;color:var(--white);}
+.cocktail-cta p{color:var(--muted);font-size:.88rem;margin-top:.3rem;}
 
-#booking { background: #0d0d0f; }
-.booking-layout { display: grid; grid-template-columns: 1fr 1.4fr; gap: 4rem; align-items: start; }
-.booking-info h2 { text-align: left; }
-.booking-info .section-label { justify-content: flex-start; }
-.booking-info p { color: rgba(248,244,238,0.6); margin-top: 1rem; line-height: 1.8; font-weight: 300; }
-.quote-preview { background: #131316; border: 1px solid rgba(212,175,100,0.3); border-radius: 12px; padding: 1.2rem; margin-top: 1rem; }
-.quote-preview h4 { font-family: ‘Playfair Display’, serif; font-size: 1.1rem; color: #d4af64; margin-bottom: 1rem; }
-.quote-line { display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.06); font-size: 0.85rem; }
-.quote-line .ql { color: rgba(248,244,238,0.55); }
-.quote-line .qv { color: #f8f4ee; font-weight: 500; }
-.quote-total { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(212,175,100,0.3); display: flex; justify-content: space-between; align-items: center; }
-.quote-total .ql { font-weight: 600; font-size: 0.9rem; color: #f8f4ee; }
-.quote-total .qv { font-family: ‘Playfair Display’, serif; font-size: 1.8rem; color: #d4af64; }
-.booking-form { background: #18181c; border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; padding: 2.5rem; }
-.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-.form-group { margin-bottom: 1.2rem; }
-.form-group label { display: block; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(248,244,238,0.6); margin-bottom: 0.4rem; font-weight: 500; }
-.form-group input, .form-group select, .form-group textarea { width: 100%; background: #131316; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 0.75rem 1rem; color: #f8f4ee; font-family: ‘Outfit’, sans-serif; font-size: 0.9rem; transition: border-color 0.2s; outline: none; -webkit-appearance: none; appearance: none; }
-.form-group select { background-image: url(“data:image/svg+xml,%3Csvg xmlns=‘http://www.w3.org/2000/svg’ width=‘12’ height=‘8’ fill=’%23d4af64’%3E%3Cpath d=‘M0 0l6 8 6-8z’/%3E%3C/svg%3E”); background-repeat: no-repeat; background-position: right 1rem center; background-color: #131316; padding-right: 2.5rem; }
-.form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: #d4af64; box-shadow: 0 0 0 3px rgba(212,175,100,0.08); }
-.form-group textarea { resize: vertical; min-height: 100px; }
-.form-group input::placeholder, .form-group textarea::placeholder { color: rgba(248,244,238,0.25); }
-.form-group input[type=“date”], .form-group input[type=“time”] { color-scheme: dark; }
-.checkbox-group { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; margin-top: 0.5rem; }
-.checkbox-item { display: flex; align-items: center; gap: 0.6rem; background: #131316; border: 2px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 0.75rem 0.9rem; cursor: pointer; transition: all 0.2s; font-size: 0.82rem; color: #f8f4ee; user-select: none; }
-.checkbox-item:hover { border-color: rgba(212,175,100,0.4); }
-.checkbox-item.active { border-color: #d4af64; background: rgba(212,175,100,0.1); color: #f0cc80; }
-.checkbox-item .cb-box { width: 18px; height: 18px; border: 2px solid rgba(255,255,255,0.3); border-radius: 4px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; transition: all 0.2s; }
-.checkbox-item.active .cb-box { background: #d4af64; border-color: #d4af64; color: #080808; }
-.form-submit { width: 100%; padding: 1rem; background: #d4af64; color: #080808; border: none; border-radius: 50px; font-family: ‘Outfit’, sans-serif; font-size: 1rem; font-weight: 700; letter-spacing: 0.06em; cursor: pointer; transition: all 0.25s; margin-top: 0.5rem; }
-.form-submit:hover { background: #f0cc80; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(212,175,100,0.3); }
-.form-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
-.success-msg { display: none; text-align: center; padding: 3rem 2rem; }
-.success-msg .check-circle { width: 70px; height: 70px; background: rgba(212,175,100,0.1); border: 2px solid #d4af64; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 1.5rem; color: #d4af64; }
-.success-msg h3 { font-family: ‘Playfair Display’, serif; font-size: 1.8rem; margin-bottom: 0.75rem; color: #f8f4ee; }
-.success-msg p { color: rgba(248,244,238,0.6); }
+#booking{background:var(--deep);}
+.booking-layout{display:grid;grid-template-columns:1fr 1.45fr;gap:4rem;align-items:start;}
+.booking-info h2,.booking-info .sec-label{text-align:left;}
+.booking-info .sec-label{justify-content:flex-start;}
+.booking-info p{color:var(--muted);margin-top:.9rem;line-height:1.82;font-weight:300;}
+.contact-quick{display:flex;flex-direction:column;gap:.7rem;margin-top:1.6rem;}
+.cq-item{display:flex;align-items:center;gap:.8rem;background:var(--card);border:1px solid var(--border);border-radius:9px;padding:.9rem 1.1rem;text-decoration:none;color:inherit;transition:border-color .2s;}
+.cq-item:hover{border-color:var(--gold-glow);}
+.cq-icon{font-size:1.1rem;width:30px;text-align:center;}
+.cq-label{font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;}
+.cq-val{font-weight:500;font-size:.88rem;color:var(--white);}
+.live-quote{background:var(--surface);border:1px solid rgba(200,169,110,0.28);border-radius:10px;padding:1.1rem;margin-top:1.2rem;}
+.live-quote h4{font-family:var(--display);font-size:1.05rem;color:var(--gold);margin-bottom:.9rem;}
+.q-line{display:flex;justify-content:space-between;padding:.42rem 0;border-bottom:1px solid rgba(255,255,255,0.06);font-size:.83rem;}
+.q-line .ql{color:var(--muted);}
+.q-line .qv{color:var(--white);font-weight:500;}
+.q-total{margin-top:.9rem;padding-top:.9rem;border-top:1px solid rgba(200,169,110,0.28);display:flex;justify-content:space-between;align-items:center;}
+.q-total .ql{font-weight:600;font-size:.88rem;color:var(--white);}
+.q-total .qv{font-family:var(--display);font-size:1.8rem;color:var(--gold);}
+.booking-form{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:2.2rem;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+.fg{margin-bottom:1.1rem;}
+.fg label{display:block;font-size:.72rem;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin-bottom:.38rem;font-weight:500;}
+.fg input,.fg select,.fg textarea{width:100%;background:var(--surface);border:1px solid rgba(255,255,255,.1);border-radius:7px;padding:.7rem .95rem;color:var(--white);font-family:var(--body);font-size:.88rem;transition:border-color .2s;outline:none;-webkit-appearance:none;appearance:none;}
+.fg select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='7' fill='%23c8a96e'%3E%3Cpath d='M0 0l5 7 5-7z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right .9rem center;background-color:var(--surface);padding-right:2.2rem;}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(200,169,110,.08);}
+.fg textarea{resize:vertical;min-height:95px;}
+.fg input::placeholder,.fg textarea::placeholder{color:rgba(245,241,235,.2);}
+.fg input[type="date"],.fg input[type="time"]{color-scheme:dark;}
+.cb-group{display:grid;grid-template-columns:1fr 1fr;gap:.55rem;margin-top:.45rem;}
+.cb-item{display:flex;align-items:center;gap:.55rem;background:var(--surface);border:2px solid rgba(255,255,255,.09);border-radius:7px;padding:.65rem .85rem;cursor:pointer;transition:all .2s;font-size:.79rem;color:var(--white);user-select:none;}
+.cb-item:hover{border-color:rgba(200,169,110,.35);}
+.cb-item.on{border-color:var(--gold);background:rgba(200,169,110,.1);color:var(--gold-lt);}
+.cb-box{width:16px;height:16px;border:2px solid rgba(255,255,255,.28);border-radius:3px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:.65rem;transition:all .2s;}
+.cb-item.on .cb-box{background:var(--gold);border-color:var(--gold);color:var(--black);}
+.form-submit{width:100%;padding:.95rem;background:var(--gold);color:var(--black);border:none;border-radius:50px;font-family:var(--body);font-size:.95rem;font-weight:700;cursor:pointer;transition:all .25s;margin-top:.5rem;}
+.form-submit:hover{background:var(--gold-lt);transform:translateY(-2px);}
+.form-submit:disabled{opacity:.55;cursor:not-allowed;transform:none;}
+.success-msg{display:none;text-align:center;padding:3rem 2rem;}
+.success-icon{width:68px;height:68px;background:rgba(200,169,110,.1);border:2px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.8rem;margin:0 auto 1.4rem;color:var(--gold);}
+.success-msg h3{font-family:var(--display);font-size:1.8rem;margin-bottom:.7rem;color:var(--white);}
+.success-msg p{color:var(--muted);}
 
-#faq { background: #080808; }
-.faq-layout { display: grid; grid-template-columns: 1fr 1.4fr; gap: 4rem; align-items: start; }
-.faq-left h2 { text-align: left; }
-.faq-left .section-label { justify-content: flex-start; }
-.faq-left p { color: rgba(248,244,238,0.6); margin-top: 1rem; font-weight: 300; line-height: 1.8; }
-.faq-chat { background: #18181c; border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; padding: 2rem; }
-.faq-chat-header { display: flex; align-items: center; gap: 0.75rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(255,255,255,0.07); margin-bottom: 1.5rem; }
-.bot-avatar { width: 38px; height: 38px; background: rgba(212,175,100,0.1); border: 1px solid rgba(212,175,100,0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #d4af64; font-size: 1rem; }
-.bot-info .name { font-weight: 600; font-size: 0.9rem; color: #f8f4ee; }
-.bot-info .status { font-size: 0.72rem; color: #4ade80; display: flex; align-items: center; gap: 0.3rem; }
-.bot-info .status::before { content: “●”; font-size: 0.5rem; }
-.faq-msgs { max-height: 300px; overflow-y: auto; display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 1.2rem; }
-.msg { max-width: 85%; padding: 0.8rem 1rem; border-radius: 12px; font-size: 0.85rem; line-height: 1.55; }
-.msg.bot { background: #131316; border: 1px solid rgba(255,255,255,0.07); align-self: flex-start; border-radius: 4px 12px 12px 12px; color: #f8f4ee; }
-.msg.user { background: rgba(212,175,100,0.1); border: 1px solid rgba(212,175,100,0.25); align-self: flex-end; color: #f8f4ee; border-radius: 12px 4px 12px 12px; }
-.faq-quick { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1rem; }
-.faq-chip { background: #131316; border: 1px solid rgba(255,255,255,0.1); border-radius: 50px; padding: 0.35rem 0.8rem; font-size: 0.75rem; cursor: pointer; transition: all 0.2s; color: #f8f4ee; }
-.faq-chip:hover { border-color: rgba(212,175,100,0.4); color: #d4af64; }
-.faq-input-row { display: flex; gap: 0.5rem; }
-.faq-input-row input { flex: 1; background: #131316; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 0.65rem 1rem; color: #f8f4ee; font-family: ‘Outfit’, sans-serif; font-size: 0.85rem; outline: none; }
-.faq-input-row input:focus { border-color: #d4af64; }
-.faq-send { background: #d4af64; color: #080808; border: none; border-radius: 8px; padding: 0.65rem 1rem; cursor: pointer; font-size: 1rem; font-weight: 700; }
-.faq-send:hover { background: #f0cc80; }
-.typing-dots { display: inline-flex; gap: 3px; align-items: center; }
-.typing-dots span { width: 6px; height: 6px; background: rgba(248,244,238,0.4); border-radius: 50%; animation: typingDot 1.2s infinite; }
-.typing-dots span:nth-child(2) { animation-delay: 0.2s; }
-.typing-dots span:nth-child(3) { animation-delay: 0.4s; }
+#reviews{background:var(--black);}
+.review-platforms{display:flex;gap:1rem;justify-content:center;margin-bottom:3rem;flex-wrap:wrap;}
+.rev-platform{display:inline-flex;align-items:center;gap:.6rem;background:var(--card);border:1px solid var(--border);border-radius:50px;padding:.55rem 1.3rem;font-size:.8rem;color:var(--white);text-decoration:none;transition:all .2s;font-weight:500;}
+.rev-platform:hover{border-color:var(--gold-glow);color:var(--gold);}
+.reviews-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.3rem;}
+.rev-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:1.8rem;transition:all .3s;position:relative;}
+.rev-card:hover{border-color:var(--gold-glow);transform:translateY(-3px);}
+.rev-platform-tag{position:absolute;top:1.3rem;right:1.3rem;font-size:.65rem;color:var(--muted);}
+.rev-stars{color:#f5a623;font-size:.85rem;letter-spacing:2px;margin-bottom:.9rem;}
+.rev-text{color:rgba(245,241,235,.62);font-size:.88rem;line-height:1.72;font-style:italic;margin-bottom:1.4rem;}
+.rev-author{display:flex;align-items:center;gap:.7rem;}
+.rev-avatar{width:40px;height:40px;border-radius:50%;background:rgba(200,169,110,.1);border:1px solid rgba(200,169,110,.28);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:1rem;color:var(--gold);}
+.rev-name{font-weight:600;font-size:.88rem;color:var(--white);}
+.rev-event{font-size:.73rem;color:var(--muted);}
+.review-cta{text-align:center;margin-top:3rem;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;}
 
-#reviews { background: #0d0d0f; }
-.reviews-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
-.review-card { background: #18181c; border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; padding: 2rem; transition: all 0.3s; }
-.review-card:hover { border-color: rgba(212,175,100,0.3); transform: translateY(-3px); }
-.review-stars { color: #d4af64; font-size: 0.9rem; letter-spacing: 2px; margin-bottom: 1rem; }
-.review-text { color: rgba(248,244,238,0.65); font-size: 0.9rem; line-height: 1.7; font-style: italic; margin-bottom: 1.5rem; }
-.review-author { display: flex; align-items: center; gap: 0.75rem; }
-.review-avatar { width: 42px; height: 42px; border-radius: 50%; background: rgba(212,175,100,0.1); border: 1px solid rgba(212,175,100,0.3); display: flex; align-items: center; justify-content: center; font-family: ‘Playfair Display’, serif; font-size: 1rem; color: #d4af64; }
-.review-name { font-weight: 600; font-size: 0.9rem; color: #f8f4ee; }
-.review-event { font-size: 0.75rem; color: rgba(248,244,238,0.5); }
+#gallery{background:var(--deep);}
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:.9rem;}
+.gallery-item{border-radius:9px;overflow:hidden;}
+.gallery-item:nth-child(1){grid-column:span 2;grid-row:span 2;}
+.gallery-item:nth-child(4){grid-column:span 2;}
+.gallery-item img{width:100%;height:100%;object-fit:cover;filter:brightness(.72);transition:all .4s;}
+.gallery-item:hover img{filter:brightness(.95);transform:scale(1.04);}
 
-#gallery { background: #080808; }
-.gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
-.gallery-item { border-radius: 10px; overflow: hidden; position: relative; }
-.gallery-item:nth-child(1) { grid-column: span 2; grid-row: span 2; }
-.gallery-item img { width: 100%; height: 100%; object-fit: cover; min-height: 200px; filter: brightness(0.75); transition: all 0.4s; }
-.gallery-item:hover img { filter: brightness(0.95); transform: scale(1.04); }
+#faq{background:var(--black);}
+.faq-layout{display:grid;grid-template-columns:1fr 1.45fr;gap:4rem;align-items:start;}
+.faq-left .sec-label{justify-content:flex-start;}
+.faq-left h2{text-align:left;}
+.faq-left p{color:var(--muted);margin-top:.9rem;font-weight:300;line-height:1.82;}
+.faq-left a{color:var(--gold);text-decoration:none;}
+.chat-box{background:var(--card);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;}
+.chat-header{background:var(--surface);padding:1rem 1.4rem;display:flex;align-items:center;gap:.8rem;border-bottom:1px solid var(--border);}
+.chat-avatar{width:36px;height:36px;background:rgba(200,169,110,.12);border:1px solid rgba(200,169,110,.3);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:.95rem;flex-shrink:0;}
+.chat-info .cname{font-weight:600;font-size:.88rem;color:var(--white);}
+.chat-info .cstatus{font-size:.7rem;color:#4ade80;display:flex;align-items:center;gap:.28rem;}
+.chat-info .cstatus::before{content:"●";font-size:.45rem;}
+.chat-msgs{height:280px;overflow-y:auto;display:flex;flex-direction:column;gap:.65rem;padding:1.2rem;scroll-behavior:smooth;}
+.msg{max-width:88%;padding:.72rem .95rem;border-radius:11px;font-size:.83rem;line-height:1.55;}
+.msg.bot{background:var(--surface);border:1px solid var(--border);align-self:flex-start;border-radius:3px 11px 11px 11px;color:var(--white);}
+.msg.user{background:rgba(200,169,110,.12);border:1px solid rgba(200,169,110,.22);align-self:flex-end;color:var(--white);border-radius:11px 3px 11px 11px;}
+.chat-chips{display:flex;flex-wrap:wrap;gap:.38rem;padding:.8rem 1.2rem;border-top:1px solid var(--border);}
+.chip{background:var(--surface);border:1px solid rgba(255,255,255,.1);border-radius:50px;padding:.3rem .75rem;font-size:.72rem;cursor:pointer;transition:all .2s;color:var(--white);}
+.chip:hover{border-color:rgba(200,169,110,.4);color:var(--gold);}
+.chat-input-row{display:flex;gap:.45rem;padding:.9rem 1.2rem;border-top:1px solid var(--border);}
+.chat-input{flex:1;background:var(--surface);border:1px solid rgba(255,255,255,.1);border-radius:7px;padding:.6rem .9rem;color:var(--white);font-family:var(--body);font-size:.83rem;outline:none;}
+.chat-input:focus{border-color:var(--gold);}
+.chat-send{background:var(--gold);color:var(--black);border:none;border-radius:7px;padding:.6rem .95rem;cursor:pointer;font-size:.9rem;font-weight:700;}
+.chat-send:hover{background:var(--gold-lt);}
+.typing{display:inline-flex;gap:3px;align-items:center;}
+.typing span{width:5px;height:5px;background:rgba(245,241,235,.4);border-radius:50%;animation:tdot 1.2s infinite;}
+.typing span:nth-child(2){animation-delay:.2s;}
+.typing span:nth-child(3){animation-delay:.4s;}
 
-#contact { background: #0d0d0f; }
-.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
-.contact-info h2 { text-align: left; }
-.contact-info .section-label { justify-content: flex-start; }
-.contact-info p { color: rgba(248,244,238,0.6); margin-top: 1rem; line-height: 1.8; font-weight: 300; }
-.contact-items { margin-top: 2rem; display: flex; flex-direction: column; gap: 1rem; }
-.contact-item { display: flex; align-items: center; gap: 1rem; background: #18181c; border: 1px solid rgba(255,255,255,0.07); border-radius: 10px; padding: 1rem 1.2rem; text-decoration: none; color: inherit; transition: border-color 0.2s; }
-.contact-item:hover { border-color: rgba(212,175,100,0.3); }
-.contact-icon { font-size: 1.3rem; }
-.contact-label { font-size: 0.75rem; color: rgba(248,244,238,0.5); text-transform: uppercase; letter-spacing: 0.08em; }
-.contact-value { font-weight: 500; font-size: 0.9rem; color: #f8f4ee; }
-.contact-cta { background: linear-gradient(135deg, #1a1507, #18181c); border: 1px solid rgba(212,175,100,0.3); border-radius: 14px; padding: 3rem; text-align: center; }
-.contact-cta h3 { font-family: ‘Playfair Display’, serif; font-size: 1.8rem; margin-bottom: 0.5rem; color: #f8f4ee; }
-.contact-cta p { color: rgba(248,244,238,0.6); margin-bottom: 2rem; }
-.social-row { display: flex; gap: 0.75rem; justify-content: center; margin-top: 1.5rem; }
-.social-btn { width: 44px; height: 44px; background: #131316; border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; text-decoration: none; transition: all 0.2s; }
-.social-btn:hover { border-color: rgba(212,175,100,0.4); background: rgba(212,175,100,0.08); transform: translateY(-2px); }
+#contact{background:var(--deep);}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
+.contact-info .sec-label{justify-content:flex-start;}
+.contact-info h2{text-align:left;}
+.contact-info p{color:var(--muted);margin-top:.9rem;line-height:1.82;font-weight:300;}
+.contact-items{margin-top:1.8rem;display:flex;flex-direction:column;gap:.9rem;}
+.contact-item{display:flex;align-items:center;gap:.9rem;background:var(--card);border:1px solid var(--border);border-radius:9px;padding:.95rem 1.2rem;text-decoration:none;color:inherit;transition:border-color .2s;}
+.contact-item:hover{border-color:var(--gold-glow);}
+.ci-icon{font-size:1.2rem;width:28px;text-align:center;}
+.ci-label{font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;}
+.ci-val{font-weight:500;font-size:.88rem;color:var(--white);}
+.contact-cta-box{background:linear-gradient(135deg,#16120a,#16161b);border:1px solid rgba(200,169,110,.28);border-radius:var(--r);padding:2.8rem;text-align:center;}
+.contact-cta-box h3{font-family:var(--display);font-size:1.9rem;margin-bottom:.5rem;color:var(--white);}
+.contact-cta-box p{color:var(--muted);margin-bottom:1.8rem;}
+.socials-row{display:flex;gap:.7rem;justify-content:center;margin-top:1.4rem;flex-wrap:wrap;}
+.soc-btn{display:inline-flex;align-items:center;gap:.5rem;background:var(--surface);border:1px solid rgba(255,255,255,.1);border-radius:9px;padding:.6rem 1.1rem;font-size:.78rem;color:var(--white);text-decoration:none;transition:all .2s;font-weight:500;}
+.soc-btn:hover{border-color:rgba(200,169,110,.4);color:var(--gold);}
 
-footer { background: #080808; border-top: 1px solid rgba(255,255,255,0.07); padding: 3rem 5vw; text-align: center; }
-.footer-logo { font-family: ‘Playfair Display’, serif; font-size: 1.4rem; color: #d4af64; margin-bottom: 0.75rem; display: block; }
-.footer-logo span { color: #f8f4ee; font-style: italic; }
-footer p { color: rgba(248,244,238,0.3); font-size: 0.8rem; }
-.footer-links { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin: 1.5rem 0; }
-.footer-links a { color: rgba(248,244,238,0.5); text-decoration: none; font-size: 0.82rem; transition: color 0.2s; }
-.footer-links a:hover { color: #d4af64; }
+footer{background:var(--black);border-top:1px solid var(--border);padding:2.8rem 5vw;text-align:center;}
+.footer-logo{font-family:var(--display);font-size:1.5rem;color:var(--gold);margin-bottom:.7rem;display:block;}
+.footer-logo span{color:var(--white);font-style:italic;}
+.footer-links{display:flex;gap:1.8rem;justify-content:center;flex-wrap:wrap;margin:1.3rem 0;}
+.footer-links a{color:rgba(245,241,235,.45);text-decoration:none;font-size:.8rem;transition:color .2s;}
+.footer-links a:hover{color:var(--gold);}
+footer p{color:rgba(245,241,235,.28);font-size:.77rem;}
 
-.sticky-cta { position: fixed; bottom: 1.5rem; right: 1.5rem; background: #d4af64; color: #080808; border: none; border-radius: 50px; padding: 0.8rem 1.5rem; font-family: ‘Outfit’, sans-serif; font-size: 0.85rem; font-weight: 700; cursor: pointer; box-shadow: 0 8px 30px rgba(212,175,100,0.4); transition: all 0.25s; z-index: 50; }
-.sticky-cta:hover { background: #f0cc80; transform: translateY(-3px); }
+.sticky-cta{position:fixed;bottom:1.4rem;right:1.4rem;background:var(--gold);color:var(--black);border:none;border-radius:50px;padding:.75rem 1.4rem;font-family:var(--body);font-size:.82rem;font-weight:700;cursor:pointer;box-shadow:0 8px 30px rgba(200,169,110,.4);transition:all .25s;z-index:50;}
+.sticky-cta:hover{background:var(--gold-lt);transform:translateY(-3px);}
 
-@keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-@keyframes bounce { 0%, 100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(-8px); } }
-@keyframes typingDot { 0%, 60%, 100% { transform: translateY(0); opacity: 0.5; } 30% { transform: translateY(-6px); opacity: 1; } }
-.fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
-.fade-in.visible { opacity: 1; transform: translateY(0); }
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px);}to{opacity:1;transform:translateY(0);}}
+@keyframes tdot{0%,60%,100%{transform:translateY(0);opacity:.4;}30%{transform:translateY(-5px);opacity:1;}}
+.fi{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease;}
+.fi.vis{opacity:1;transform:translateY(0);}
 
-@media (max-width: 960px) {
-.about-grid, .booking-layout, .faq-layout, .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
-.packages-grid { grid-template-columns: 1fr; }
-.gallery-grid { grid-template-columns: repeat(2, 1fr); }
-.gallery-item:nth-child(1) { grid-column: span 2; }
-.nav-links { display: none; }
-.hamburger { display: flex; }
-.form-row { grid-template-columns: 1fr; }
-}
-@media (max-width: 600px) {
-h1 { font-size: 2.4rem; }
-section { padding: 70px 5vw; }
-.about-pillars { grid-template-columns: 1fr; }
-.gallery-grid { grid-template-columns: 1fr; }
-.gallery-item:nth-child(1) { grid-column: span 1; }
-.checkbox-group { grid-template-columns: 1fr; }
-.sticky-cta { display: none; }
-}
+@media(max-width:1100px){.pkg-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:960px){.about-grid,.booking-layout,.faq-layout,.contact-grid{grid-template-columns:1fr;gap:2.8rem;}.pkg-grid{grid-template-columns:1fr 1fr;}.gallery-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:180px;}.gallery-item:nth-child(1){grid-column:span 2;}.gallery-item:nth-child(4){grid-column:span 1;}.nav-links{display:none;}.hamburger{display:flex;}.form-row{grid-template-columns:1fr;}}
+@media(max-width:640px){h1{font-size:2.6rem;}section{padding:68px 5vw;}.pillars,.cb-group{grid-template-columns:1fr;}.gallery-grid{grid-template-columns:1fr;grid-auto-rows:200px;}.gallery-item:nth-child(1),.gallery-item:nth-child(4){grid-column:span 1;}.pkg-grid{grid-template-columns:1fr;}.sticky-cta{display:none;}}
 </style>
-
 </head>
 <body>
 
@@ -307,72 +281,71 @@ section { padding: 70px 5vw; }
     <li><a href="#services">Services</a></li>
     <li><a href="#packages">Packages</a></li>
     <li><a href="#drinks">Menu</a></li>
+    <li><a href="#reviews">Reviews</a></li>
     <li><a href="#faq">FAQ</a></li>
     <li><a href="#booking" class="nav-cta">Get a Quote</a></li>
   </ul>
-  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#about" onclick="toggleMenu()">About</a>
-  <a href="#services" onclick="toggleMenu()">Services</a>
-  <a href="#packages" onclick="toggleMenu()">Packages</a>
-  <a href="#drinks" onclick="toggleMenu()">Drink Menu</a>
-  <a href="#reviews" onclick="toggleMenu()">Reviews</a>
-  <a href="#faq" onclick="toggleMenu()">FAQ</a>
-  <a href="#contact" onclick="toggleMenu()">Contact</a>
-  <a href="#booking" onclick="toggleMenu()" class="gold">✦ Get a Quote</a>
+  <a href="#about" onclick="closeMenu()">About</a>
+  <a href="#services" onclick="closeMenu()">Services</a>
+  <a href="#packages" onclick="closeMenu()">Packages</a>
+  <a href="#drinks" onclick="closeMenu()">Drink Menu</a>
+  <a href="#reviews" onclick="closeMenu()">Reviews</a>
+  <a href="#faq" onclick="closeMenu()">FAQ</a>
+  <a href="#contact" onclick="closeMenu()">Contact</a>
+  <a href="#booking" onclick="closeMenu()" class="gold-link">✦ Get a Quote</a>
 </div>
 
 <section id="hero">
   <div class="hero-bg"></div>
-  <div class="hero-grid"></div>
-  <div class="hero-visual"></div>
-  <div class="hero-content">
-    <div class="hero-badge">✦ DMV's Premier Mobile Bartending Service</div>
+  <div class="hero-img"></div>
+  <div class="hero-content" style="animation:fadeUp 1s ease both;">
+    <div class="hero-eyebrow">✦ DMV's Premier Mobile Bartending Service</div>
     <h1>Elevate Every<br><em>Pour, Every</em><br>Celebration.</h1>
-    <p class="hero-sub">Professional mobile bartending for unforgettable private events in DC, Maryland &amp; Virginia. Custom cocktails. Seamless setup. Stress-free luxury.</p>
+    <p class="hero-sub">Professional mobile bartending for unforgettable private events in DC, Maryland &amp; Virginia. You bring the drinks — we bring the experience.</p>
     <div class="hero-btns">
-      <a href="#booking" class="btn-primary">✦ Get a Free Quote</a>
-      <a href="#packages" class="btn-outline">View Packages</a>
-      <a href="#drinks" class="btn-outline">Explore Menu</a>
+      <a href="#booking" class="btn-gold">✦ Get a Free Quote</a>
+      <a href="#packages" class="btn-ghost">View Packages</a>
+      <a href="tel:+12404742431" class="btn-ghost">📞 (240) 474-2431</a>
     </div>
-    <div class="trust-row">
-      <span class="trust-item">Licensed &amp; Insured</span>
-      <span class="trust-item">Custom Cocktail Menus</span>
-      <span class="trust-item">Instant Quotes</span>
-      <span class="trust-item">DMV Service Area</span>
-      <span class="trust-item">Clean Setup Guaranteed</span>
+    <div class="trust-pills">
+      <span class="trust-pill">Licensed &amp; Insured</span>
+      <span class="trust-pill">Custom Cocktail Menus</span>
+      <span class="trust-pill">DMV Area</span>
+      <span class="trust-pill">500+ Events Served</span>
+      <span class="trust-pill">Clean Setup Guaranteed</span>
+    </div>
+    <div class="social-strip">
+      <a href="https://www.instagram.com/zacariasbartending?igsh=MXFjZnpmZWczM2lhag%3D%3D&utm_source=qr" target="_blank" class="social-pill">📸 @zacariasbartending</a>
+      <a href="https://yelp.to/ERniOmOYIa" target="_blank" class="social-pill">⭐ Yelp Reviews</a>
+      <a href="https://share.google/LyuJvK12fcKbBYIlt" target="_blank" class="social-pill">🔵 Google Reviews</a>
     </div>
   </div>
-  <div class="hero-scroll">Scroll</div>
 </section>
 
 <div class="divider"></div>
 
 <section id="about">
-  <div class="about-grid fade-in">
+  <div class="about-grid fi">
     <div class="about-img-wrap">
-      <img src="https://images.unsplash.com/photo-1570598912132-0ba1dc952b7d?w=700&q=80" alt="Professional bartender" loading="lazy">
-      <div class="about-img-border"></div>
-      <div class="about-stat-badge">
-        <strong>500+</strong>
-        <span>Events Served</span>
-      </div>
+      <img src="https://images.unsplash.com/photo-1570598912132-0ba1dc952b7d?auto=format&fit=crop&w=700&q=80" alt="Professional bartender" loading="lazy">
+      <div class="img-border"></div>
+      <div class="stat-badge"><strong>500+</strong><span>Events Served</span></div>
     </div>
     <div class="about-text">
-      <div class="section-label">Our Story</div>
+      <div class="sec-label">Our Story</div>
       <h2>More Than a Bartender.<br><em>A Full Experience.</em></h2>
-      <p>Zacarias Bartending &amp; Events brings luxury mobile bartending directly to your celebration. Whether you're hosting 20 guests or 200, we arrive fully prepared, professionally dressed, and ready to make your bar the highlight of the night.</p>
-      <p>We specialize in birthdays, weddings, private parties, corporate events, family celebrations, and upscale gatherings across the entire DMV area. When you book with us, you're hiring peace of mind, seamless hospitality, and an experience your guests won't stop talking about.</p>
-      <div class="about-pillars">
-        <div class="pillar"><span>🍸</span><span class="pillar-text">Custom Cocktail Menus</span></div>
-        <div class="pillar"><span>✨</span><span class="pillar-text">Premium Presentation</span></div>
-        <div class="pillar"><span>🛡️</span><span class="pillar-text">Licensed &amp; Insured</span></div>
-        <div class="pillar"><span>🤝</span><span class="pillar-text">Seamless Service</span></div>
-        <div class="pillar"><span>📍</span><span class="pillar-text">Full DMV Coverage</span></div>
-        <div class="pillar"><span>⚡</span><span class="pillar-text">Stress-Free Setup</span></div>
+      <p>Zacarias Bartending &amp; Events brings luxury mobile bartending directly to your celebration. Whether you're hosting 25 guests or 250, we arrive fully prepared, professionally dressed, and ready to make your bar the highlight of the night.</p>
+      <p>You bring the drinks — we bring everything else: the tools, the talent, the vibe, and a personalized shopping list so you never have to guess.</p>
+      <div class="pillars">
+        <div class="pillar"><span>🍸</span><span>Custom Cocktail Menus</span></div>
+        <div class="pillar"><span>✨</span><span>Premium Presentation</span></div>
+        <div class="pillar"><span>🛡️</span><span>Licensed &amp; Insured</span></div>
+        <div class="pillar"><span>🤝</span><span>Seamless Service</span></div>
+        <div class="pillar"><span>📍</span><span>Full DMV Coverage</span></div>
+        <div class="pillar"><span>⚡</span><span>Stress-Free Setup</span></div>
       </div>
     </div>
   </div>
@@ -381,86 +354,84 @@ section { padding: 70px 5vw; }
 <div class="divider"></div>
 
 <section id="services">
-  <div class="section-head fade-in">
-    <div class="section-label">What We Offer</div>
+  <div class="sec-head fi">
+    <div class="sec-label">What We Offer</div>
     <h2>Services Built for<br><em>Every Occasion</em></h2>
-    <p class="section-intro">From intimate birthday dinners to large-scale corporate galas, we bring the full bar experience wherever you need it.</p>
+    <p class="sec-intro">From intimate birthday dinners to large-scale corporate galas, we bring the full bar experience wherever you need it.</p>
   </div>
-  <div class="services-grid fade-in">
-    <div class="service-card"><div class="service-img"><img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=500&q=80" alt="Bartending" loading="lazy"></div><div class="service-body"><div class="service-icon">🍹</div><h3>Full Bartending Service</h3><p>Full bar setup with professional equipment, premium glassware, and expert mixology.</p><span class="service-tag">Most Popular</span></div></div>
-    <div class="service-card"><div class="service-img"><img src="https://images.unsplash.com/photo-1551538827-9c037cb4f32a?w=500&q=80" alt="Custom cocktails" loading="lazy"></div><div class="service-body"><div class="service-icon">🍋</div><h3>Custom Cocktail Menu</h3><p>A personalized drink menu tailored to your event theme, season, or preferences.</p><span class="service-tag">Add-On Available</span></div></div>
-    <div class="service-card"><div class="service-img"><img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=500&q=80" alt="Mocktails" loading="lazy"></div><div class="service-body"><div class="service-icon">🌿</div><h3>Mocktail Bar</h3><p>Beautiful non-alcoholic craft drinks for an inclusive, premium experience.</p><span class="service-tag">Inclusive</span></div></div>
-    <div class="service-card"><div class="service-img"><img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=500&q=80" alt="Wedding" loading="lazy"></div><div class="service-body"><div class="service-icon">💍</div><h3>Wedding Bartending</h3><p>Elegant bar service for your most important day, coordinated with your planner.</p><span class="service-tag">Premium</span></div></div>
-    <div class="service-card"><div class="service-img"><img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=500&q=80" alt="Corporate" loading="lazy"></div><div class="service-body"><div class="service-icon">🏢</div><h3>Corporate Events</h3><p>Polished bar service that impresses clients and elevates team celebrations.</p><span class="service-tag">B2B</span></div></div>
-    <div class="service-card"><div class="service-img"><img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=500&q=80" alt="Beer Wine" loading="lazy"></div><div class="service-body"><div class="service-icon">🍷</div><h3>Beer &amp; Wine Service</h3><p>Curated beer and wine for events that call for something refined but relaxed.</p><span class="service-tag">Flexible</span></div></div>
-    <div class="service-card"><div class="service-img"><img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=500&q=80" alt="Private party" loading="lazy"></div><div class="service-body"><div class="service-icon">🎉</div><h3>Private Parties</h3><p>Birthdays, anniversaries, graduations — we make every celebration feel exclusive.</p><span class="service-tag">All Ages</span></div></div>
-    <div class="service-card"><div class="service-img"><img src="https://images.unsplash.com/photo-1470338745628-171cf53de3a8?w=500&q=80" alt="Outdoor" loading="lazy"></div><div class="service-body"><div class="service-icon">🌞</div><h3>Outdoor Event Bar</h3><p>Patios, gardens, rooftops — we bring a full setup anywhere you need it.</p><span class="service-tag">Mobile</span></div></div>
+  <div class="services-grid fi">
+    <div class="svc-card"><div class="svc-img"><img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=500&q=80" alt="Bartending" loading="lazy"></div><div class="svc-body"><div class="svc-icon">🍹</div><h3>Full Bartending Service</h3><p>Professional setup, premium tools, expert mixology — your guests are in good hands.</p><span class="svc-tag">Most Popular</span></div></div>
+    <div class="svc-card"><div class="svc-img"><img src="https://images.unsplash.com/photo-1551538827-9c037cb4f32a?auto=format&fit=crop&w=500&q=80" alt="Custom cocktails" loading="lazy"></div><div class="svc-body"><div class="svc-icon">🍋</div><h3>Custom Cocktail Menu</h3><p>A personalized drink menu tailored to your event theme, season, or preferences.</p><span class="svc-tag">Add-On Available</span></div></div>
+    <div class="svc-card"><div class="svc-img"><img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=500&q=80" alt="Mocktails" loading="lazy"></div><div class="svc-body"><div class="svc-icon">🌿</div><h3>Mocktail Bar</h3><p>Beautiful non-alcoholic craft drinks for an inclusive, premium experience.</p><span class="svc-tag">Inclusive</span></div></div>
+    <div class="svc-card"><div class="svc-img"><img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=500&q=80" alt="Wedding" loading="lazy"></div><div class="svc-body"><div class="svc-icon">💍</div><h3>Wedding Bartending</h3><p>Elegant bar service for your most important day, coordinated with your planner.</p><span class="svc-tag">Premium</span></div></div>
+    <div class="svc-card"><div class="svc-img"><img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=500&q=80" alt="Corporate" loading="lazy"></div><div class="svc-body"><div class="svc-icon">🏢</div><h3>Corporate Events</h3><p>Polished bar service that impresses clients and elevates team celebrations.</p><span class="svc-tag">B2B</span></div></div>
+    <div class="svc-card"><div class="svc-img"><img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=500&q=80" alt="Beer Wine" loading="lazy"></div><div class="svc-body"><div class="svc-icon">🍷</div><h3>Beer &amp; Wine Service</h3><p>Curated beer and wine for events that call for something refined but relaxed.</p><span class="svc-tag">Flexible</span></div></div>
+    <div class="svc-card"><div class="svc-img"><img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=500&q=80" alt="Private party" loading="lazy"></div><div class="svc-body"><div class="svc-icon">🎉</div><h3>Private Parties</h3><p>Birthdays, anniversaries, graduations — we make every celebration feel exclusive.</p><span class="svc-tag">All Ages</span></div></div>
+    <div class="svc-card"><div class="svc-img"><img src="https://images.unsplash.com/photo-1470338745628-171cf53de3a8?auto=format&fit=crop&w=500&q=80" alt="Outdoor" loading="lazy"></div><div class="svc-body"><div class="svc-icon">🌞</div><h3>Outdoor Event Bar</h3><p>Patios, gardens, rooftops — we bring a full setup anywhere you need it.</p><span class="svc-tag">Mobile</span></div></div>
   </div>
 </section>
 
 <div class="divider"></div>
 
 <section id="packages">
-  <div class="section-head fade-in">
-    <div class="section-label">Pricing</div>
+  <div class="sec-head fi">
+    <div class="sec-label">Pricing</div>
     <h2>Transparent Packages.<br><em>Zero Surprises.</em></h2>
-    <p class="section-intro">All packages include professional bartender(s), full bar setup, breakdown &amp; cleanup, premium tools, and a menu consultation.</p>
+    <p class="sec-intro">Every package includes professional bartender(s), cups, straws, napkins, garnishes, setup &amp; breakdown, and your personalized alcohol shopping list.</p>
   </div>
-  <div class="packages-grid fade-in">
-    <div class="package-card">
-      <div class="pkg-name">Starter</div>
-      <div class="pkg-subtitle">Perfect for intimate gatherings</div>
-      <div class="pkg-price"><strong>$350</strong><span>Flat Rate</span></div>
-      <ul class="pkg-details">
-        <li>3 Hours of Service</li><li>Up to 50 Guests</li><li>1 Professional Bartender</li><li>Full Bar Setup &amp; Breakdown</li><li>Standard Cocktail Menu</li><li>Premium Tools &amp; Supplies</li>
-      </ul>
-      <a href="#booking" class="btn-outline" style="width:100%;text-align:center;display:block;">Book This Package</a>
+  <div class="pkg-grid fi">
+    <div class="pkg-card">
+      <div class="pkg-name">Essential</div><div class="pkg-sub">Intimate Gatherings</div>
+      <div class="pkg-price"><strong>$450</strong><span>Up to 75 guests</span></div>
+      <ul class="pkg-details"><li>3 Hours of Service</li><li>1 Professional Bartender</li><li>Cups, Straws &amp; Napkins</li><li>Basic Garnish Package</li><li>Personalized Shopping List</li><li>Setup &amp; Breakdown</li></ul>
+      <a href="#booking" class="btn-ghost" style="width:100%;text-align:center;justify-content:center;">Book This Package</a>
     </div>
-    <div class="package-card featured">
+    <div class="pkg-card featured">
       <div class="pkg-badge">Most Popular</div>
-      <div class="pkg-name">Standard</div>
-      <div class="pkg-subtitle">Our signature experience</div>
-      <div class="pkg-price"><strong>$500</strong><span>Flat Rate</span></div>
-      <ul class="pkg-details">
-        <li>4 Hours of Service</li><li>Up to 75 Guests</li><li>1 Professional Bartender</li><li>Full Bar Setup &amp; Breakdown</li><li>Custom Cocktail Consultation</li><li>Premium Tools &amp; Supplies</li>
-      </ul>
-      <a href="#booking" class="btn-primary" style="width:100%;text-align:center;display:block;">Book This Package</a>
+      <div class="pkg-name">Classic</div><div class="pkg-sub">Birthdays &amp; Celebrations</div>
+      <div class="pkg-price"><strong>$850</strong><span>75–150 guests</span></div>
+      <ul class="pkg-details"><li>4 Hours of Service</li><li>2 Professional Bartenders</li><li>Cups, Straws &amp; Napkins</li><li>Full Garnish Package</li><li>Personalized Shopping List</li><li>Signature Cocktail Menu Card</li><li>Setup &amp; Breakdown</li></ul>
+      <a href="#booking" class="btn-gold" style="width:100%;text-align:center;justify-content:center;">Book This Package</a>
     </div>
-    <div class="package-card">
-      <div class="pkg-name">Premium</div>
-      <div class="pkg-subtitle">For the most elevated events</div>
-      <div class="pkg-price"><strong>$650</strong><span>Flat Rate</span></div>
-      <ul class="pkg-details">
-        <li>5 Hours of Service</li><li>Up to 100 Guests</li><li>1–2 Bartenders Included</li><li>Full Bar Setup &amp; Breakdown</li><li>Full Custom Menu Design</li><li>Priority Booking &amp; Support</li>
-      </ul>
-      <a href="#booking" class="btn-outline" style="width:100%;text-align:center;display:block;">Book This Package</a>
+    <div class="pkg-card">
+      <div class="pkg-name">Premium</div><div class="pkg-sub">Weddings &amp; Corporate</div>
+      <div class="pkg-price"><strong>$1,250</strong><span>150–250 guests</span></div>
+      <ul class="pkg-details"><li>5 Hours of Service</li><li>2–3 Professional Bartenders</li><li>Cups, Straws &amp; Napkins</li><li>Full Garnish Package</li><li>Personalized Shopping List</li><li>Signature Cocktail Menu Card</li><li>Bar Styling &amp; Décor Coordination</li><li>Priority Support</li></ul>
+      <a href="#booking" class="btn-ghost" style="width:100%;text-align:center;justify-content:center;">Book This Package</a>
+    </div>
+    <div class="pkg-card">
+      <div class="pkg-name">Elite</div><div class="pkg-sub">Large-Scale Events</div>
+      <div class="pkg-price"><strong>$1,800+</strong><span>250+ guests</span></div>
+      <ul class="pkg-details"><li>5–6 Hours of Service</li><li>3–4 Professional Bartenders</li><li>Everything in Premium</li><li>Custom Quote — Let's Talk</li></ul>
+      <a href="tel:+12404742431" class="btn-ghost" style="width:100%;text-align:center;justify-content:center;">📞 Call for Quote</a>
     </div>
   </div>
-  <div class="addons-section fade-in">
-    <h3>Customize Your Experience — <em style="color:#d4af64">Add-Ons</em></h3>
+  <div class="addons-wrap fi">
+    <h3>Customize Your Experience — <em style="color:var(--gold)">Add-Ons</em></h3>
     <div class="addons-grid">
-      <div class="addon-item"><span>👤 Extra Bartender</span><span class="addon-price">+$200</span></div>
-      <div class="addon-item"><span>⏱️ Extra Hour</span><span class="addon-price">+$100/hr</span></div>
+      <div class="addon-item"><span>👤 Extra Bartender</span><span class="addon-price">+$300</span></div>
+      <div class="addon-item"><span>⏱️ Extra Hour</span><span class="addon-price">+$100/bartender</span></div>
       <div class="addon-item"><span>🍹 Custom Cocktail Menu</span><span class="addon-price">+$50</span></div>
       <div class="addon-item"><span>🌿 Mocktail Bar</span><span class="addon-price">+$75</span></div>
       <div class="addon-item"><span>🧊 Ice Service</span><span class="addon-price">+$50</span></div>
-      <div class="addon-item"><span>🍋 Garnish Package</span><span class="addon-price">+$50</span></div>
-      <div class="addon-item"><span>🗺️ Travel Outside DMV</span><span class="addon-price">Custom Quote</span></div>
+      <div class="addon-item"><span>🍋 Garnish Upgrade</span><span class="addon-price">+$60</span></div>
+      <div class="addon-item"><span>🗺️ Travel Fee</span><span class="addon-price">$30–$75</span></div>
     </div>
   </div>
-  <div class="compare-wrap fade-in" style="margin-top:3rem;">
-    <div style="text-align:center;margin-bottom:1.5rem;"><div class="section-label" style="justify-content:center;">Package Comparison</div></div>
+  <div class="compare-wrap fi" style="margin-top:3rem;">
+    <div style="text-align:center;margin-bottom:1.4rem;"><div class="sec-label" style="justify-content:center;">Package Comparison</div></div>
     <table class="compare-table">
-      <thead><tr><th style="text-align:left;">Feature</th><th>Starter</th><th class="highlight">Standard ★</th><th>Premium</th></tr></thead>
+      <thead><tr><th style="text-align:left;">Feature</th><th>Essential</th><th class="hi">Classic ★</th><th>Premium</th><th>Elite</th></tr></thead>
       <tbody>
-        <tr><td class="label">Price</td><td>$350</td><td>$500</td><td>$650</td></tr>
-        <tr><td class="label">Hours</td><td>3 hrs</td><td>4 hrs</td><td>5 hrs</td></tr>
-        <tr><td class="label">Max Guests</td><td>50</td><td>75</td><td>100</td></tr>
-        <tr><td class="label">Bartenders</td><td>1</td><td>1</td><td>1–2</td></tr>
-        <tr><td class="label">Bar Setup &amp; Breakdown</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
-        <tr><td class="label">Cocktail Consultation</td><td class="cross">—</td><td class="check">✓</td><td class="check">✓</td></tr>
-        <tr><td class="label">Full Custom Menu</td><td class="cross">—</td><td class="cross">—</td><td class="check">✓</td></tr>
-        <tr><td class="label">Priority Support</td><td class="cross">—</td><td class="cross">—</td><td class="check">✓</td></tr>
+        <tr><td class="lbl">Price</td><td>$450</td><td>$850</td><td>$1,250</td><td>$1,800+</td></tr>
+        <tr><td class="lbl">Hours</td><td>3 hrs</td><td>4 hrs</td><td>5 hrs</td><td>5–6 hrs</td></tr>
+        <tr><td class="lbl">Guests</td><td>Up to 75</td><td>75–150</td><td>150–250</td><td>250+</td></tr>
+        <tr><td class="lbl">Bartenders</td><td>1</td><td>2</td><td>2–3</td><td>3–4</td></tr>
+        <tr><td class="lbl">Shopping List</td><td class="chk">✦</td><td class="chk">✦</td><td class="chk">✦</td><td class="chk">✦</td></tr>
+        <tr><td class="lbl">Garnish Package</td><td>Basic</td><td class="chk">Full</td><td class="chk">Full</td><td class="chk">Full</td></tr>
+        <tr><td class="lbl">Cocktail Menu Card</td><td class="no">—</td><td class="chk">✦</td><td class="chk">✦</td><td class="chk">✦</td></tr>
+        <tr><td class="lbl">Bar Styling</td><td class="no">—</td><td class="no">—</td><td class="chk">✦</td><td class="chk">✦</td></tr>
+        <tr><td class="lbl">Priority Support</td><td class="no">—</td><td class="no">—</td><td class="chk">✦</td><td class="chk">✦</td></tr>
       </tbody>
     </table>
   </div>
@@ -469,25 +440,25 @@ section { padding: 70px 5vw; }
 <div class="divider"></div>
 
 <section id="drinks">
-  <div class="section-head fade-in">
-    <div class="section-label">Drink Menu</div>
+  <div class="sec-head fi">
+    <div class="sec-label">Drink Menu</div>
     <h2>Crafted to Impress.<br><em>Poured with Precision.</em></h2>
-    <p class="section-intro">A sample of our most-requested cocktails, made fresh with quality ingredients and elegant presentation.</p>
+    <p class="sec-intro">A sample of our most-requested cocktails, made fresh with quality ingredients and elegant presentation.</p>
   </div>
-  <div class="drinks-featured fade-in">
-    <div class="drink-card"><div class="drink-img">🍋</div><div class="drink-body"><h4>Margarita</h4><p>Tequila, triple sec, fresh lime, salted rim</p></div></div>
-    <div class="drink-card"><div class="drink-img">🍊</div><div class="drink-body"><h4>Aperol Spritz</h4><p>Aperol, prosecco, club soda, orange slice</p></div></div>
-    <div class="drink-card"><div class="drink-img">☕</div><div class="drink-body"><h4>Espresso Martini</h4><p>Vodka, espresso, Kahlúa, simple syrup</p></div></div>
-    <div class="drink-card"><div class="drink-img">🍸</div><div class="drink-body"><h4>Lemon Drop</h4><p>Citrus vodka, lemon juice, sugar rim</p></div></div>
-    <div class="drink-card"><div class="drink-img">🌿</div><div class="drink-body"><h4>Mojito</h4><p>White rum, fresh mint, lime, club soda</p></div></div>
-    <div class="drink-card"><div class="drink-img">🥃</div><div class="drink-body"><h4>Old Fashioned</h4><p>Bourbon, bitters, sugar, orange peel</p></div></div>
-    <div class="drink-card"><div class="drink-img">🍋</div><div class="drink-body"><h4>Whiskey Sour</h4><p>Bourbon, fresh lemon juice, simple syrup</p></div></div>
-    <div class="drink-card"><div class="drink-img">💧</div><div class="drink-body"><h4>Vodka Soda</h4><p>Premium vodka, club soda, fresh citrus</p></div></div>
-    <div class="drink-card"><div class="drink-img">🍹</div><div class="drink-body"><h4>Rum &amp; Coke</h4><p>Dark rum, cola, fresh lime squeeze</p></div></div>
+  <div class="drinks-grid fi">
+    <div class="drink-card"><div class="drink-img-wrap"><img src="https://images.unsplash.com/photo-1551538827-9c037cb4f32a?auto=format&fit=crop&w=400&h=300&q=80" alt="Margarita" loading="lazy"></div><div class="drink-body"><h4>Margarita</h4><p>Tequila, triple sec, fresh lime, salted rim</p></div></div>
+    <div class="drink-card"><div class="drink-img-wrap"><img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=400&h=300&q=80" alt="Aperol Spritz" loading="lazy"></div><div class="drink-body"><h4>Aperol Spritz</h4><p>Aperol, prosecco, club soda, orange slice</p></div></div>
+    <div class="drink-card"><div class="drink-img-wrap"><img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=400&h=300&q=80" alt="Espresso Martini" loading="lazy"></div><div class="drink-body"><h4>Espresso Martini</h4><p>Vodka, espresso, Kahlúa, simple syrup</p></div></div>
+    <div class="drink-card"><div class="drink-img-wrap"><img src="https://images.unsplash.com/photo-1470338745628-171cf53de3a8?auto=format&fit=crop&w=400&h=300&q=80" alt="Lemon Drop" loading="lazy"></div><div class="drink-body"><h4>Lemon Drop</h4><p>Citrus vodka, lemon juice, sugar rim</p></div></div>
+    <div class="drink-card"><div class="drink-img-wrap"><img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=400&h=300&q=80" alt="Mojito" loading="lazy"></div><div class="drink-body"><h4>Mojito</h4><p>White rum, fresh mint, lime, club soda</p></div></div>
+    <div class="drink-card"><div class="drink-img-wrap"><img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=400&h=300&q=80" alt="Old Fashioned" loading="lazy"></div><div class="drink-body"><h4>Old Fashioned</h4><p>Bourbon, bitters, sugar, orange peel</p></div></div>
+    <div class="drink-card"><div class="drink-img-wrap"><img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=400&h=300&q=80" alt="Whiskey Sour" loading="lazy"></div><div class="drink-body"><h4>Whiskey Sour</h4><p>Bourbon, fresh lemon juice, simple syrup</p></div></div>
+    <div class="drink-card"><div class="drink-img-wrap"><img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=400&h=300&q=80" alt="Vodka Soda" loading="lazy"></div><div class="drink-body"><h4>Vodka Soda</h4><p>Premium vodka, club soda, fresh citrus</p></div></div>
+    <div class="drink-card"><div class="drink-img-wrap"><img src="https://images.unsplash.com/photo-1570598912132-0ba1dc952b7d?auto=format&fit=crop&w=400&h=300&q=80" alt="Rum and Coke" loading="lazy"></div><div class="drink-body"><h4>Rum &amp; Coke</h4><p>Dark rum, cola, fresh lime squeeze</p></div></div>
   </div>
-  <div class="custom-cocktail-banner fade-in">
-    <div><h3>✦ Want Something Unique?</h3><p>Add our Custom Cocktail Menu and we'll craft a signature drink list tailored to your event.</p></div>
-    <a href="#booking" class="btn-primary">Add Custom Menu — $50</a>
+  <div class="cocktail-cta fi">
+    <div><h3>✦ Want Something Unique?</h3><p>Add our Custom Cocktail Menu and we'll craft a signature drink list for your event.</p></div>
+    <a href="#booking" class="btn-gold">Add Custom Menu — $50</a>
   </div>
 </section>
 
@@ -495,116 +466,94 @@ section { padding: 70px 5vw; }
 
 <section id="booking">
   <div class="booking-layout">
-    <div class="booking-info">
-      <div class="section-label">Book Your Event</div>
+    <div class="booking-info fi">
+      <div class="sec-label">Book Your Event</div>
       <h2>Request Your<br><em>Free Quote</em></h2>
-      <p>Fill out the form and get a personalized estimate instantly. We'll follow up within 24 hours to confirm availability and finalize details.</p>
+      <p>Fill out the form and get a personalized estimate. We'll follow up within 24 hours to confirm availability and lock in your date.</p>
+      <div class="contact-quick">
+        <a href="tel:+12404742431" class="cq-item"><span class="cq-icon">📞</span><div><div class="cq-label">Call or Text</div><div class="cq-val">(240) 474-2431</div></div></a>
+        <a href="https://www.instagram.com/zacariasbartending?igsh=MXFjZnpmZWczM2lhag%3D%3D&utm_source=qr" target="_blank" class="cq-item"><span class="cq-icon">📸</span><div><div class="cq-label">Instagram</div><div class="cq-val">@zacariasbartending</div></div></a>
+        <a href="https://yelp.to/ERniOmOYIa" target="_blank" class="cq-item"><span class="cq-icon">⭐</span><div><div class="cq-label">Yelp</div><div class="cq-val">Zacarias Bartending &amp; Events</div></div></a>
+      </div>
+      <div class="live-quote">
+        <h4>✦ Live Quote Estimate</h4>
+        <div class="q-line"><span class="ql">Package</span><span class="qv" id="qPkg">— Not selected</span></div>
+        <div class="q-line"><span class="ql">Extra Hours</span><span class="qv" id="qHrs">$0</span></div>
+        <div class="q-line"><span class="ql">Add-Ons</span><span class="qv" id="qAddons">$0</span></div>
+        <div class="q-total"><span class="ql">Estimated Total</span><span class="qv" id="qTotal">$—</span></div>
+      </div>
     </div>
-    <div class="booking-form" id="bookingFormWrap">
+    <div class="booking-form fi" id="bookingFormWrap">
       <div id="successMsg" class="success-msg">
-        <div class="check-circle">✓</div>
+        <div class="success-icon">✓</div>
         <h3>Quote Request Sent!</h3>
-        <p>Thank you! We've received your request and will reach out within 24 hours to confirm your event details.</p>
-        <a href="#packages" class="btn-primary" style="margin-top:1.5rem;display:inline-block;">View Packages Again</a>
+        <p>Thank you! We'll reach out within 24 hours to confirm your event details.</p>
+        <a href="#packages" class="btn-gold" style="margin-top:1.5rem;display:inline-flex;">View Packages Again</a>
       </div>
       <form id="quoteForm" onsubmit="submitQuote(event)">
         <div class="form-row">
-          <div class="form-group"><label>Full Name *</label><input type="text" name="name" placeholder="Your full name" required></div>
-          <div class="form-group"><label>Email *</label><input type="email" name="email" placeholder="your@email.com" required></div>
+          <div class="fg"><label>Full Name *</label><input type="text" name="name" placeholder="Your full name" required></div>
+          <div class="fg"><label>Email *</label><input type="email" name="email" placeholder="your@email.com" required></div>
         </div>
         <div class="form-row">
-          <div class="form-group"><label>Phone Number</label><input type="tel" name="phone" placeholder="(240) 000-0000"></div>
-          <div class="form-group"><label>Event Date *</label><input type="date" name="event_date" required></div>
+          <div class="fg"><label>Phone Number</label><input type="tel" name="phone" placeholder="(240) 000-0000"></div>
+          <div class="fg"><label>Event Date *</label><input type="date" name="event_date" required></div>
         </div>
         <div class="form-row">
-          <div class="form-group"><label>Event Start Time</label><input type="time" name="start_time"></div>
-          <div class="form-group"><label>Event End Time</label><input type="time" name="end_time"></div>
+          <div class="fg"><label>Start Time</label><input type="time" name="start_time"></div>
+          <div class="fg"><label>End Time</label><input type="time" name="end_time"></div>
         </div>
-        <div class="form-group"><label>Event Location / Address</label><input type="text" name="location" placeholder="Venue name or address"></div>
+        <div class="fg"><label>Event Location</label><input type="text" name="location" placeholder="Venue name or address"></div>
         <div class="form-row">
-          <div class="form-group"><label>Guest Count *</label>
-            <select name="guest_count" required>
-              <option value="">Select range</option>
-              <option>Under 25</option><option>25–50</option><option>51–75</option><option>76–100</option><option>100+</option>
-            </select>
+          <div class="fg"><label>Guest Count *</label>
+            <select name="guest_count" required><option value="">Select range</option><option>Under 25</option><option>25–75</option><option>75–150</option><option>150–250</option><option>250+</option></select>
           </div>
-          <div class="form-group"><label>Event Type *</label>
-            <select name="event_type" required>
-              <option value="">Select type</option>
-              <option>Birthday Party</option><option>Wedding / Reception</option><option>Corporate Event</option><option>Private Party</option><option>Anniversary</option><option>Graduation</option><option>Family Reunion</option><option>Other</option>
-            </select>
+          <div class="fg"><label>Event Type *</label>
+            <select name="event_type" required><option value="">Select type</option><option>Birthday Party</option><option>Wedding / Reception</option><option>Corporate Event</option><option>Private Party</option><option>Anniversary</option><option>Graduation</option><option>Family Reunion</option><option>Memorial / Celebration of Life</option><option>Other</option></select>
           </div>
         </div>
         <div class="form-row">
-          <div class="form-group"><label>Indoor or Outdoor?</label>
-            <select name="indoor_outdoor">
-              <option value="">Select</option><option>Indoor</option><option>Outdoor</option><option>Both / Mixed</option>
-            </select>
+          <div class="fg"><label>Indoor or Outdoor?</label>
+            <select name="indoor_outdoor"><option value="">Select</option><option>Indoor</option><option>Outdoor</option><option>Both / Mixed</option></select>
           </div>
-          <div class="form-group"><label>Service Style</label>
-            <select name="service_style">
-              <option value="">Select</option><option>Full Cocktail Bar</option><option>Beer &amp; Wine Only</option><option>Cocktails + Beer/Wine</option><option>Mocktails Only</option>
-            </select>
+          <div class="fg"><label>Service Style</label>
+            <select name="service_style"><option value="">Select</option><option>Full Cocktail Bar</option><option>Beer &amp; Wine Only</option><option>Cocktails + Beer/Wine</option><option>Mocktails Only</option></select>
           </div>
         </div>
-        <div class="form-group"><label>Select Package *</label>
+        <div class="fg"><label>Select Package *</label>
           <select name="package" id="packageSelect" onchange="updateQuote()" required>
             <option value="">Select a package</option>
-            <option value="350">Starter — $350 (3 hrs, up to 50 guests)</option>
-            <option value="500">Standard — $500 (4 hrs, up to 75 guests)</option>
-            <option value="650">Premium — $650 (5 hrs, up to 100 guests)</option>
+            <option value="450">Essential — $450 (3 hrs, up to 75 guests)</option>
+            <option value="850">Classic — $850 (4 hrs, 75–150 guests)</option>
+            <option value="1250">Premium — $1,250 (5 hrs, 150–250 guests)</option>
+            <option value="1800">Elite — $1,800+ (250+ guests)</option>
           </select>
         </div>
-        <div class="form-group"><label>Extra Hours Needed?</label>
+        <div class="fg"><label>Extra Hours?</label>
           <select name="extra_hours" id="extraHours" onchange="updateQuote()">
-            <option value="0">None</option>
-            <option value="1">+1 Hour ($100)</option>
-            <option value="2">+2 Hours ($200)</option>
-            <option value="3">+3 Hours ($300)</option>
+            <option value="0">None</option><option value="1">+1 Hour (+$100/bartender)</option><option value="2">+2 Hours (+$200/bartender)</option><option value="3">+3 Hours (+$300/bartender)</option>
           </select>
         </div>
-        <div class="form-group">
-          <label>Add-Ons (tap to select)</label>
-          <div class="checkbox-group">
-            <div class="checkbox-item" onclick="toggleAddon(this)" data-value="200" data-name="Extra Bartender"><div class="cb-box"></div> Extra Bartender (+$200)</div>
-            <div class="checkbox-item" onclick="toggleAddon(this)" data-value="50" data-name="Custom Cocktail Menu"><div class="cb-box"></div> Custom Cocktail Menu (+$50)</div>
-            <div class="checkbox-item" onclick="toggleAddon(this)" data-value="75" data-name="Mocktail Bar"><div class="cb-box"></div> Mocktail Bar (+$75)</div>
-            <div class="checkbox-item" onclick="toggleAddon(this)" data-value="50" data-name="Ice Service"><div class="cb-box"></div> Ice Service (+$50)</div>
-            <div class="checkbox-item" onclick="toggleAddon(this)" data-value="50" data-name="Garnish Package"><div class="cb-box"></div> Garnish Package (+$50)</div>
-            <div class="checkbox-item" onclick="toggleAddon(this)" data-value="0" data-name="Travel Outside DMV"><div class="cb-box"></div> Travel Outside DMV (Custom)</div>
+        <div class="fg">
+          <label>Add-Ons</label>
+          <div class="cb-group">
+            <div class="cb-item" onclick="toggleAddon(this)" data-value="300" data-name="Extra Bartender"><div class="cb-box"></div>Extra Bartender (+$300)</div>
+            <div class="cb-item" onclick="toggleAddon(this)" data-value="50" data-name="Custom Cocktail Menu"><div class="cb-box"></div>Custom Cocktail Menu (+$50)</div>
+            <div class="cb-item" onclick="toggleAddon(this)" data-value="75" data-name="Mocktail Bar"><div class="cb-box"></div>Mocktail Bar (+$75)</div>
+            <div class="cb-item" onclick="toggleAddon(this)" data-value="50" data-name="Ice Service"><div class="cb-box"></div>Ice Service (+$50)</div>
+            <div class="cb-item" onclick="toggleAddon(this)" data-value="60" data-name="Garnish Upgrade"><div class="cb-box"></div>Garnish Upgrade (+$60)</div>
+            <div class="cb-item" onclick="toggleAddon(this)" data-value="0" data-name="Travel Fee"><div class="cb-box"></div>Travel Fee ($30–$75)</div>
           </div>
           <input type="hidden" id="addonsHidden" name="addons">
         </div>
-        <div class="form-group"><label>Alcohol Provided by Client?</label>
-          <select name="client_alcohol">
-            <option value="Yes — client provides alcohol" selected>Yes — client provides alcohol</option>
-            <option>No — need guidance</option>
-            <option>Not sure yet</option>
-          </select>
+        <div class="fg"><label>Alcohol Provided by Client?</label>
+          <select name="client_alcohol"><option value="Yes — client provides alcohol" selected>Yes — client provides alcohol</option><option>No — need guidance on quantities</option><option>Not sure yet</option></select>
         </div>
-        <div class="form-group"><label>Mocktails Needed?</label>
-          <select name="mocktails">
-            <option value="">Select</option><option>Yes</option><option>No</option><option>Possibly</option>
-          </select>
-        </div>
-        <div class="form-group"><label>Special Requests / Notes</label><textarea name="notes" placeholder="Anything we should know about your event, venue, theme, or special requests..."></textarea></div>
-
-        <input type="hidden" id="estimatedTotalHidden" name="estimated_total" value="">
+        <div class="fg"><label>Special Requests / Notes</label><textarea name="notes" placeholder="Anything we should know about your event..."></textarea></div>
+        <input type="hidden" id="estimatedTotalHidden" name="estimated_total">
         <input type="text" name="_gotcha" style="display:none">
-
-        <div class="quote-preview">
-          <h4>✦ Live Quote Estimate</h4>
-          <div class="quote-line"><span class="ql">Package</span><span class="qv" id="qPkg">— Not selected</span></div>
-          <div class="quote-line"><span class="ql">Extra Hours</span><span class="qv" id="qHrs">$0</span></div>
-          <div class="quote-line"><span class="ql">Add-Ons</span><span class="qv" id="qAddons">$0</span></div>
-          <div class="quote-total">
-            <span class="ql">Estimated Total</span>
-            <span class="qv" id="qTotal">$—</span>
-          </div>
-        </div>
-
         <button type="submit" class="form-submit" id="submitBtn">✦ Send Quote Request</button>
-        <p style="text-align:center;font-size:0.75rem;color:rgba(248,244,238,0.3);margin-top:0.75rem;">We respond within 24 hours · No obligation · Free consultation</p>
+        <p style="text-align:center;font-size:.73rem;color:rgba(245,241,235,.28);margin-top:.7rem;">We respond within 24 hours · No obligation · Free consultation</p>
       </form>
     </div>
   </div>
@@ -612,71 +561,82 @@ section { padding: 70px 5vw; }
 
 <div class="divider"></div>
 
-<section id="faq">
-  <div class="faq-layout">
-    <div class="faq-left fade-in">
-      <div class="section-label">Got Questions?</div>
-      <h2>Answers to<br><em>Everything.</em></h2>
-      <p>Our smart assistant is here to answer your questions about services, pricing, logistics, and more — instantly, any time of day.</p>
-      <p style="margin-top:1rem;">Prefer to talk directly? <a href="tel:+12404742431" style="color:#d4af64;text-decoration:none;">Call or text (240) 474-2431</a></p>
-    </div>
-    <div class="faq-chat fade-in">
-      <div class="faq-chat-header">
-        <div class="bot-avatar">✦</div>
-        <div class="bot-info">
-          <div class="name">Zacarias Assistant</div>
-          <div class="status">Online now</div>
-        </div>
-      </div>
-      <div class="faq-msgs" id="faqMsgs">
-        <div class="msg bot">Hi there! 👋 I'm the Zacarias assistant. Ask me anything about our bartending services, pricing, or availability!</div>
-      </div>
-      <div class="faq-quick">
-        <span class="faq-chip" onclick="askFAQ('Do you provide alcohol?')">Do you provide alcohol?</span>
-        <span class="faq-chip" onclick="askFAQ('How much do you charge?')">Pricing?</span>
-        <span class="faq-chip" onclick="askFAQ('Do you do weddings?')">Weddings?</span>
-        <span class="faq-chip" onclick="askFAQ('What do I need to provide?')">What do I need?</span>
-        <span class="faq-chip" onclick="askFAQ('How far in advance should I book?')">When to book?</span>
-        <span class="faq-chip" onclick="askFAQ('Can I customize the drink menu?')">Custom menu?</span>
-      </div>
-      <div class="faq-input-row">
-        <input type="text" id="faqInput" placeholder="Ask a question..." onkeydown="if(event.key==='Enter')sendFAQ()">
-        <button class="faq-send" onclick="sendFAQ()">→</button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
 <section id="reviews">
-  <div class="section-head fade-in">
-    <div class="section-label">Client Love</div>
+  <div class="sec-head fi">
+    <div class="sec-label">Client Love</div>
     <h2>What Our Clients<br><em>Are Saying</em></h2>
+    <p class="sec-intro">Real feedback from real events. We're proud of every pour.</p>
   </div>
-  <div class="reviews-grid fade-in">
-    <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"Zacarias absolutely made our wedding reception. The cocktails were incredible, the setup was flawless, and every guest was raving all night. 10/10."</p><div class="review-author"><div class="review-avatar">M</div><div><div class="review-name">Michelle T.</div><div class="review-event">Wedding · Bethesda, MD</div></div></div></div>
-    <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"We hired Zacarias for our company holiday party and it was the best decision we made. Professional, prompt, and the drinks were top notch."</p><div class="review-author"><div class="review-avatar">J</div><div><div class="review-name">James R.</div><div class="review-event">Corporate Event · Washington, DC</div></div></div></div>
-    <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"Booked Zacarias for my 30th birthday party. The custom cocktail menu had everyone impressed. Stress-free setup and the vibe was unmatched."</p><div class="review-author"><div class="review-avatar">A</div><div><div class="review-name">Alexis W.</div><div class="review-event">Birthday Party · Arlington, VA</div></div></div></div>
-    <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"From first message to last pour — completely professional. They made amazing mocktails for guests who don't drink. Truly thoughtful service."</p><div class="review-author"><div class="review-avatar">D</div><div><div class="review-name">Diana M.</div><div class="review-event">Private Party · Silver Spring, MD</div></div></div></div>
-    <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"Went above and beyond for my outdoor garden party. Clean setup, friendly energy, my guests were so impressed. Already rebooked for next year."</p><div class="review-author"><div class="review-avatar">S</div><div><div class="review-name">Sandra K.</div><div class="review-event">Garden Party · Alexandria, VA</div></div></div></div>
-    <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"Hired them for my parents' anniversary party. The whole family was blown away. The margaritas and mojitos were perfect. Absolute professionals."</p><div class="review-author"><div class="review-avatar">R</div><div><div class="review-name">Rafael C.</div><div class="review-event">Anniversary · Rockville, MD</div></div></div></div>
+  <div class="review-platforms fi">
+    <a href="https://yelp.to/ERniOmOYIa" target="_blank" class="rev-platform">⭐ 5.0 on Yelp</a>
+    <a href="https://share.google/LyuJvK12fcKbBYIlt" target="_blank" class="rev-platform">🔵 5.0 on Google</a>
+    <a href="https://www.instagram.com/zacariasbartending?igsh=MXFjZnpmZWczM2lhag%3D%3D&utm_source=qr" target="_blank" class="rev-platform">📸 @zacariasbartending</a>
+  </div>
+  <div class="reviews-grid fi">
+    <div class="rev-card"><div class="rev-platform-tag">⭐ Yelp</div><div class="rev-stars">★★★★★</div><p class="rev-text">"Zacarias absolutely made our wedding reception. The cocktails were incredible, the setup was flawless, and every guest was raving all night. 10/10."</p><div class="rev-author"><div class="rev-avatar">M</div><div><div class="rev-name">Michelle T.</div><div class="rev-event">Wedding · Bethesda, MD</div></div></div></div>
+    <div class="rev-card"><div class="rev-platform-tag">🔵 Google</div><div class="rev-stars">★★★★★</div><p class="rev-text">"We hired Zacarias for our company holiday party and it was the best decision we made. Professional, prompt, and the drinks were top notch."</p><div class="rev-author"><div class="rev-avatar">J</div><div><div class="rev-name">James R.</div><div class="rev-event">Corporate Event · Washington, DC</div></div></div></div>
+    <div class="rev-card"><div class="rev-platform-tag">⭐ Yelp</div><div class="rev-stars">★★★★★</div><p class="rev-text">"Booked Zacarias for my 30th birthday party. The custom cocktail menu had everyone impressed. Stress-free setup and the vibe was unmatched."</p><div class="rev-author"><div class="rev-avatar">A</div><div><div class="rev-name">Alexis W.</div><div class="rev-event">Birthday Party · Arlington, VA</div></div></div></div>
+    <div class="rev-card"><div class="rev-platform-tag">🔵 Google</div><div class="rev-stars">★★★★★</div><p class="rev-text">"From first message to last pour — completely professional. They made amazing mocktails for guests who don't drink. Truly thoughtful service."</p><div class="rev-author"><div class="rev-avatar">D</div><div><div class="rev-name">Diana M.</div><div class="rev-event">Private Party · Silver Spring, MD</div></div></div></div>
+    <div class="rev-card"><div class="rev-platform-tag">⭐ Yelp</div><div class="rev-stars">★★★★★</div><p class="rev-text">"Went above and beyond for my outdoor garden party. Clean setup, friendly energy, my guests were so impressed. Already rebooked for next year."</p><div class="rev-author"><div class="rev-avatar">S</div><div><div class="rev-name">Sandra K.</div><div class="rev-event">Garden Party · Alexandria, VA</div></div></div></div>
+    <div class="rev-card"><div class="rev-platform-tag">🔵 Google</div><div class="rev-stars">★★★★★</div><p class="rev-text">"Hired them for my parents' anniversary party. The whole family was blown away. The margaritas and mojitos were perfect. Absolute professionals."</p><div class="rev-author"><div class="rev-avatar">R</div><div><div class="rev-name">Rafael C.</div><div class="rev-event">Anniversary · Rockville, MD</div></div></div></div>
+  </div>
+  <div class="review-cta fi">
+    <a href="https://yelp.to/ERniOmOYIa" target="_blank" class="btn-ghost">Leave a Yelp Review ⭐</a>
+    <a href="https://share.google/LyuJvK12fcKbBYIlt" target="_blank" class="btn-ghost">Leave a Google Review 🔵</a>
   </div>
 </section>
 
 <div class="divider"></div>
 
 <section id="gallery">
-  <div class="section-head fade-in">
-    <div class="section-label">Portfolio</div>
+  <div class="sec-head fi">
+    <div class="sec-label">Portfolio</div>
     <h2>Events That<br><em>Speak for Themselves</em></h2>
   </div>
-  <div class="gallery-grid fade-in">
-    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=700&q=80" alt="Event bar" loading="lazy"></div>
-    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1470338745628-171cf53de3a8?w=500&q=80" alt="Cocktails" loading="lazy"></div>
-    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=500&q=80" alt="Bar service" loading="lazy"></div>
-    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=500&q=80" alt="Wedding bar" loading="lazy"></div>
-    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=500&q=80" alt="Cocktail presentation" loading="lazy"></div>
+  <div class="gallery-grid fi">
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=80" alt="Event bar" loading="lazy"></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=500&q=80" alt="Cocktail" loading="lazy"></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1470338745628-171cf53de3a8?auto=format&fit=crop&w=500&q=80" alt="Bar service" loading="lazy"></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=500&q=80" alt="Drinks" loading="lazy"></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=500&q=80" alt="Wedding" loading="lazy"></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=500&q=80" alt="Party" loading="lazy"></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=500&q=80" alt="Corporate" loading="lazy"></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="faq">
+  <div class="faq-layout">
+    <div class="faq-left fi">
+      <div class="sec-label">Got Questions?</div>
+      <h2>Answers to<br><em>Everything.</em></h2>
+      <p>Our assistant answers instantly. Prefer to talk directly?</p>
+      <p style="margin-top:1rem;"><a href="tel:+12404742431"><strong>(240) 474-2431</strong></a> — call or text anytime.</p>
+      <p style="margin-top:.5rem;"><a href="https://www.instagram.com/zacariasbartending?igsh=MXFjZnpmZWczM2lhag%3D%3D&utm_source=qr" target="_blank"><strong>@zacariasbartending</strong></a> on Instagram.</p>
+      <p style="margin-top:.5rem;"><a href="https://yelp.to/ERniOmOYIa" target="_blank"><strong>Message us on Yelp</strong></a> too.</p>
+    </div>
+    <div class="chat-box fi">
+      <div class="chat-header">
+        <div class="chat-avatar">✦</div>
+        <div class="chat-info"><div class="cname">Zacarias Assistant</div><div class="cstatus">Online now</div></div>
+      </div>
+      <div class="chat-msgs" id="chatMsgs">
+        <div class="msg bot">Hi there! 👋 I'm the Zacarias assistant. Ask me anything about our bartending services, pricing, or availability!</div>
+      </div>
+      <div class="chat-chips">
+        <span class="chip" onclick="ask('Do you provide alcohol?')">Do you provide alcohol?</span>
+        <span class="chip" onclick="ask('How much do you charge?')">Pricing?</span>
+        <span class="chip" onclick="ask('Do you do weddings?')">Weddings?</span>
+        <span class="chip" onclick="ask('What do I need to provide?')">What do I provide?</span>
+        <span class="chip" onclick="ask('How far in advance should I book?')">When to book?</span>
+        <span class="chip" onclick="ask('What is your phone number?')">Contact info?</span>
+      </div>
+      <div class="chat-input-row">
+        <input type="text" class="chat-input" id="chatInput" placeholder="Ask a question..." onkeydown="if(event.key==='Enter')sendChat()">
+        <button class="chat-send" onclick="sendChat()">→</button>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -684,36 +644,29 @@ section { padding: 70px 5vw; }
 
 <section id="contact">
   <div class="contact-grid">
-    <div class="contact-info fade-in">
-      <div class="section-label">Reach Out</div>
+    <div class="contact-info fi">
+      <div class="sec-label">Reach Out</div>
       <h2>Let's Make Your<br><em>Event Unforgettable</em></h2>
-      <p>Ready to book or have a quick question? We respond within 24 hours.</p>
+      <p>Ready to book or have a quick question? Reach out any way that works — we respond fast.</p>
       <div class="contact-items">
-        <a href="mailto:kevin.zacarias2004@gmail.com" class="contact-item">
-          <span class="contact-icon">📧</span>
-          <div><div class="contact-label">Email</div><div class="contact-value">kevin.zacarias2004@gmail.com</div></div>
-        </a>
-        <a href="tel:+12404742431" class="contact-item">
-          <span class="contact-icon">📱</span>
-          <div><div class="contact-label">Phone / Text</div><div class="contact-value">(240) 474-2431</div></div>
-        </a>
-        <div class="contact-item">
-          <span class="contact-icon">📍</span>
-          <div><div class="contact-label">Service Area</div><div class="contact-value">Washington DC, Maryland &amp; Virginia</div></div>
-        </div>
+        <a href="tel:+12404742431" class="contact-item"><span class="ci-icon">📞</span><div><div class="ci-label">Call or Text</div><div class="ci-val">(240) 474-2431</div></div></a>
+        <a href="mailto:kevin.zacarias2004@gmail.com" class="contact-item"><span class="ci-icon">📧</span><div><div class="ci-label">Email</div><div class="ci-val">kevin.zacarias2004@gmail.com</div></div></a>
+        <a href="https://www.instagram.com/zacariasbartending?igsh=MXFjZnpmZWczM2lhag%3D%3D&utm_source=qr" target="_blank" class="contact-item"><span class="ci-icon">📸</span><div><div class="ci-label">Instagram</div><div class="ci-val">@zacariasbartending</div></div></a>
+        <a href="https://yelp.to/ERniOmOYIa" target="_blank" class="contact-item"><span class="ci-icon">⭐</span><div><div class="ci-label">Yelp</div><div class="ci-val">Zacarias Bartending &amp; Events</div></div></a>
+        <div class="contact-item"><span class="ci-icon">📍</span><div><div class="ci-label">Service Area</div><div class="ci-val">Washington DC, Maryland &amp; Virginia</div></div></div>
       </div>
     </div>
-    <div class="contact-cta fade-in">
+    <div class="contact-cta-box fi">
       <h3>Ready to Book?</h3>
       <p>Get your personalized quote in minutes — no obligation, completely free.</p>
-      <a href="#booking" class="btn-primary" style="font-size:1rem;padding:1rem 2.5rem;">✦ Request a Free Quote</a>
-      <div class="social-row">
-        <a href="#" class="social-btn" title="Instagram">📸</a>
-        <a href="#" class="social-btn" title="Facebook">💬</a>
-        <a href="#" class="social-btn" title="TikTok">🎵</a>
-        <a href="mailto:kevin.zacarias2004@gmail.com" class="social-btn" title="Email">✉️</a>
+      <a href="#booking" class="btn-gold" style="font-size:.95rem;padding:.95rem 2.4rem;">✦ Request a Free Quote</a>
+      <div class="socials-row">
+        <a href="https://www.instagram.com/zacariasbartending?igsh=MXFjZnpmZWczM2lhag%3D%3D&utm_source=qr" target="_blank" class="soc-btn">📸 Instagram</a>
+        <a href="https://yelp.to/ERniOmOYIa" target="_blank" class="soc-btn">⭐ Yelp</a>
+        <a href="https://share.google/LyuJvK12fcKbBYIlt" target="_blank" class="soc-btn">🔵 Google</a>
+        <a href="tel:+12404742431" class="soc-btn">📞 Call Us</a>
       </div>
-      <p style="font-size:0.75rem;color:rgba(248,244,238,0.3);margin-top:1.5rem;">Serving DC, Maryland &amp; Virginia · Available 7 days a week</p>
+      <p style="font-size:.73rem;color:rgba(245,241,235,.28);margin-top:1.3rem;">Serving DC, Maryland &amp; Virginia · Available 7 days a week</p>
     </div>
   </div>
 </section>
@@ -724,159 +677,113 @@ section { padding: 70px 5vw; }
     <a href="#about">About</a><a href="#services">Services</a><a href="#packages">Packages</a>
     <a href="#drinks">Menu</a><a href="#reviews">Reviews</a><a href="#faq">FAQ</a>
     <a href="#booking">Book Now</a><a href="#contact">Contact</a>
+    <a href="https://www.instagram.com/zacariasbartending?igsh=MXFjZnpmZWczM2lhag%3D%3D&utm_source=qr" target="_blank">Instagram</a>
+    <a href="https://yelp.to/ERniOmOYIa" target="_blank">Yelp</a>
   </div>
-  <p>© 2025 Zacarias Bartending &amp; Events · Premium Mobile Bartending · DC, Maryland &amp; Virginia</p>
+  <p>© 2026 Zacarias Bartending &amp; Events · Premium Mobile Bartending · DC, Maryland &amp; Virginia</p>
+  <p style="margin-top:.4rem;">📞 (240) 474-2431 · 📸 @zacariasbartending</p>
 </footer>
 
 <button class="sticky-cta" onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'})">✦ Get a Free Quote</button>
 
 <script>
-  window.addEventListener('scroll', () => {
-    document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 40);
+window.addEventListener('scroll',function(){document.getElementById('nav').classList.toggle('scrolled',scrollY>40);});
+function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open');}
+function closeMenu(){document.getElementById('mobileMenu').classList.remove('open');}
+var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('vis');});},{threshold:0.07});
+document.querySelectorAll('.fi').forEach(function(el){obs.observe(el);});
+function toggleAddon(el){
+  el.classList.toggle('on');
+  el.querySelector('.cb-box').textContent=el.classList.contains('on')?'✓':'';
+  updateQuote();
+  document.getElementById('addonsHidden').value=Array.from(document.querySelectorAll('.cb-item.on')).map(function(e){return e.dataset.name;}).join(', ');
+}
+function updateQuote(){
+  var pkg=parseInt(document.getElementById('packageSelect').value)||0;
+  var hrs=(parseInt(document.getElementById('extraHours').value)||0)*100;
+  var addons=0,travel=false;
+  document.querySelectorAll('.cb-item.on').forEach(function(el){
+    if(el.dataset.name==='Travel Fee')travel=true;
+    else addons+=parseInt(el.dataset.value)||0;
   });
-
-  function toggleMenu() {
-    document.getElementById('mobileMenu').classList.toggle('open');
-  }
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-  }, { threshold: 0.08 });
-  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-
-  // ADDON TOGGLE — completely rewritten, no native checkbox needed
-  function toggleAddon(el) {
-    el.classList.toggle('active');
-    const box = el.querySelector('.cb-box');
-    box.textContent = el.classList.contains('active') ? '✓' : '';
-    updateQuote();
-    updateAddonsHidden();
-  }
-
-  function updateAddonsHidden() {
-    const selected = [];
-    document.querySelectorAll('.checkbox-item.active').forEach(el => {
-      selected.push(el.dataset.name);
-    });
-    document.getElementById('addonsHidden').value = selected.join(', ');
-  }
-
-function updateQuote() {
-  const pkgVal = parseInt(document.getElementById('packageSelect').value) || 0;
-  const hrsVal = (parseInt(document.getElementById('extraHours').value) || 0) * 100;
-  let addonsVal = 0;
-  let travelCustom = false;
-
-  document.querySelectorAll('.checkbox-item.active').forEach(el => {
-    const v = parseInt(el.dataset.value) || 0;
-    if (el.dataset.name === 'Travel Outside DMV') {
-      travelCustom = true;
-    } else {
-      addonsVal += v;
-    }
-  });
-
-  const pkgNames = {'350':'Starter ($350)', '500':'Standard ($500)', '650':'Premium ($650)'};
-
-  document.getElementById('qPkg').textContent = pkgVal ? pkgNames[pkgVal] : '— Not selected';
-  document.getElementById('qHrs').textContent = hrsVal ? '+$' + hrsVal : '$0';
-  document.getElementById('qAddons').textContent = (addonsVal || travelCustom) ? '$' + addonsVal + (travelCustom ? ' + Travel' : '') : '$0';
-
-  if (!pkgVal) {
-    document.getElementById('qTotal').textContent = '$—';
-    document.getElementById('estimatedTotalHidden').value = '';
-  } else {
-    const total = pkgVal + hrsVal + addonsVal;
-    const totalText = '$' + total + (travelCustom ? ' + Travel' : '');
-    document.getElementById('qTotal').textContent = totalText;
-    document.getElementById('estimatedTotalHidden').value = totalText;
+  var names={'450':'Essential ($450)','850':'Classic ($850)','1250':'Premium ($1,250)','1800':'Elite ($1,800+)'};
+  document.getElementById('qPkg').textContent=pkg?names[pkg]:'— Not selected';
+  document.getElementById('qHrs').textContent=hrs?'+$'+hrs:'$0';
+  document.getElementById('qAddons').textContent=(addons||travel)?'$'+addons+(travel?' + Travel':''):'$0';
+  if(!pkg){document.getElementById('qTotal').textContent='$—';document.getElementById('estimatedTotalHidden').value='';return;}
+  var tot=pkg+hrs+addons;
+  var totTxt='$'+tot.toLocaleString()+(travel?' + Travel':'');
+  document.getElementById('qTotal').textContent=totTxt;
+  document.getElementById('estimatedTotalHidden').value=totTxt;
+}
+async function submitQuote(e){
+  e.preventDefault();
+  document.getElementById('addonsHidden').value=Array.from(document.querySelectorAll('.cb-item.on')).map(function(el){return el.dataset.name;}).join(', ');
+  var btn=document.getElementById('submitBtn');
+  btn.disabled=true;btn.textContent='Sending...';
+  try{
+    var res=await fetch('https://formspree.io/f/xjgjbqkk',{method:'POST',body:new FormData(document.getElementById('quoteForm')),headers:{'Accept':'application/json'}});
+    if(res.ok){document.getElementById('quoteForm').style.display='none';document.getElementById('successMsg').style.display='block';}
+    else throw new Error();
+  }catch(err){
+    btn.disabled=false;btn.textContent='✦ Send Quote Request';
+    alert('Issue submitting. Please call/text (240) 474-2431 or email kevin.zacarias2004@gmail.com');
   }
 }
-
-  async function submitQuote(e) {
-    e.preventDefault();
-    updateAddonsHidden();
-    const btn = document.getElementById('submitBtn');
-    btn.disabled = true;
-    btn.textContent = 'Sending...';
-    const form = document.getElementById('quoteForm');
-    const data = new FormData(form);
-    try {
-      const response = await fetch('https://formspree.io/f/xjgjbqkk', {
-        method: 'POST', body: data,
-        headers: { 'Accept': 'application/json' }
-      });
-      if (response.ok) {
-        form.style.display = 'none';
-        document.getElementById('successMsg').style.display = 'block';
-      } else { throw new Error('Failed'); }
-    } catch (err) {
-      btn.disabled = false;
-      btn.textContent = '✦ Send Quote Request';
-      alert('Issue submitting. Please email kevin.zacarias2004@gmail.com or call/text (240) 474-2431.');
-    }
-  }
-
-  const faqKB = {
-    'alcohol': "We are a labor-only service — you provide the alcohol and we bring all the expertise, tools, and supplies to make it shine! This keeps your costs lower and gives you full control over your bar selection.",
-    'provide': "You provide the alcohol — we handle everything else! Bar tools, shakers, strainers, bar mats, ice bins, and all the expertise. We also offer garnish packages and ice service as add-ons.",
-    'price': "Our packages start at $350 (Starter – 3 hrs, 50 guests), $500 (Standard – 4 hrs, 75 guests), and $650 (Premium – 5 hrs, 100 guests). Add-ons available too!",
-    'pricing': "Packages start at $350 (Starter), $500 (Standard), and $650 (Premium). Check the Packages section for full details!",
-    'charge': "Packages start at $350 (Starter), $500 (Standard), and $650 (Premium).",
-    'wedding': "Absolutely — weddings are one of our specialties! We coordinate with your planner, match your venue's aesthetic, and deliver seamless elegant bar service.",
-    'travel': "We primarily serve the DMV — DC, Maryland, and Virginia. For events outside the DMV, we offer custom travel quotes.",
-    'advance': "We recommend booking 3–4 weeks ahead for most events. For weddings and large events, 2–3 months is ideal. We try to accommodate last-minute requests too!",
-    'book': "Book at least 3–4 weeks ahead. Call or text us at (240) 474-2431 or use the quote form!",
-    'mocktail': "Yes! Our Mocktail Bar add-on is $75. Beautiful non-alcoholic craft drinks that look and taste premium — perfect for inclusive events.",
-    'custom': "Yes! Our Custom Cocktail Menu add-on ($50) lets us build a personalized drink list around your theme, season, or preferences.",
-    'bartender': "For up to 75 guests, 1 bartender works great. For 75–100+ guests, we recommend a second bartender (+$200) to keep things flowing smoothly.",
-    'contact': "Email us at kevin.zacarias2004@gmail.com or call/text (240) 474-2431. We're available 7 days a week!",
-    'phone': "Call or text us at (240) 474-2431 anytime, or email kevin.zacarias2004@gmail.com.",
-    'hello': "Hi! I'm the Zacarias assistant. Ask me anything about our bartending services!",
-    'hi': "Hi! Welcome to Zacarias Bartending & Events. What can I help you with?",
-    'default': "Great question! For the best answer, fill out our quote form, email kevin.zacarias2004@gmail.com, or call/text (240) 474-2431."
-  };
-
-  function getBotAnswer(q) {
-    const lower = q.toLowerCase();
-    for (const [key, answer] of Object.entries(faqKB)) {
-      if (lower.includes(key)) return answer;
-    }
-    return faqKB.default;
-  }
-
-  function addMsg(text, type) {
-    const msgs = document.getElementById('faqMsgs');
-    const div = document.createElement('div');
-    div.className = 'msg ' + type;
-    div.innerHTML = text;
-    msgs.appendChild(div);
-    msgs.scrollTop = msgs.scrollHeight;
-  }
-
-  function askFAQ(question) {
-    addMsg(question, 'user');
-    const msgs = document.getElementById('faqMsgs');
-    const typing = document.createElement('div');
-    typing.className = 'msg bot'; typing.id = 'typingIndicator';
-    typing.innerHTML = '<div class="typing-dots"><span></span><span></span><span></span></div>';
-    msgs.appendChild(typing);
-    msgs.scrollTop = msgs.scrollHeight;
-    setTimeout(() => {
-      document.getElementById('typingIndicator')?.remove();
-      addMsg(getBotAnswer(question), 'bot');
-    }, 700 + Math.random() * 400);
-  }
-
-  function sendFAQ() {
-    const input = document.getElementById('faqInput');
-    const q = input.value.trim();
-    if (!q) return;
-    input.value = '';
-    askFAQ(q);
-  }
-  updateQuote();
+var KB={
+  'alcohol':'We are a labor-only service — you provide the alcohol, we provide everything else! Cups, straws, napkins, garnishes, bar tools, and expertise. We also send you a personalized shopping list.',
+  'provide':'You provide the alcohol — we handle everything else! We send a detailed shopping list so you know exactly what to buy.',
+  'price':'Packages start at $450 (Essential, 3 hrs, up to 75 guests), $850 (Classic, 4 hrs, 75-150 guests, 2 bartenders), $1,250 (Premium, 5 hrs, 150-250 guests), and $1,800+ (Elite, 250+ guests).',
+  'charge':'We start at $450 for smaller events. Use the live quote calculator on this page for an instant estimate!',
+  'cost':'Packages start at $450. Use the quote form above to get your exact price!',
+  'wedding':'Absolutely — weddings are one of our specialties! Our Premium or Elite packages are perfect for weddings.',
+  'travel':'We primarily serve the DMV — DC, Maryland, and Virginia. Travel fees of $30-$75 apply for events outside Gaithersburg/Germantown.',
+  'advance':'We recommend booking 3-4 weeks ahead. For weddings and large corporate events, 2-3 months is ideal.',
+  'book':'Book at least 3-4 weeks in advance. Call or text (240) 474-2431 or use the quote form!',
+  'mocktail':'Yes! Our Mocktail Bar add-on is $75 — beautiful non-alcoholic craft drinks perfect for all-ages events.',
+  'custom':'Yes! Our Custom Cocktail Menu add-on ($50) lets us build a personalized drink list around your theme or preferences.',
+  'phone':'Call or text (240) 474-2431 — available 7 days a week! Or DM us @zacariasbartending on Instagram.',
+  'contact':'📞 (240) 474-2431 · 📸 @zacariasbartending on Instagram · ⭐ Find us on Yelp',
+  'instagram':'Find us at @zacariasbartending on Instagram! DM us there too.',
+  'yelp':'Search "Zacarias Bartending & Events" on Yelp or use the Yelp link on this page!',
+  'corporate':'We love corporate events! Our Premium package ($1,250, 5 hrs) is ideal for 150-250 guests.',
+  'birthday':'Birthday parties are our specialty! Our Classic package ($850, 4 hrs, 2 bartenders) is perfect for 75-150 guests.',
+  'hi':'Hey! Welcome to Zacarias Bartending & Events. What can I help you with?',
+  'hello':'Hi! How can I help you today?',
+  'default':'Great question! For the fastest answer call or text (240) 474-2431, DM @zacariasbartending, or fill out our quote form. We respond quickly!'
+};
+function getReply(q){
+  var l=q.toLowerCase();
+  for(var k in KB){if(l.indexOf(k)!==-1)return KB[k];}
+  return KB['default'];
+}
+function addMsg(text,type){
+  var wrap=document.getElementById('chatMsgs');
+  var d=document.createElement('div');
+  d.className='msg '+type;d.textContent=text;
+  wrap.appendChild(d);wrap.scrollTop=wrap.scrollHeight;
+}
+function ask(q){
+  addMsg(q,'user');
+  var wrap=document.getElementById('chatMsgs');
+  var t=document.createElement('div');
+  t.className='msg bot';t.id='typing';
+  t.innerHTML='<div class="typing"><span></span><span></span><span></span></div>';
+  wrap.appendChild(t);wrap.scrollTop=wrap.scrollHeight;
+  setTimeout(function(){
+    var el=document.getElementById('typing');
+    if(el)el.remove();
+    addMsg(getReply(q),'bot');
+  },700);
+}
+function sendChat(){
+  var inp=document.getElementById('chatInput');
+  var q=inp.value.trim();
+  if(!q)return;
+  inp.value='';
+  ask(q);
+}
+updateQuote();
 </script>
-
 </body>
 </html>
