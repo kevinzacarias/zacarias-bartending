@@ -270,6 +270,8 @@ footer p{color:rgba(245,241,235,.28);font-size:.77rem;}
 @media(max-width:1100px){.pkg-grid{grid-template-columns:repeat(2,1fr);}}
 @media(max-width:960px){.about-grid,.booking-layout,.faq-layout,.contact-grid{grid-template-columns:1fr;gap:2.8rem;}.pkg-grid{grid-template-columns:1fr 1fr;}.gallery-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:180px;}.gallery-item:nth-child(1){grid-column:span 2;}.gallery-item:nth-child(4){grid-column:span 1;}.nav-links{display:none;}.hamburger{display:flex;}.form-row{grid-template-columns:1fr;}}
 @media(max-width:640px){h1{font-size:2.6rem;}section{padding:68px 5vw;}.pillars,.cb-group{grid-template-columns:1fr;}.gallery-grid{grid-template-columns:1fr;grid-auto-rows:200px;}.gallery-item:nth-child(1),.gallery-item:nth-child(4){grid-column:span 1;}.pkg-grid{grid-template-columns:1fr;}.sticky-cta{display:none;}}
+.real-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin:2rem auto;max-width:1100px}.real-gallery img{display:block;width:100%;height:320px;object-fit:contain;background:#151515;border-radius:8px}@media(max-width:640px){.real-gallery{grid-template-columns:1fr}.real-gallery img{height:auto;max-height:420px}}.fi{opacity:1;transform:none}
+.pkg-highlights{list-style:none;padding:0;margin:1rem 0;color:var(--gold)}.pkg-highlights li{margin:.35rem 0}.pkg-expand{margin:0 0 1.2rem;border-top:1px solid #b69a6140;border-bottom:1px solid #b69a6140}.pkg-expand summary,.compare-wrap summary{cursor:pointer;color:var(--gold);padding:.9rem 0;font-weight:600}.pkg-expand summary:focus-visible,.compare-wrap summary:focus-visible{outline:2px solid var(--gold);outline-offset:3px}.pkg-expand .pkg-details{margin-top:.5rem}.compare-wrap{overflow-x:auto}
 </style>
 </head>
 <body>
@@ -278,22 +280,22 @@ footer p{color:rgba(245,241,235,.28);font-size:.77rem;}
   <a href="#hero" class="nav-logo">Zacarias <span>&amp; Events</span></a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
-    <li><a href="#services">Services</a></li>
+    
     <li><a href="#packages">Packages</a></li>
-    <li><a href="#drinks">Menu</a></li>
-    <li><a href="#reviews">Reviews</a></li>
-    <li><a href="#faq">FAQ</a></li>
+    
+    <li><a href="#gallery">Our Work</a></li><li><a href="#reviews">Reviews</a></li>
+    
     <li><a href="#booking" class="nav-cta">Get a Quote</a></li>
   </ul>
   <button class="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
   <a href="#about" onclick="closeMenu()">About</a>
-  <a href="#services" onclick="closeMenu()">Services</a>
+  
   <a href="#packages" onclick="closeMenu()">Packages</a>
-  <a href="#drinks" onclick="closeMenu()">Drink Menu</a>
-  <a href="#reviews" onclick="closeMenu()">Reviews</a>
-  <a href="#faq" onclick="closeMenu()">FAQ</a>
+  
+  <a href="#gallery" onclick="closeMenu()">Our Work</a><a href="#reviews" onclick="closeMenu()">Reviews</a>
+  
   <a href="#contact" onclick="closeMenu()">Contact</a>
   <a href="#booking" onclick="closeMenu()" class="gold-link">✦ Get a Quote</a>
 </div>
@@ -303,18 +305,18 @@ footer p{color:rgba(245,241,235,.28);font-size:.77rem;}
   <div class="hero-img"></div>
   <div class="hero-content" style="animation:fadeUp 1s ease both;">
     <div class="hero-eyebrow">✦ DMV's Premier Mobile Bartending Service</div>
-    <h1>Elevate Every<br><em>Pour, Every</em><br>Celebration.</h1>
-    <p class="hero-sub">Professional mobile bartending for unforgettable private events in DC, Maryland &amp; Virginia. You bring the drinks — we bring the experience.</p>
+    <h1>Be a Guest at<br><em>Your Own Party.</em></h1>
+    <p class="hero-sub">Professional mobile bartending for unforgettable private events in DC, Maryland &amp; Virginia. We handle the bar so you can enjoy your celebration.</p>
     <div class="hero-btns">
       <a href="#booking" class="btn-gold">✦ Get a Free Quote</a>
       <a href="#packages" class="btn-ghost">View Packages</a>
       <a href="tel:+12404742431" class="btn-ghost">📞 (240) 474-2431</a>
     </div>
     <div class="trust-pills">
-      <span class="trust-pill">Licensed &amp; Insured</span>
+      <span class="trust-pill">Professional &amp; Experienced</span>
       <span class="trust-pill">Custom Cocktail Menus</span>
       <span class="trust-pill">DMV Area</span>
-      <span class="trust-pill">500+ Events Served</span>
+      <span class="trust-pill">Personalized Planning</span>
       <span class="trust-pill">Clean Setup Guaranteed</span>
     </div>
     <div class="social-strip">
@@ -332,17 +334,17 @@ footer p{color:rgba(245,241,235,.28);font-size:.77rem;}
     <div class="about-img-wrap">
       <img src="https://images.unsplash.com/photo-1570598912132-0ba1dc952b7d?auto=format&fit=crop&w=700&q=80" alt="Professional bartender" loading="lazy">
       <div class="img-border"></div>
-      <div class="stat-badge"><strong>500+</strong><span>Events Served</span></div>
+      <div class="stat-badge"><strong>DMV</strong><span>Mobile Bartending</span></div>
     </div>
     <div class="about-text">
       <div class="sec-label">Our Story</div>
       <h2>More Than a Bartender.<br><em>A Full Experience.</em></h2>
       <p>Zacarias Bartending &amp; Events brings luxury mobile bartending directly to your celebration. Whether you're hosting 25 guests or 250, we arrive fully prepared, professionally dressed, and ready to make your bar the highlight of the night.</p>
-      <p>You bring the drinks — we bring everything else: the tools, the talent, the vibe, and a personalized shopping list so you never have to guess.</p>
+      <p>You provide the alcohol. We handle bar service, tools, drinkware, garnishes and a personalized shopping list. Mixers, ice and portable bar arrangements can be quoted separately.</p>
       <div class="pillars">
         <div class="pillar"><span>🍸</span><span>Custom Cocktail Menus</span></div>
         <div class="pillar"><span>✨</span><span>Premium Presentation</span></div>
-        <div class="pillar"><span>🛡️</span><span>Licensed &amp; Insured</span></div>
+        <div class="pillar"><span>🛡️</span><span>Professional &amp; Experienced</span></div>
         <div class="pillar"><span>🤝</span><span>Seamless Service</span></div>
         <div class="pillar"><span>📍</span><span>Full DMV Coverage</span></div>
         <div class="pillar"><span>⚡</span><span>Stress-Free Setup</span></div>
@@ -352,27 +354,6 @@ footer p{color:rgba(245,241,235,.28);font-size:.77rem;}
 </section>
 
 <div class="divider"></div>
-
-<section id="services">
-  <div class="sec-head fi">
-    <div class="sec-label">What We Offer</div>
-    <h2>Services Built for<br><em>Every Occasion</em></h2>
-    <p class="sec-intro">From intimate birthday dinners to large-scale corporate galas, we bring the full bar experience wherever you need it.</p>
-  </div>
-  <div class="services-grid fi">
-    <div class="svc-card"><div class="svc-img"><img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=500&q=80" alt="Bartending" loading="lazy"></div><div class="svc-body"><div class="svc-icon">🍹</div><h3>Full Bartending Service</h3><p>Professional setup, premium tools, expert mixology — your guests are in good hands.</p><span class="svc-tag">Most Popular</span></div></div>
-    <div class="svc-card"><div class="svc-img"><img src="https://images.unsplash.com/photo-1551538827-9c037cb4f32a?auto=format&fit=crop&w=500&q=80" alt="Custom cocktails" loading="lazy"></div><div class="svc-body"><div class="svc-icon">🍋</div><h3>Custom Cocktail Menu</h3><p>A personalized drink menu tailored to your event theme, season, or preferences.</p><span class="svc-tag">Add-On Available</span></div></div>
-    <div class="svc-card"><div class="svc-img"><img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=500&q=80" alt="Mocktails" loading="lazy"></div><div class="svc-body"><div class="svc-icon">🌿</div><h3>Mocktail Bar</h3><p>Beautiful non-alcoholic craft drinks for an inclusive, premium experience.</p><span class="svc-tag">Inclusive</span></div></div>
-    <div class="svc-card"><div class="svc-img"><img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=500&q=80" alt="Wedding" loading="lazy"></div><div class="svc-body"><div class="svc-icon">💍</div><h3>Wedding Bartending</h3><p>Elegant bar service for your most important day, coordinated with your planner.</p><span class="svc-tag">Premium</span></div></div>
-    <div class="svc-card"><div class="svc-img"><img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=500&q=80" alt="Corporate" loading="lazy"></div><div class="svc-body"><div class="svc-icon">🏢</div><h3>Corporate Events</h3><p>Polished bar service that impresses clients and elevates team celebrations.</p><span class="svc-tag">B2B</span></div></div>
-    <div class="svc-card"><div class="svc-img"><img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=500&q=80" alt="Beer Wine" loading="lazy"></div><div class="svc-body"><div class="svc-icon">🍷</div><h3>Beer &amp; Wine Service</h3><p>Curated beer and wine for events that call for something refined but relaxed.</p><span class="svc-tag">Flexible</span></div></div>
-    <div class="svc-card"><div class="svc-img"><img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=500&q=80" alt="Private party" loading="lazy"></div><div class="svc-body"><div class="svc-icon">🎉</div><h3>Private Parties</h3><p>Birthdays, anniversaries, graduations — we make every celebration feel exclusive.</p><span class="svc-tag">All Ages</span></div></div>
-    <div class="svc-card"><div class="svc-img"><img src="https://images.unsplash.com/photo-1470338745628-171cf53de3a8?auto=format&fit=crop&w=500&q=80" alt="Outdoor" loading="lazy"></div><div class="svc-body"><div class="svc-icon">🌞</div><h3>Outdoor Event Bar</h3><p>Patios, gardens, rooftops — we bring a full setup anywhere you need it.</p><span class="svc-tag">Mobile</span></div></div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
 <section id="packages">
   <div class="sec-head fi">
     <div class="sec-label">Pricing</div>
@@ -383,32 +364,32 @@ footer p{color:rgba(245,241,235,.28);font-size:.77rem;}
     <div class="pkg-card">
       <div class="pkg-name">Essential</div><div class="pkg-sub">Intimate Gatherings</div>
       <div class="pkg-price"><strong>$600</strong><span>Up to 50 guests</span></div>
-      <ul class="pkg-details"><li>3 Hours of Service</li><li>1 Professional Bartender</li><li>Cups, Straws &amp; Napkins</li><li>Basic Garnish Package</li><li>Personalized Shopping List</li><li>Setup &amp; Breakdown</li></ul>
+      <ul class="pkg-highlights"><li>3 Hours of Service</li><li>1 Professional Bartender</li></ul><details class="pkg-expand"><summary>View full package details</summary><ul class="pkg-details"><li>3 Hours of Service</li><li>1 Professional Bartender</li><li>Cups, Straws &amp; Napkins</li><li>Basic Garnish Package</li><li>Personalized Shopping List</li><li>Setup &amp; Breakdown</li></ul></details>
       <a href="#booking" class="btn-ghost" style="width:100%;text-align:center;justify-content:center;">Book This Package</a>
     </div>
     <div class="pkg-card featured">
       <div class="pkg-badge">Most Popular</div>
       <div class="pkg-name">Signature</div><div class="pkg-sub">Birthdays &amp; Celebrations</div>
       <div class="pkg-price"><strong>$950</strong><span>51–100 guests</span></div>
-      <ul class="pkg-details"><li>4 Hours of Service</li><li>1 Professional Bartender</li><li>Cups, Straws &amp; Napkins</li><li>Full Garnish Package</li><li>Personalized Shopping List</li><li>Signature Cocktail Menu Card</li><li>Setup &amp; Breakdown</li></ul>
+      <ul class="pkg-highlights"><li>4 Hours of Service</li><li>1 Professional Bartender</li></ul><details class="pkg-expand"><summary>View full package details</summary><ul class="pkg-details"><li>4 Hours of Service</li><li>1 Professional Bartender</li><li>Cups, Straws &amp; Napkins</li><li>Full Garnish Package</li><li>Personalized Shopping List</li><li>Signature Cocktail Menu Card</li><li>Setup &amp; Breakdown</li></ul></details>
       <a href="#booking" class="btn-gold" style="width:100%;text-align:center;justify-content:center;">Book This Package</a>
     </div>
     <div class="pkg-card">
       <div class="pkg-name">Premier</div><div class="pkg-sub">Large Celebrations</div>
       <div class="pkg-price"><strong>$1,300</strong><span>101–150 guests</span></div>
-      <ul class="pkg-details"><li>4 Hours of Service</li><li>2 Professional Bartenders</li><li>Cups, Straws &amp; Napkins</li><li>Full Garnish Package</li><li>Personalized Shopping List</li><li>Signature Cocktail Menu Card</li><li>Setup &amp; Breakdown</li></ul>
+      <ul class="pkg-highlights"><li>4 Hours of Service</li><li>2 Professional Bartenders</li></ul><details class="pkg-expand"><summary>View full package details</summary><ul class="pkg-details"><li>4 Hours of Service</li><li>2 Professional Bartenders</li><li>Cups, Straws &amp; Napkins</li><li>Full Garnish Package</li><li>Personalized Shopping List</li><li>Signature Cocktail Menu Card</li><li>Setup &amp; Breakdown</li></ul></details>
       <a href="#booking" class="btn-ghost" style="width:100%;text-align:center;justify-content:center;">Book This Package</a>
     </div>
     <div class="pkg-card">
       <div class="pkg-name">Premium</div><div class="pkg-sub">Weddings &amp; Corporate</div>
       <div class="pkg-price"><strong>$1,800</strong><span>151–250 guests</span></div>
-      <ul class="pkg-details"><li>5 Hours of Service</li><li>2 Professional Bartenders</li><li>Cups, Straws &amp; Napkins</li><li>Full Garnish Package</li><li>Personalized Shopping List</li><li>Signature Cocktail Menu Card</li><li>Bar Styling &amp; Décor Coordination</li><li>Priority Support</li></ul>
+      <ul class="pkg-highlights"><li>5 Hours of Service</li><li>2 Professional Bartenders</li></ul><details class="pkg-expand"><summary>View full package details</summary><ul class="pkg-details"><li>5 Hours of Service</li><li>2 Professional Bartenders</li><li>Cups, Straws &amp; Napkins</li><li>Full Garnish Package</li><li>Personalized Shopping List</li><li>Signature Cocktail Menu Card</li><li>Bar Styling &amp; Décor Coordination</li><li>Priority Support</li></ul></details>
       <a href="#booking" class="btn-ghost" style="width:100%;text-align:center;justify-content:center;">Book This Package</a>
     </div>
     <div class="pkg-card">
       <div class="pkg-name">Elite</div><div class="pkg-sub">Large-Scale Events</div>
       <div class="pkg-price"><strong>$2,600+</strong><span>250+ guests</span></div>
-      <ul class="pkg-details"><li>5–6 Hours of Service</li><li>3 Professional Bartenders</li><li>Everything in Premium</li><li>Custom Quote — Let's Talk</li></ul>
+      <ul class="pkg-highlights"><li>5–6 Hours of Service</li><li>3 Professional Bartenders</li></ul><details class="pkg-expand"><summary>View full package details</summary><ul class="pkg-details"><li>5–6 Hours of Service</li><li>3 Professional Bartenders</li><li>Everything in Premium</li><li>Custom Quote — Let's Talk</li></ul></details>
       <a href="tel:+12404742431" class="btn-ghost" style="width:100%;text-align:center;justify-content:center;">📞 Call for Quote</a>
     </div>
   </div>
@@ -424,7 +405,7 @@ footer p{color:rgba(245,241,235,.28);font-size:.77rem;}
       <div class="addon-item"><span>🗺️ Travel Fee</span><span class="addon-price">$30–$75</span></div>
     </div>
   </div>
-  <div class="compare-wrap fi" style="margin-top:3rem;">
+  <details class="compare-wrap fi" style="margin-top:3rem;"><summary>Compare all packages</summary>
     <div style="text-align:center;margin-bottom:1.4rem;"><div class="sec-label" style="justify-content:center;">Package Comparison</div></div>
     <table class="compare-table">
       <thead><tr><th style="text-align:left;">Feature</th><th>Essential</th><th class="hi">Signature ★</th><th>Premier</th><th>Premium</th><th>Elite</th></tr></thead>
@@ -439,37 +420,29 @@ footer p{color:rgba(245,241,235,.28);font-size:.77rem;}
         <tr><td class="lbl">Bar Styling</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="chk">✦</td><td class="chk">✦</td></tr>
         <tr><td class="lbl">Priority Support</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="chk">✦</td><td class="chk">✦</td></tr>
       </tbody>
-    </table>
-  </div>
+    </table></details>
 </section>
 
 <div class="divider"></div>
-
-<section id="drinks">
+<section id="gallery"><div class="sec-head"><div class="sec-label">Our Work</div><h2>Real Events.<br><em>Real Experiences.</em></h2></div><div class="real-gallery"><img src="Image3.JPG.PNG" alt="Zacarias private event photography" loading="lazy"><img src="Image.JPG.PNG" alt="Zacarias private event photography" loading="lazy"><img src="Image2.JPG.PNG" alt="Zacarias private event photography" loading="lazy"></div><div class="review-platforms"><a class="rev-platform" href="https://www.instagram.com/zacariasbartending/" target="_blank" rel="noopener">Instagram — More Photos &amp; Videos</a><a class="rev-platform" href="https://yelp.to/ERniOmOYIa" target="_blank" rel="noopener">Yelp — Event Photos &amp; Reviews</a><a class="rev-platform" href="https://share.google/LyuJvK12fcKbBYIlt" target="_blank" rel="noopener">Google — Customer Reviews</a></div></section>
+<div class="divider"></div>
+<section id="reviews">
   <div class="sec-head fi">
-    <div class="sec-label">Drink Menu</div>
-    <h2>Crafted to Impress.<br><em>Poured with Precision.</em></h2>
-    <p class="sec-intro">A sample of our most-requested cocktails, made fresh with quality ingredients and elegant presentation.</p>
+    <div class="sec-label">Client Love</div>
+    <h2>What Our Clients<br><em>Are Saying</em></h2>
+    <p class="sec-intro">Real feedback from real events. We're proud of every pour.</p>
   </div>
-  <div class="drinks-grid fi">
-    <div class="drink-card"><div class="drink-img-wrap"><img src="https://images.unsplash.com/photo-1551538827-9c037cb4f32a?auto=format&fit=crop&w=400&h=300&q=80" alt="Margarita" loading="lazy"></div><div class="drink-body"><h4>Margarita</h4><p>Tequila, triple sec, fresh lime, salted rim</p></div></div>
-    <div class="drink-card"><div class="drink-img-wrap"><img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=400&h=300&q=80" alt="Aperol Spritz" loading="lazy"></div><div class="drink-body"><h4>Aperol Spritz</h4><p>Aperol, prosecco, club soda, orange slice</p></div></div>
-    <div class="drink-card"><div class="drink-img-wrap"><img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=400&h=300&q=80" alt="Espresso Martini" loading="lazy"></div><div class="drink-body"><h4>Espresso Martini</h4><p>Vodka, espresso, Kahlúa, simple syrup</p></div></div>
-    <div class="drink-card"><div class="drink-img-wrap"><img src="https://images.unsplash.com/photo-1470338745628-171cf53de3a8?auto=format&fit=crop&w=400&h=300&q=80" alt="Lemon Drop" loading="lazy"></div><div class="drink-body"><h4>Lemon Drop</h4><p>Citrus vodka, lemon juice, sugar rim</p></div></div>
-    <div class="drink-card"><div class="drink-img-wrap"><img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=400&h=300&q=80" alt="Mojito" loading="lazy"></div><div class="drink-body"><h4>Mojito</h4><p>White rum, fresh mint, lime, club soda</p></div></div>
-    <div class="drink-card"><div class="drink-img-wrap"><img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=400&h=300&q=80" alt="Old Fashioned" loading="lazy"></div><div class="drink-body"><h4>Old Fashioned</h4><p>Bourbon, bitters, sugar, orange peel</p></div></div>
-    <div class="drink-card"><div class="drink-img-wrap"><img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=400&h=300&q=80" alt="Whiskey Sour" loading="lazy"></div><div class="drink-body"><h4>Whiskey Sour</h4><p>Bourbon, fresh lemon juice, simple syrup</p></div></div>
-    <div class="drink-card"><div class="drink-img-wrap"><img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=400&h=300&q=80" alt="Vodka Soda" loading="lazy"></div><div class="drink-body"><h4>Vodka Soda</h4><p>Premium vodka, club soda, fresh citrus</p></div></div>
-    <div class="drink-card"><div class="drink-img-wrap"><img src="https://images.unsplash.com/photo-1570598912132-0ba1dc952b7d?auto=format&fit=crop&w=400&h=300&q=80" alt="Rum and Coke" loading="lazy"></div><div class="drink-body"><h4>Rum &amp; Coke</h4><p>Dark rum, cola, fresh lime squeeze</p></div></div>
+  <div class="review-platforms fi">
+    <a href="https://yelp.to/ERniOmOYIa" target="_blank" class="rev-platform">⭐ Read Yelp Reviews</a>
+    <a href="https://share.google/LyuJvK12fcKbBYIlt" target="_blank" class="rev-platform">🔵 Read Google Reviews</a>
+    <a href="https://www.instagram.com/zacariasbartending?igsh=MXFjZnpmZWczM2lhag%3D%3D&utm_source=qr" target="_blank" class="rev-platform">📸 @zacariasbartending</a>
   </div>
-  <div class="cocktail-cta fi">
-    <div><h3>✦ Want Something Unique?</h3><p>Add our Custom Cocktail Menu and we'll craft a signature drink list for your event.</p></div>
-    <a href="#booking" class="btn-gold">Add Custom Menu — $50</a>
+  
+  <div class="review-cta fi">
+    <a href="https://yelp.to/ERniOmOYIa" target="_blank" class="btn-ghost">Leave a Yelp Review ⭐</a>
+    <a href="https://share.google/LyuJvK12fcKbBYIlt" target="_blank" class="btn-ghost">Leave a Google Review 🔵</a>
   </div>
 </section>
-
-<div class="divider"></div>
-
 <section id="booking">
   <div class="booking-layout">
     <div class="booking-info fi">
@@ -567,88 +540,6 @@ footer p{color:rgba(245,241,235,.28);font-size:.77rem;}
 </section>
 
 <div class="divider"></div>
-
-<section id="reviews">
-  <div class="sec-head fi">
-    <div class="sec-label">Client Love</div>
-    <h2>What Our Clients<br><em>Are Saying</em></h2>
-    <p class="sec-intro">Real feedback from real events. We're proud of every pour.</p>
-  </div>
-  <div class="review-platforms fi">
-    <a href="https://yelp.to/ERniOmOYIa" target="_blank" class="rev-platform">⭐ 5.0 on Yelp</a>
-    <a href="https://share.google/LyuJvK12fcKbBYIlt" target="_blank" class="rev-platform">🔵 5.0 on Google</a>
-    <a href="https://www.instagram.com/zacariasbartending?igsh=MXFjZnpmZWczM2lhag%3D%3D&utm_source=qr" target="_blank" class="rev-platform">📸 @zacariasbartending</a>
-  </div>
-  <div class="reviews-grid fi">
-    <div class="rev-card"><div class="rev-platform-tag">⭐ Yelp</div><div class="rev-stars">★★★★★</div><p class="rev-text">"Zacarias absolutely made our wedding reception. The cocktails were incredible, the setup was flawless, and every guest was raving all night. 10/10."</p><div class="rev-author"><div class="rev-avatar">M</div><div><div class="rev-name">Michelle T.</div><div class="rev-event">Wedding · Bethesda, MD</div></div></div></div>
-    <div class="rev-card"><div class="rev-platform-tag">🔵 Google</div><div class="rev-stars">★★★★★</div><p class="rev-text">"We hired Zacarias for our company holiday party and it was the best decision we made. Professional, prompt, and the drinks were top notch."</p><div class="rev-author"><div class="rev-avatar">J</div><div><div class="rev-name">James R.</div><div class="rev-event">Corporate Event · Washington, DC</div></div></div></div>
-    <div class="rev-card"><div class="rev-platform-tag">⭐ Yelp</div><div class="rev-stars">★★★★★</div><p class="rev-text">"Booked Zacarias for my 30th birthday party. The custom cocktail menu had everyone impressed. Stress-free setup and the vibe was unmatched."</p><div class="rev-author"><div class="rev-avatar">A</div><div><div class="rev-name">Alexis W.</div><div class="rev-event">Birthday Party · Arlington, VA</div></div></div></div>
-    <div class="rev-card"><div class="rev-platform-tag">🔵 Google</div><div class="rev-stars">★★★★★</div><p class="rev-text">"From first message to last pour — completely professional. They made amazing mocktails for guests who don't drink. Truly thoughtful service."</p><div class="rev-author"><div class="rev-avatar">D</div><div><div class="rev-name">Diana M.</div><div class="rev-event">Private Party · Silver Spring, MD</div></div></div></div>
-    <div class="rev-card"><div class="rev-platform-tag">⭐ Yelp</div><div class="rev-stars">★★★★★</div><p class="rev-text">"Went above and beyond for my outdoor garden party. Clean setup, friendly energy, my guests were so impressed. Already rebooked for next year."</p><div class="rev-author"><div class="rev-avatar">S</div><div><div class="rev-name">Sandra K.</div><div class="rev-event">Garden Party · Alexandria, VA</div></div></div></div>
-    <div class="rev-card"><div class="rev-platform-tag">🔵 Google</div><div class="rev-stars">★★★★★</div><p class="rev-text">"Hired them for my parents' anniversary party. The whole family was blown away. The margaritas and mojitos were perfect. Absolute professionals."</p><div class="rev-author"><div class="rev-avatar">R</div><div><div class="rev-name">Rafael C.</div><div class="rev-event">Anniversary · Rockville, MD</div></div></div></div>
-  </div>
-  <div class="review-cta fi">
-    <a href="https://yelp.to/ERniOmOYIa" target="_blank" class="btn-ghost">Leave a Yelp Review ⭐</a>
-    <a href="https://share.google/LyuJvK12fcKbBYIlt" target="_blank" class="btn-ghost">Leave a Google Review 🔵</a>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<section id="gallery">
-  <div class="sec-head fi">
-    <div class="sec-label">Portfolio</div>
-    <h2>Events That<br><em>Speak for Themselves</em></h2>
-  </div>
-  <div class="gallery-grid fi">
-    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=80" alt="Event bar" loading="lazy"></div>
-    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=500&q=80" alt="Cocktail" loading="lazy"></div>
-    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1470338745628-171cf53de3a8?auto=format&fit=crop&w=500&q=80" alt="Bar service" loading="lazy"></div>
-    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=500&q=80" alt="Drinks" loading="lazy"></div>
-    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=500&q=80" alt="Wedding" loading="lazy"></div>
-    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=500&q=80" alt="Party" loading="lazy"></div>
-    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=500&q=80" alt="Corporate" loading="lazy"></div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<section id="faq">
-  <div class="faq-layout">
-    <div class="faq-left fi">
-      <div class="sec-label">Got Questions?</div>
-      <h2>Answers to<br><em>Everything.</em></h2>
-      <p>Our assistant answers instantly. Prefer to talk directly?</p>
-      <p style="margin-top:1rem;"><a href="tel:+12404742431"><strong>(240) 474-2431</strong></a> — call or text anytime.</p>
-      <p style="margin-top:.5rem;"><a href="https://www.instagram.com/zacariasbartending?igsh=MXFjZnpmZWczM2lhag%3D%3D&utm_source=qr" target="_blank"><strong>@zacariasbartending</strong></a> on Instagram.</p>
-      <p style="margin-top:.5rem;"><a href="https://yelp.to/ERniOmOYIa" target="_blank"><strong>Message us on Yelp</strong></a> too.</p>
-    </div>
-    <div class="chat-box fi">
-      <div class="chat-header">
-        <div class="chat-avatar">✦</div>
-        <div class="chat-info"><div class="cname">Zacarias Assistant</div><div class="cstatus">Online now</div></div>
-      </div>
-      <div class="chat-msgs" id="chatMsgs">
-        <div class="msg bot">Hi there! 👋 I'm the Zacarias assistant. Ask me anything about our bartending services, pricing, or availability!</div>
-      </div>
-      <div class="chat-chips">
-        <span class="chip" onclick="ask('Do you provide alcohol?')">Do you provide alcohol?</span>
-        <span class="chip" onclick="ask('How much do you charge?')">Pricing?</span>
-        <span class="chip" onclick="ask('Do you do weddings?')">Weddings?</span>
-        <span class="chip" onclick="ask('What do I need to provide?')">What do I provide?</span>
-        <span class="chip" onclick="ask('How far in advance should I book?')">When to book?</span>
-        <span class="chip" onclick="ask('What is your phone number?')">Contact info?</span>
-      </div>
-      <div class="chat-input-row">
-        <input type="text" class="chat-input" id="chatInput" placeholder="Ask a question..." onkeydown="if(event.key==='Enter')sendChat()">
-        <button class="chat-send" onclick="sendChat()">→</button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
 <section id="contact">
   <div class="contact-grid">
     <div class="contact-info fi">
@@ -681,8 +572,8 @@ footer p{color:rgba(245,241,235,.28);font-size:.77rem;}
 <footer>
   <span class="footer-logo">Zacarias <span>&amp; Events</span></span>
   <div class="footer-links">
-    <a href="#about">About</a><a href="#services">Services</a><a href="#packages">Packages</a>
-    <a href="#drinks">Menu</a><a href="#reviews">Reviews</a><a href="#faq">FAQ</a>
+    <a href="#about">About</a><a href="#packages">Services</a><a href="#packages">Packages</a>
+    <a href="#packages">Menu</a><a href="#reviews">Reviews</a><a href="#packages">FAQ</a>
     <a href="#booking">Book Now</a><a href="#contact">Contact</a>
     <a href="https://www.instagram.com/zacariasbartending?igsh=MXFjZnpmZWczM2lhag%3D%3D&utm_source=qr" target="_blank">Instagram</a>
     <a href="https://yelp.to/ERniOmOYIa" target="_blank">Yelp</a>
@@ -707,7 +598,9 @@ function toggleAddon(el){
 }
 function updateQuote(){
   var pkg=parseInt(document.getElementById('packageSelect').value)||0;
-  var hrs=(parseInt(document.getElementById('extraHours').value)||0)*125;
+  var staff=({600:1,950:1,1300:2,1800:2,2600:3})[pkg]||1;
+  if(document.querySelector('.cb-item.on[data-name="Extra Bartender"]'))staff++;
+  var hrs=(parseInt(document.getElementById('extraHours').value)||0)*125*staff;
   var addons=0,travel=false;
   document.querySelectorAll('.cb-item.on').forEach(function(el){
     if(el.dataset.name==='Travel Fee')travel=true;
