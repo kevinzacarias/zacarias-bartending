@@ -424,10 +424,8 @@ footer p{color:rgba(245,241,235,.28);font-size:.77rem;}
 </section>
 
 <div class="divider"></div>
-
-
+<section id="gallery"><div class="sec-head"><div class="sec-label">Our Work</div><h2>Real Events.<br><em>Real Experiences.</em></h2></div><div class="real-gallery"><img src="Image3.JPG.PNG" alt="Zacarias private event photography" loading="lazy"><img src="Image.JPG.PNG" alt="Zacarias private event photography" loading="lazy"><img src="Image2.JPG.PNG" alt="Zacarias private event photography" loading="lazy"></div><div class="review-platforms"><a class="rev-platform" href="https://www.instagram.com/zacariasbartending/" target="_blank" rel="noopener">Instagram Photos</a><a class="rev-platform" href="https://yelp.to/ERniOmOYIa" target="_blank" rel="noopener">Yelp Photos &amp; Reviews</a><a class="rev-platform" href="https://share.google/LyuJvK12fcKbBYIlt" target="_blank" rel="noopener">Google Reviews</a></div></section>
 <div class="divider"></div>
-
 <section id="reviews">
   <div class="sec-head fi">
     <div class="sec-label">Client Love</div>
@@ -542,10 +540,6 @@ footer p{color:rgba(245,241,235,.28);font-size:.77rem;}
 </section>
 
 <div class="divider"></div>
-
-<section id="gallery"><div class="sec-head"><div class="sec-label">Our Work</div><h2>Real Events.<br><em>Real Experiences.</em></h2></div><div class="real-gallery"><img src="Image3.JPG.PNG" alt="Zacarias private event photography" loading="lazy"><img src="Image.JPG.PNG" alt="Zacarias private event photography" loading="lazy"><img src="Image2.JPG.PNG" alt="Zacarias private event photography" loading="lazy"></div><div class="review-platforms"><a class="rev-platform" href="https://www.instagram.com/zacariasbartending/" target="_blank" rel="noopener">Instagram Photos</a><a class="rev-platform" href="https://yelp.to/ERniOmOYIa" target="_blank" rel="noopener">Yelp Photos &amp; Reviews</a><a class="rev-platform" href="https://share.google/LyuJvK12fcKbBYIlt" target="_blank" rel="noopener">Google Reviews</a></div></section>
-
-<div class="divider"></div>
 <section id="contact">
   <div class="contact-grid">
     <div class="contact-info fi">
@@ -604,7 +598,9 @@ function toggleAddon(el){
 }
 function updateQuote(){
   var pkg=parseInt(document.getElementById('packageSelect').value)||0;
-  var hrs=(parseInt(document.getElementById('extraHours').value)||0)*125;
+  var staff=({600:1,950:1,1300:2,1800:2,2600:3})[pkg]||1;
+  if(document.querySelector('.cb-item.on[data-name="Extra Bartender"]'))staff++;
+  var hrs=(parseInt(document.getElementById('extraHours').value)||0)*125*staff;
   var addons=0,travel=false;
   document.querySelectorAll('.cb-item.on').forEach(function(el){
     if(el.dataset.name==='Travel Fee')travel=true;
